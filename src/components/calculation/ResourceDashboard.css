@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
+:root {
+  --rate-high: #4ade80;
+  --rate-mid:  #facc15;
+  --rate-low:  #94a3b8;
+  --rate-none: rgba(148, 163, 184, 0.4);
+  --border:    rgba(0, 217, 255, 0.15);
+  --accent:    rgba(0, 217, 255, 0.55);
+}
+
+.rd-page {
+  /* min-height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: #0f172a;
+}
+
+.rd-panel {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1.5px solid rgba(0, 217, 255, 0.2);
+  border-radius: 12px;
+  overflow: auto;
+}
+
+.rd-table {
+  display: flex;
+  flex-direction: row;
+}
+
+.rd-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.rd-col-header {
+  border-right: 1px solid var(--border);
+}
+
+.rd-col-data {
+  border-right: 1px solid var(--border);
+}
+
+.rd-col-data:last-child {
+  border-right: none;
+}
+
+.rd-col-data:hover .rd-cell {
+  background: rgba(0, 217, 255, 0.04);
+}
+
+/* 通用 cell — 无横向边框 */
+.rd-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  font-size: 12px;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+/* 左侧标签 cell */
+.rd-label-cell {
+  justify-content: flex-end;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-right: 18px;
+  min-width: 68px;
+}
+
+.rd-name-cell {
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  color: #e2e8f0;
+  letter-spacing: 0.05em;
+}
+
+.rd-produced {
+  color: #4ade80;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.rd-consumed {
+  color: #f87171;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.rd-rate {
+  color: #ffba26;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
+}
+.pd-header{
+  font-family: 'Orbitron', sans-serif; 
+  color: #00d9ff;
+
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  
+  padding : 0.5rem 0rem 0.5rem 1rem;
+  border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+  
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

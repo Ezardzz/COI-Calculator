@@ -1,0 +1,408 @@
+/* FacilityConfig.css */
+.facility-container {
+  background: rgba(15, 25, 40, 0.85);
+  border: 1px solid #00d9ff;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 217, 255, 0.1);
+  flex: 1;
+  margin: 0 auto;
+}
+
+.facility-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00d9ff, transparent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.facility-header {
+  font-family: 'Orbitron', sans-serif;
+  color: #00d9ff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.facility-nav {
+  display: flex;
+  gap: 0;
+  margin-bottom: 0;
+  border-bottom: 3px solid #0a1929;
+  background: #0a1929;
+}
+
+.facility-nav-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  background: #1e293b;
+  color: #64748b;
+  border: none;
+  border-right: 2px solid #0a1929;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.facility-nav-button:last-child {
+  border-right: none;
+}
+
+.facility-nav-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.facility-nav-button:hover::before {
+  left: 100%;
+}
+
+.facility-nav-button:hover {
+  background: #334155;
+  color: #00d9ff;
+}
+
+.facility-nav-button.active {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+  color: #00d9ff;
+  border-bottom: 3px solid #00d9ff;
+  box-shadow: 0 -2px 12px rgba(0, 217, 255, 0.3), inset 0 0 20px rgba(0, 217, 255, 0.05);
+  font-weight: 700;
+  transform: translateY(-2px);
+}
+
+.facility-content {
+  /* background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%); */
+  min-height: 500px;
+}
+
+.facility-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+}
+
+.facility-toolbar-button {
+  padding: 0.75rem 2rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border: 2px solid rgba(0, 217, 255, 0.4);
+  border-radius: 6px;
+  background: rgba(0, 217, 255, 0.1);
+  color: #00d9ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.facility-toolbar-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.facility-toolbar-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.facility-toolbar-button:hover {
+  background: rgba(0, 217, 255, 0.2);
+  border-color: #00d9ff;
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.facility-toolbar-button:active {
+  transform: translateY(0);
+}
+
+.facility-tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.facility-section-header {
+  font-family: 'Orbitron', sans-serif;
+  color: #00d9ff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+}
+.label-header {
+  font-family: 'Orbitron', sans-serif;
+  color: #00d9ff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.sub-section {
+  margin-bottom: 0.5rem;
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.pop-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qty-input {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1.5px solid #334155;
+  color: #e2e8f0;
+  padding: 0.3rem 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.qty-input:focus {
+  outline: none;
+  border-color: #00d9ff;
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+}
+
+.fuel-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+  padding: 0.3rem;
+  border-radius: 4px;
+}
+
+.fuel-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #94a3b8;
+  min-width: 40px;
+}
+.section-container {
+  --col1: 50%;
+  --col2: 50%;
+
+  display: grid;
+  grid-template-columns: var(--col1) var(--col2);
+  grid-template-rows: auto auto;
+  gap: 0.5rem;                           
+}
+/* 第一列 */
+.section-container > :nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.section-container > :nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* 第二列 */
+.section-container > :nth-child(3) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.section-container > :nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.miner-group {
+  margin-bottom: 0.8rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid rgba(0, 217, 255, 0.2);
+}
+
+.miner-hint {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  color: #64748b;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+.trigger-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 0.5rem 1rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: rgba(0, 217, 255, 0.1);
+  border: 1.5px solid rgba(0, 217, 255, 0.4);
+  color: #00d9ff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: rgba(0, 217, 255, 0.2);
+  border-color: #00d9ff;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.chip-removable {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.chip-x {
+  cursor: pointer;
+  color: rgba(0, 217, 255, 0.5);
+  font-size: 11px;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.chip-x:hover { 
+  color: #00d9ff; 
+}
+
+.hint-text {
+  font-size: 0.7rem;
+  color: #64748b;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.config-panel {
+  margin-top: 1.5rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1.5px solid rgba(0, 217, 255, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.config-panel-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  color: #00d9ff;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.config-panel pre {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  white-space: pre-wrap;
+  word-break: break-all;
+  max-height: 200px;
+  overflow: auto;
+  line-height: 1.6;
+  margin-top: 0.8rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── 冗余设计 ────────────────────────────────────────────────────────────── */
+.redundancy-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* display: flex; */
+  gap: 8px;
+}
+
+.redundancy-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 5px 10px;
+  background: var(--surface);
+  border: var(--border);
+  border-radius: var(--radius);
+}
+
+.redundancy-label {
+  font-size: 12px;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.redundancy-input {
+  width: 56px;
+  flex-shrink: 0;
+}
+/* ── Config Preview 导入导出 ─────────────────────────────────────────────── */
+.config-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.config-panel-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}

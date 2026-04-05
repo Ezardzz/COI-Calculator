@@ -1,0 +1,117 @@
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px #00d9ff, 0 0 10px #00d9ff; }
+  50% { box-shadow: 0 0 10px #00d9ff, 0 0 20px #00d9ff, 0 0 30px #00d9ff; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes tooltipFadeIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(-4px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1419 100%);
+  color: #e0e6ed;
+  
+  min-width: fit-content; /* 保持内容完整显示 */
+  overflow-x: auto; /* 允许横向滚动 */
+  padding: 2rem;
+}
+
+.grid-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 217, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 0 1rem; /* 添加内边距防止贴边 */
+}
+
+.base-font{
+  font-family: 'Orbitron', sans-serif; 
+  color: #00d9ff;
+}
+
+.main-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #00d9ff;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 20px rgba(0, 217, 255, 0.6), 0 0 40px rgba(0, 217, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.title-icon {
+  display: inline;
+}
+
+
+
+
+
+/* 滚动条整体 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* 轨道 */
+::-webkit-scrollbar-track {
+  /* background: rgba(255, 255, 255, 0.05); */
+  border-radius: 4px;
+}
+
+/* 滑块 */
+::-webkit-scrollbar-thumb {
+  /* background: linear-gradient(
+    180deg,
+    #2ee7ff,
+    #0aa0ff
+  ); */
+  background:#0aa0ff;
+  border-radius: 4px;
+  /* box-shadow: 0 0 6px rgba(0, 200, 255, 0.5); */
+}
+
+/* 悬停态 */
+::-webkit-scrollbar-thumb:hover {
+  /* background: linear-gradient(
+    180deg,
+    #5cf2ff,
+    #2bb2ff
+  ); */
+  background:#44b5fc;
+}

@@ -1,0 +1,100 @@
+
+.chip.contract-active {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(0, 217, 255, 0.3);
+}
+
+.contract-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.contract-row {
+  display: grid;
+  grid-template-columns: 5% 30% 5% 30% 30%;
+  width: 100%;
+
+  /* gap: 20px; */
+  padding: 8px 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 217, 255, 0.12);
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text);
+  transition: all 0.15s;
+}
+/* .contract-row > :nth-child(5) {
+  padding-left: 170px;
+} */
+.contract-row:hover {
+  border-color: rgba(0, 217, 255, 0.3);
+  background: rgba(0, 217, 255, 0.04);
+}
+.contract-row--selected {
+  border-color: var(--accent);
+  background: rgba(0, 217, 255, 0.08);
+  color: var(--accent);
+}
+
+.contract-diamond {
+  font-size: 10px;
+  text-align: center;
+}
+
+.contract-item {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  gap: 5px;
+}
+.contract-item-right{
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  gap: 5px;
+}
+.contract-arrow {
+  color: var(--text-dim);
+}
+
+.contract-muted {
+  color: var(--text-dim);
+}
+
+.contract-cohesion {
+  font-size: 10px;
+  color: var(--text-dim);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.selected-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 三列等宽 */
+  gap: 5px;
+}
+
+.selected-contract {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: rgba(0, 217, 255, 0.06);
+  border: var(--border);
+  font-size: 12px;
+}
+
+.item-remove {
+  background: none;
+  border: none;
+  color: rgba(0, 217, 255, 0.4);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 2px;
+  transition: color 0.15s;
+}
+.item-remove:hover { color: var(--accent); }
