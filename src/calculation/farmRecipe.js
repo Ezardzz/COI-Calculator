@@ -12,7 +12,7 @@ export function calFarmRecipe(farmCfg) {
             product:{},
             material:{}
         },
-        Category:"食品制造",
+        Category:"食品",
         Farm:{},
         farmCfg:farmCfg,
         Enable:true

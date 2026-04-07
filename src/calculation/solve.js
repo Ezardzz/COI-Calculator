@@ -79,10 +79,10 @@ export  async function solve({
     // 三：农业配方整数解
     // -----------------------------   
     let index = RecipesWInt.length
-    const additionalRecipes = []
+    let farmRecipe = null
     for(const recipe of RecipesWInt){
       const farmCfg = recipe?.farmCfg      
-      if (farmCfg){
+      if (farmCfg && recipe.Factory.name == "农业系统" ){
         if (!(String(recipe?.ID) in solution)) continue
         const amount = solution[recipe.ID]
         const amountInt = Math.floor(amount)
@@ -93,25 +93,29 @@ export  async function solve({
         const ftK = 1.02// 农作物产量冗余系数
         const ftTargetNew = Math.ceil(Math.max(1.4*ftK*amountDec,0.6)/0.1)*0.1
         const ftCfg = ["肥料 II",2.5,ftTargetNew]
-        const farmRecipe = JSON.parse(JSON.stringify(recipe))
+
+        farmRecipe = JSON.parse(JSON.stringify(recipe))
         farmRecipe.farmCfg.fertilityCfg = ftCfg
         farmRecipe.Items = (calFarmRecipe(farmRecipe.farmCfg)).Items
         farmRecipe.FixedValue = 1
-        farmRecipe.ID = index++
-        additionalRecipes.push(farmRecipe)
+        farmRecipe.ID = index
+
+        const lpData3 = buildLP([...RecipesWInt,farmRecipe]);
+        const lpRes3 = await lpSolve(lpData3);
+        solution = {};
+        for (const [name, col] of Object.entries(lpRes3.Columns)) {
+          if (col.Primal > 1e-6) solution[name.replace("x_", "")] = col.Primal;
+        }
+        break
       }
     }
-    const lpData3 = buildLP([...RecipesWInt,...additionalRecipes]);
-    const lpRes3 = await lpSolve(lpData3);
-    solution = {};
-    for (const [name, col] of Object.entries(lpRes3.Columns)) {
-      if (col.Primal > 1e-6) solution[name.replace("x_", "")] = col.Primal;
-    }
+
     // -----------------------------
     // 四：计算使用率，判断是否可行
     // -----------------------------
     /* ---------- 1. 计算真实产出、消耗 ---------- */
-    const resultRecipes = [...Recipes,...additionalRecipes]
+    let resultRecipes = Recipes
+    if(farmRecipe) resultRecipes = [...Recipes,farmRecipe]
     
     const pc = calcRealPC(
       resultRecipes,

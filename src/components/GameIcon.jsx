@@ -45,8 +45,10 @@ function GameIcon({ name, size = 40, tooltip = '',tooltipData = ''}) {
   if (!iconData || !name) {
     return <div className="game-icon-placeholder" style={{ width: size, height: size }} />;
   }
-  // 处理图标名称：去掉 # 和将 - 替换为空格
-  const processedName = name.replace(/#/g, '').replace(/-/g, ' ');
+  // 处理图标名称：去掉 # 和 ! ,将 - 替换为空格
+  // #：代表物品的中间态，仅用于转换物品状态的配方
+  // !：代表仅作展示的物品，不参与配方配平
+  const processedName = name.replace(/#/g, '').replace(/!/g, '').replace(/-/g, ' ');
   
   // 查找图标数据
   const iconInfo = iconData[processedName];

@@ -88,9 +88,10 @@ export function cfg2recipe(configuration,GameData,recipeData,contractData){
 
     return resultRecipe
 }
-function calRecipe(recipeCalList, newFactoryName = null, newExtraPart = null) {
+function combineRecipe(recipeCalList, newFactoryName = null, newExtraPart = null) {
     // 初始化结果配方结构
     const resultRecipe = {
+        ID:0,
         Factory: {
             name: newFactoryName || "",
             consumption: {}
@@ -240,7 +241,7 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
     const medicine = settlement.medicine
     const commodity = settlement.commodity || []
     const housingTier = settlement.housing
-    // specialRecipe[housingTier].Enable = true
+    specialRecipe[housingTier].Enable = true
     const farmTier = settlement.farm
 
 
@@ -325,7 +326,7 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
                 material:{},
                 product:{[crop]:1}
             },
-            Category:"食品制造",
+            Category:"食品",
             Enable:true,
             ErrorFlag:true 
         }
@@ -536,7 +537,7 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
         },
         Items:{
             product:{
-                "工人":1000,
+                "工人#":1000,
                 "垃圾#":29.3,
             },
             material:service
@@ -614,38 +615,87 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
     }    
     
     // 开采
-    const excavator      = configuration.facility.mineral.map.miner.excavator
-    const logger         = configuration.facility.mineral.map.miner.logger
+    const excavator = configuration.facility.mineral.map.miner.excavator
+    const logger = configuration.facility.mineral.map.miner.logger
     const minerFuel = configuration.facility.mineral.map.miner.fuel
     const mines = configuration.facility.mineral.map.mine
 
     if (excavator){
-        const vehicleInfo = vehicleData.开采[minerFuel][excavator]
-        const recipe = extractVehicleRecipe(excavator,vehicleInfo,"车辆","原矿")
+        const excavatorInfo = vehicleData.开采[minerFuel][excavator]
+        let trunkMine = null
+        if (excavator.startsWith("小型挖掘机")){
+            trunkMine = "皮卡" + (minerFuel == "氢" ? "【氢】" : '')
+        }
+        else if (excavator.startsWith("挖掘机")){
+            trunkMine = "卡车" + (minerFuel == "氢" ? "【氢】" : '')
+        }
+        else if (excavator.startsWith("超大型挖掘机")){
+            trunkMine = "巨型卡车(散装)" + (minerFuel == "氢" ? "【氢】" : '')
+        }
+        
+        const trunkMineInfo = vehicleData.卡车[minerFuel][trunkMine]
+
+        const excavatorRecipe = extractVehicleRecipe("-",excavatorInfo,"车辆","-")
+        const trunkMineRecipe = extractVehicleRecipe("-",trunkMineInfo,"车辆","-")
+        
         for(const mine of mines){
             if (mine == "木材") continue
             // 替换"开采速率"为对应矿物属性
-            const newRecipe = JSON.parse(JSON.stringify(recipe));
-            newRecipe.Items.product[mine] = newRecipe.Items.product["开采速率"];
-            delete newRecipe.Items.product["开采速率"];
-            vehicleRecipe.push(newRecipe)
+            const excavatorRecipeCopy = JSON.parse(JSON.stringify(excavatorRecipe))
+            excavatorRecipeCopy.Items.product[mine] = excavatorRecipeCopy.Items.product["开采速率"]
+            delete excavatorRecipeCopy.Items.product["开采速率"]
+            const combine_recipe = combineRecipe([[excavatorRecipeCopy,1],[trunkMineRecipe,2]],"开采",{Enable:true,Category:"原矿"})
+            combine_recipe.Items.material[excavator + '!'] = 1
+            combine_recipe.Items.material[trunkMine + '!'] = 2
+            // 1辆挖掘机 + 2辆同级别卡车
+            vehicleRecipe.push(combine_recipe)
         }
-        const carportTier = vehicleInfo.车库等级
+        const carportTier = excavatorInfo.车库等级
         maxCarportTier = maxCarportTier > carportTier ? maxCarportTier : carportTier;
     }
-    if(logger){
-        const vehicleInfo = vehicleData.开采[minerFuel][logger]
-        if ('木材' in mines)
-            sapling = true
-        if (logger.includes('大')) {
-            vehicleRecipe.push(extractVehicleRecipe("伐木场(大)",vehicleInfo,"车辆","原矿"))
+    if(logger && mines.includes("木材")){
+        sapling = true
+
+        const loggerInfo = vehicleData.开采[minerFuel][logger]
+        const planter = "植树机" + (minerFuel == "氢" ? "【氢】" : '')
+        const planterInfo = vehicleData.开采[minerFuel][planter]
+        const forestryInfo = vehicleData.开采[minerFuel]["伐木场"]
+        let trunkLogger = null
+        if (logger.startsWith("伐木机")){
+            trunkLogger = "皮卡" + (minerFuel == "氢" ? "【氢】" : '')
         }
-        else {
-            vehicleRecipe.push(extractVehicleRecipe("伐木场(小)",vehicleInfo,"车辆","原矿"))
+        else if (logger.startsWith("大型伐木机")){
+            trunkLogger = "卡车" + (minerFuel == "氢" ? "【氢】" : '')
         }
-        const carportTier = vehicleInfo.车库等级
+        const trunkLoggerInfo = vehicleData.卡车[minerFuel][trunkLogger]
+        //配方
+        const loggerRecipe = extractVehicleRecipe("-",loggerInfo,"车辆","-")
+        const planterRecipe = extractVehicleRecipe("-",planterInfo,"车辆","-")
+        const trunkRecipe = extractVehicleRecipe("-",trunkLoggerInfo,"车辆","-")
+        const forestryRecipe = extractVehicleRecipe("-",forestryInfo,"-","-")
+        console.log(loggerRecipe);
+        console.log(planterRecipe);
+        console.log(trunkRecipe);
+        console.log(forestryRecipe);
+        
+        
+        // 1个伐木场 + 2辆植树机 + 2辆伐木机 + 5辆同级别卡车
+        const recipeCalList = [
+            [loggerRecipe,2],
+            [planterRecipe,2],
+            [trunkRecipe,5],
+            [forestryRecipe,1],
+        ]
+        const combine_recipe = combineRecipe(recipeCalList,"伐木场",{Enable:true,Category:"原矿"})
+        combine_recipe.Items.material[logger + '!'] = 2
+        combine_recipe.Items.material[planter + '!'] = 2
+        combine_recipe.Items.material[trunkLogger + '!'] = 5
+        vehicleRecipe.push(combine_recipe)
+
+        const carportTier = loggerInfo.车库等级
         maxCarportTier = maxCarportTier > carportTier ? maxCarportTier : carportTier;
     }
+    console.log(vehicleRecipe)
 
     // 海外矿
     const cargoDepot = configuration.facility.mineral.ocean.ship.cargoDepot

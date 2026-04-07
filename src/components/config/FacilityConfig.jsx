@@ -495,7 +495,6 @@ function MineralSection() {
 }
 
 // ── Config Preview ────────────────────────────────────────────────────────────
-// 新
 function ConfigPreview() {
   const { configuration, updateConfig } = useConfig()
   const { gameData, recipeData, updateRecipesEnable, resetAllRecipes } = useGameData()
@@ -509,8 +508,6 @@ function ConfigPreview() {
     }
     return null
   })[0]
-
-// 新
 const handleExport = () => {
   const payload = {
     version: gameData?.Version ?? 'unknown',

@@ -6,7 +6,7 @@ const HighsContext = createContext(null);
 export function HighsProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
-  // ✅ 用 ref 保证始终是最新实例（关键）
+  // 用 ref 保证始终是最新实例
   const highsRef = useRef(null);
 
   // 防止重复初始化
@@ -29,7 +29,7 @@ export function HighsProvider({ children }) {
 
       console.log("[HiGHS] solver ready");
 
-      // ✅ 关键：直接写入 ref（同步）
+      // 直接写入 ref（同步）
       highsRef.current = module;
 
       return module;
@@ -51,7 +51,7 @@ export function HighsProvider({ children }) {
   }, []);
 
   /* =========================
-   * 获取当前 solver（保证存在）
+   * 获取当前 solver
    * ========================= */
   const getHighs = async () => {
     if (highsRef.current) return highsRef.current;
@@ -59,7 +59,7 @@ export function HighsProvider({ children }) {
   };
 
   /* =========================
-   * 安全求解（核心）
+   * 安全求解，崩溃时间自动重建
    * ========================= */
   const lpSolve = async (lp) => {
     let solver = await getHighs();
@@ -69,16 +69,13 @@ export function HighsProvider({ children }) {
     } catch (err) {
       console.warn("[HiGHS] solve crashed, reloading...", err);
 
-      // ❗ 清掉旧实例（非常关键）
+      // 清掉旧实例
       highsRef.current = null;
-
-      // 🔥 强制重建
+      // 强制重建
       solver = await loadHighs();
-
       if (!solver) {
         throw new Error("HiGHS reload failed");
       }
-
       try {
         return solver.solve(lp);
       } catch (err2) {

@@ -13,7 +13,7 @@ export const useGameData = () => {
 
 // ── 合同数据处理 ──────────────────────────────────────────────────────────────
 
-// 单条合同最优化计算
+// 最优港口模块分布
 // contract 原始字段：出口、出口量、进口、进口量、凝聚力/进口、凝聚力/月
 // maxModule：港口总模块数，capacity：单模块容量
 // rUnity：凝聚力系数，rProfit：利润率系数
@@ -22,22 +22,28 @@ function optimizeContract(contract, maxModule, capacity, rUnity, rProfit) {
   const exportQty  = contract['出口量']
   const importItem = contract['进口']
   const importQty  = contract['进口量']
-  let   unityPerInput = contract['凝聚力/进口']
+  let   unityPerImport = contract['凝聚力/进口']
   let   unityPerMouth = contract['凝聚力/月']
 
-  // 增益修正
-  unityPerInput *= rUnity
+  // 凝聚力消耗增益修正
+  unityPerImport *= rUnity
   unityPerMouth *= rUnity
-
+  // 进出口比例增益修正
   let Kio = importQty / exportQty
   Kio *= rProfit
 
   // 搜索最优模块分配
+  // x：出口模块数，
+  // 出口带来的进口 = x * capacity * Kio
+  // 进口模块容量   = (maxModule - x) * capacity
+  // 理论最优 x = maxModule / (1 + Kio)
   let best = null
   const xTheory = Math.floor(maxModule / (1 + Kio))
+  // 搜索边界设置
   const start   = Math.max(0, xTheory - 10)
   const end     = Math.min(maxModule, xTheory + 10)
 
+  // 在理论最优附近暴力搜索最佳的进出口模块数
   for (let x = start; x <= end; x++) {
     const y = maxModule - x
 
@@ -53,13 +59,13 @@ function optimizeContract(contract, maxModule, capacity, rUnity, rProfit) {
         import_modules: y,
         export_qty:     exportUsed,
         import_qty:     importReal,
-        unity_per_input: unityPerInput,
+        unity_per_import: unityPerImport,
         unity_per_mouth: unityPerMouth,
       }
     }
   }
 
-  const unityPerShip = best.import_qty * best.unity_per_input
+  const unityPerShip = best.import_qty * best.unity_per_import
 
   return {
     '出口': { '物品': exportItem, '数量': Math.floor(best.export_qty), '模块数': best.export_modules },
@@ -80,11 +86,12 @@ function processAll(data, cargoDepot, rUnity, rProfit) {
 
   const result = {};
 
-  for (const importType in data["合同"]) {
-      result[importType] = [];
-      const contracts = data["合同"][importType];
+  for (const importItem in data["合同"]) {
+      result[importItem] = [];
+      const contracts = data["合同"][importItem];
 
       for (const c of contracts) {
+          // 计算最优港口模块分布
           const optimized = optimizeContract(
               c,
               maxModule,
@@ -92,7 +99,7 @@ function processAll(data, cargoDepot, rUnity, rProfit) {
               rUnity,
               rProfit
           );
-          result[importType].push(optimized);
+          result[importItem].push(optimized);
       }
   }
   return result

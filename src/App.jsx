@@ -1,4 +1,4 @@
-// App.jsx
+// 主体文件
 import { useState, useEffect, useRef } from 'react';
 
 import { Calculator } from 'lucide-react';

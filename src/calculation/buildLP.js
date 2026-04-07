@@ -87,7 +87,7 @@ export function buildLP(recipes) {
   });
 
   itemStats.forEach((stat, item) => {
-    if (["占地","水污染","空气污染","模块等级","进口模块","出口模块","目标肥力","农场数"].includes(item)) return;
+    if (["占地","水污染","空气污染","模块等级","进口模块","出口模块"].includes(item) || item.includes('!')) return;
     // if (!(stat.hasProduct && stat.hasConsumption)) return;
     let terms = [];
 

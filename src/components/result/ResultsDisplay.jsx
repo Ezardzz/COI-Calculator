@@ -7,6 +7,8 @@ function ResultsDisplay({ Results }) {
   if (!Results) return (<></>)
   // 类别显示状态
   const categories = Object.keys(Results);
+  console.log(categories);
+  
   const [activeCategory, setActiveCategory] = useState(categories[0]);
   // 跳转配方高光显示
   const [highlightedRecipe, setHighlightedRecipe] = useState(null);

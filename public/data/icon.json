@@ -6,7 +6,7 @@
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "交易平台": {
     "x": 128,
@@ -15,4164 +15,4209 @@
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "低压涡轮 I": {
+  "伐木场": {
     "x": 256,
     "y": 0,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "低压涡轮 II": {
+  "低压涡轮 I": {
     "x": 384,
     "y": 0,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "住房 I": {
+  "低压涡轮 II": {
     "x": 512,
     "y": 0,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "住房 II": {
+  "住房 I": {
     "x": 640,
     "y": 0,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "住房 III": {
+  "住房 II": {
     "x": 768,
     "y": 0,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "住房 IV": {
+  "住房 III": {
     "x": 896,
     "y": 0,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "供水设施": {
+  "住房 IV": {
     "x": 1024,
     "y": 0,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
+  },
+  "供水设施": {
+    "x": 1152,
+    "y": 0,
+    "width": 128,
+    "height": 128,
+    "padding": 0,
+    "total_width": 1792,
+    "total_height": 2625
   },
   "倾倒": {
-    "x": 1536,
-    "y": 2139,
+    "x": 1664,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "养鸡场": {
-    "x": 1280,
+    "x": 1408,
     "y": 0,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
+  },
+  "农业系统": {
+    "x": 1536,
+    "y": 0,
+    "width": 128,
+    "height": 128,
+    "padding": 0,
+    "total_width": 1792,
+    "total_height": 2625
   },
   "农场": {
-    "x": 1408,
+    "x": 1664,
     "y": 0,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "冷却塔": {
-    "x": 1536,
-    "y": 0,
+    "x": 0,
+    "y": 128,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "冷却塔（大）": {
-    "x": 1664,
-    "y": 0,
+    "x": 128,
+    "y": 128,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "列车车库": {
-    "x": 0,
+    "x": 256,
     "y": 128,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "列车车库扩展": {
-    "x": 128,
+    "x": 384,
     "y": 128,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "初级蒸馏塔": {
-    "x": 256,
+    "x": 512,
     "y": 128,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "办公室 I": {
-    "x": 384,
+    "x": 640,
     "y": 128,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "办公室 II": {
-    "x": 512,
+    "x": 768,
     "y": 128,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "办公室 III": {
-    "x": 640,
+    "x": 896,
     "y": 128,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "加油站 I": {
-    "x": 768,
+    "x": 1024,
     "y": 128,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "加油站 II": {
-    "x": 896,
+    "x": 1152,
     "y": 128,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "加油站 III": {
-    "x": 1024,
+    "x": 1280,
     "y": 128,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "化工厂 I": {
-    "x": 1152,
+    "x": 1408,
     "y": 128,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "化工厂 II": {
-    "x": 1280,
+    "x": 1536,
     "y": 128,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "单元模块（中）": {
-    "x": 1408,
+    "x": 1664,
     "y": 128,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "单元模块（大）": {
-    "x": 1536,
-    "y": 128,
+    "x": 0,
+    "y": 256,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "单元模块（小）": {
-    "x": 1664,
-    "y": 128,
+    "x": 128,
+    "y": 256,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "压实机": {
-    "x": 0,
+    "x": 256,
     "y": 256,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "厌氧消化池": {
-    "x": 128,
+    "x": 384,
     "y": 256,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "发电机": {
-    "x": 256,
+    "x": 512,
     "y": 256,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "发电机（大）": {
-    "x": 384,
+    "x": 640,
     "y": 256,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "发酵罐": {
-    "x": 512,
+    "x": 768,
     "y": 256,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "变压器": {
-    "x": 640,
+    "x": 896,
     "y": 256,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "可回收物收集站": {
-    "x": 768,
+    "x": 1024,
     "y": 256,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "合金混合器": {
-    "x": 896,
+    "x": 1152,
     "y": 256,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "回转窑": {
-    "x": 1024,
+    "x": 1280,
     "y": 256,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "回转窑（燃气）": {
-    "x": 1152,
+    "x": 1408,
     "y": 256,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "地下水泵": {
-    "x": 1280,
+    "x": 1536,
     "y": 256,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "垃圾分类工厂": {
-    "x": 1408,
+    "x": 1664,
     "y": 256,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "垃圾收集站": {
-    "x": 1536,
-    "y": 256,
+    "x": 0,
+    "y": 384,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "垃圾焚烧厂": {
-    "x": 1664,
-    "y": 256,
+    "x": 128,
+    "y": 384,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "堆垛塔": {
-    "x": 0,
+    "x": 256,
     "y": 384,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "堆垛机": {
-    "x": 128,
+    "x": 384,
     "y": 384,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "大型机": {
-    "x": 256,
+    "x": 512,
     "y": 384,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "大型矿石分拣设施": {
-    "x": 384,
+    "x": 640,
     "y": 384,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "太阳能板": {
-    "x": 512,
+    "x": 768,
     "y": 384,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "太阳能电池板（单晶）": {
-    "x": 640,
+    "x": 896,
     "y": 384,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "奢侈品模块": {
-    "x": 768,
+    "x": 1024,
     "y": 384,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "家居用品模块": {
-    "x": 896,
+    "x": 1152,
     "y": 384,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "家电模块": {
-    "x": 1024,
+    "x": 1280,
     "y": 384,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "尾气洗涤器": {
-    "x": 1152,
+    "x": 1408,
     "y": 384,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "废水处理": {
-    "x": 1280,
+    "x": 1536,
     "y": 384,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
+  },
+  "开采": {
+    "x": 1664,
+    "y": 384,
+    "width": 128,
+    "height": 128,
+    "padding": 0,
+    "total_width": 1792,
+    "total_height": 2625
   },
   "微芯片机 I": {
-    "x": 1408,
-    "y": 384,
+    "x": 0,
+    "y": 512,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "微芯片机 II": {
-    "x": 1536,
-    "y": 384,
+    "x": 128,
+    "y": 512,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "快中子增殖反应堆": {
-    "x": 1664,
-    "y": 384,
+    "x": 256,
+    "y": 512,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "搅拌机 I": {
-    "x": 0,
+    "x": 384,
     "y": 512,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "搅拌机 II": {
-    "x": 128,
+    "x": 512,
     "y": 512,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "散装货模块（中）": {
-    "x": 256,
+    "x": 640,
     "y": 512,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "散装货模块（大）": {
-    "x": 384,
+    "x": 768,
     "y": 512,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "散装货模块（小）": {
-    "x": 512,
+    "x": 896,
     "y": 512,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "数据中心": {
-    "x": 640,
+    "x": 1024,
     "y": 512,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "木炭炉": {
-    "x": 768,
+    "x": 1152,
     "y": 512,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "柴油发电机 I": {
-    "x": 896,
+    "x": 1280,
     "y": 512,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "柴油发电机 II": {
-    "x": 1024,
+    "x": 1408,
     "y": 512,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "核反应堆 I": {
-    "x": 1152,
+    "x": 1536,
     "y": 512,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "核反应堆 II": {
-    "x": 1280,
+    "x": 1664,
     "y": 512,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "核后处理厂": {
-    "x": 1408,
-    "y": 512,
+    "x": 0,
+    "y": 640,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "核废料存储": {
-    "x": 1536,
-    "y": 512,
+    "x": 128,
+    "y": 640,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "橡胶制造机": {
-    "x": 1664,
-    "y": 512,
+    "x": 256,
+    "y": 640,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "气体喷射泵": {
-    "x": 0,
+    "x": 384,
     "y": 640,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氢燃料站": {
-    "x": 128,
+    "x": 512,
     "y": 640,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氢重整器": {
-    "x": 256,
+    "x": 640,
     "y": 640,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氧气转炉 I": {
-    "x": 384,
+    "x": 768,
     "y": 640,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氧气转炉 II": {
-    "x": 512,
+    "x": 896,
     "y": 640,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "水冷装置": {
-    "x": 640,
+    "x": 1024,
     "y": 640,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "水冷铸造机 I": {
-    "x": 768,
+    "x": 1152,
     "y": 640,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "水冷铸造机 II": {
-    "x": 896,
+    "x": 1280,
     "y": 640,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "沉淀池": {
-    "x": 1024,
+    "x": 1408,
     "y": 640,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "油泵": {
-    "x": 1152,
+    "x": 1536,
     "y": 640,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "流体模块（中）": {
-    "x": 1280,
+    "x": 1664,
     "y": 640,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "流体模块（大）": {
-    "x": 1408,
-    "y": 640,
+    "x": 0,
+    "y": 768,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "流体模块（小）": {
-    "x": 1536,
-    "y": 640,
+    "x": 128,
+    "y": 768,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "海水泵": {
-    "x": 1664,
-    "y": 640,
+    "x": 256,
+    "y": 768,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "海水泵（高）": {
-    "x": 0,
+    "x": 384,
     "y": 768,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "消费电子模块": {
-    "x": 128,
+    "x": 512,
     "y": 768,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "液体倾倒": {
-    "x": 256,
+    "x": 640,
     "y": 768,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "混凝土搅拌机 I": {
-    "x": 384,
+    "x": 768,
     "y": 768,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "混凝土搅拌机 II": {
-    "x": 512,
+    "x": 896,
     "y": 768,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "混凝土搅拌机 III": {
-    "x": 640,
+    "x": 1024,
     "y": 768,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "温室 I": {
-    "x": 768,
+    "x": 1152,
     "y": 768,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "温室 II": {
-    "x": 896,
+    "x": 1280,
     "y": 768,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "灌溉农场": {
-    "x": 1024,
+    "x": 1408,
     "y": 768,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "火炬": {
-    "x": 1152,
+    "x": 1536,
     "y": 768,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "火箭发射台": {
-    "x": 1280,
+    "x": 1664,
     "y": 768,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "火箭组装站": {
-    "x": 1408,
-    "y": 768,
+    "x": 0,
+    "y": 896,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "灯塔": {
-    "x": 1536,
-    "y": 768,
+    "x": 128,
+    "y": 896,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "烘焙单元": {
-    "x": 1664,
-    "y": 768,
+    "x": 256,
+    "y": 896,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "烟囱": {
-    "x": 0,
+    "x": 384,
     "y": 896,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "烟囱（大）": {
-    "x": 128,
+    "x": 512,
     "y": 896,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "热脱盐器": {
-    "x": 256,
+    "x": 640,
     "y": 896,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "焚化炉（固体）": {
-    "x": 384,
+    "x": 768,
     "y": 896,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "熔体平衡器": {
-    "x": 512,
+    "x": 896,
     "y": 896,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "熔融连接器": {
-    "x": 640,
+    "x": 1024,
     "y": 896,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "玻璃制造机 I": {
-    "x": 768,
+    "x": 1152,
     "y": 896,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "玻璃制造机 II": {
-    "x": 896,
+    "x": 1280,
     "y": 896,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "生物质收集站": {
-    "x": 1024,
+    "x": 1408,
     "y": 896,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "电弧炉 I": {
-    "x": 1152,
+    "x": 1536,
     "y": 896,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "电弧炉 II": {
-    "x": 1280,
+    "x": 1664,
     "y": 896,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "电解槽 I": {
-    "x": 1408,
-    "y": 896,
+    "x": 0,
+    "y": 1024,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "电解槽 II": {
-    "x": 1536,
-    "y": 896,
+    "x": 128,
+    "y": 1024,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "矿石分拣设施": {
-    "x": 1664,
-    "y": 896,
+    "x": 256,
+    "y": 1024,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "码头": {
-    "x": 0,
+    "x": 384,
     "y": 1024,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "研究实验室 I": {
-    "x": 128,
+    "x": 512,
     "y": 1024,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "研究实验室 II": {
-    "x": 256,
+    "x": 640,
     "y": 1024,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "研究实验室 III": {
-    "x": 384,
+    "x": 768,
     "y": 1024,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "研究实验室 IV": {
-    "x": 512,
+    "x": 896,
     "y": 1024,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "研究实验室": {
-    "x": 640,
+    "x": 1024,
     "y": 1024,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "研究实验室（基础）": {
-    "x": 768,
+    "x": 1152,
     "y": 1024,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "砖厂": {
-    "x": 896,
+    "x": 1280,
     "y": 1024,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "破碎机": {
-    "x": 1024,
+    "x": 1408,
     "y": 1024,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "硅反应器": {
-    "x": 1152,
+    "x": 1536,
     "y": 1024,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "磨": {
-    "x": 1280,
+    "x": 1664,
     "y": 1024,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "空气分离装置": {
-    "x": 1408,
-    "y": 1024,
+    "x": 0,
+    "y": 1152,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "空间站": {
-    "x": 1536,
-    "y": 1024,
+    "x": 128,
+    "y": 1152,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "粉碎机": {
-    "x": 1664,
-    "y": 1024,
+    "x": 256,
+    "y": 1152,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "粉碎机（大型）": {
-    "x": 0,
+    "x": 384,
     "y": 1152,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "结晶器": {
-    "x": 128,
+    "x": 512,
     "y": 1152,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "维修站 I": {
-    "x": 256,
+    "x": 640,
     "y": 1152,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "维修站 II": {
-    "x": 384,
+    "x": 768,
     "y": 1152,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "维修站 III": {
-    "x": 512,
+    "x": 896,
     "y": 1152,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "维修站（基础）": {
-    "x": 640,
+    "x": 1024,
     "y": 1152,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "维护雕像": {
-    "x": 768,
+    "x": 1152,
     "y": 1152,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "维护雕像（金）": {
-    "x": 896,
+    "x": 1280,
     "y": 1152,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "聚合装置": {
-    "x": 1024,
+    "x": 1408,
     "y": 1152,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "船长之墓": {
-    "x": 1152,
+    "x": 1536,
     "y": 1152,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "船长办公室 I": {
-    "x": 1280,
+    "x": 1664,
     "y": 1152,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "船长办公室 II": {
-    "x": 1408,
-    "y": 1152,
+    "x": 0,
+    "y": 1280,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蒸发池": {
-    "x": 1536,
-    "y": 1152,
+    "x": 128,
+    "y": 1280,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蒸发池（加热）": {
-    "x": 1664,
-    "y": 1152,
+    "x": 256,
+    "y": 1280,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蒸馏（阶段III）": {
-    "x": 0,
+    "x": 384,
     "y": 1280,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蒸馏（阶段II）": {
-    "x": 128,
+    "x": 512,
     "y": 1280,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蒸馏（阶段I）": {
-    "x": 256,
+    "x": 640,
     "y": 1280,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蓄热器": {
-    "x": 384,
+    "x": 768,
     "y": 1280,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "裂解装置": {
-    "x": 512,
+    "x": 896,
     "y": 1280,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "装配机 I": {
-    "x": 640,
+    "x": 1024,
     "y": 1280,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "装配机 II": {
-    "x": 768,
+    "x": 1152,
     "y": 1280,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "装配机 III": {
-    "x": 896,
+    "x": 1280,
     "y": 1280,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "装配机 IV": {
-    "x": 1024,
+    "x": 1408,
     "y": 1280,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "装配机 V": {
-    "x": 1152,
+    "x": 1536,
     "y": 1280,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "诊所": {
-    "x": 1280,
+    "x": 1664,
     "y": 1280,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "货运港（2）": {
-    "x": 1408,
-    "y": 1280,
+    "x": 0,
+    "y": 1408,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "货运港（4）": {
-    "x": 1536,
-    "y": 1280,
+    "x": 128,
+    "y": 1408,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "货运港（6）": {
-    "x": 1664,
-    "y": 1280,
-    "width": 128,
-    "height": 128,
-    "padding": 0,
-    "total_width": 1792,
-    "total_height": 2497
-  },
-  "货运港（8）": {
-    "x": 0,
-    "y": 1408,
-    "width": 128,
-    "height": 128,
-    "padding": 0,
-    "total_width": 1792,
-    "total_height": 2497
-  },
-  "超高压涡轮": {
-    "x": 128,
-    "y": 1408,
-    "width": 128,
-    "height": 128,
-    "padding": 0,
-    "total_width": 1792,
-    "total_height": 2497
-  },
-  "车库 I": {
     "x": 256,
     "y": 1408,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "车库 II": {
+  "货运港（8）": {
     "x": 384,
     "y": 1408,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "车库 III": {
+  "超高压涡轮": {
     "x": 512,
     "y": 1408,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "酸水汽提器": {
+  "车库 I": {
     "x": 640,
     "y": 1408,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "金属铸造机 I": {
+  "车库 II": {
     "x": 768,
     "y": 1408,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "金属铸造机 II": {
+  "车库 III": {
     "x": 896,
     "y": 1408,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "金炉": {
+  "酸水汽提器": {
     "x": 1024,
     "y": 1408,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "钻石反应堆": {
+  "金属铸造机 I": {
     "x": 1152,
     "y": 1408,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "铀浓缩工厂": {
+  "金属铸造机 II": {
     "x": 1280,
     "y": 1408,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "铜电解槽": {
+  "金炉": {
     "x": 1408,
     "y": 1408,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "铝电解槽": {
+  "钻石反应堆": {
     "x": 1536,
     "y": 1408,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "锅炉": {
+  "铀浓缩工厂": {
     "x": 1664,
     "y": 1408,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "锅炉（气）": {
+  "铜电解槽": {
     "x": 0,
     "y": 1536,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "锅炉（电）": {
+  "铝电解槽": {
     "x": 128,
     "y": 1536,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "镜面抛光机": {
+  "锅炉": {
     "x": 256,
     "y": 1536,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "雨水收集器": {
+  "锅炉（气）": {
     "x": 384,
     "y": 1536,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "飞轮": {
+  "锅炉（电）": {
     "x": 512,
     "y": 1536,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "食品加工机": {
+  "镜面抛光机": {
     "x": 640,
     "y": 1536,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "食品市场 II": {
+  "雨水收集器": {
     "x": 768,
     "y": 1536,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "食品超市 I": {
+  "飞轮": {
     "x": 896,
     "y": 1536,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "高压涡轮 I": {
+  "食品加工机": {
     "x": 1024,
     "y": 1536,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "高压涡轮 II": {
+  "食品市场 II": {
     "x": 1152,
     "y": 1536,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "高炉 I": {
+  "食品超市 I": {
     "x": 1280,
     "y": 1536,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
-  "高炉 II": {
+  "高压涡轮 I": {
     "x": 1408,
     "y": 1536,
     "width": 128,
     "height": 128,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
+  },
+  "高压涡轮 II": {
+    "x": 1536,
+    "y": 1536,
+    "width": 128,
+    "height": 128,
+    "padding": 0,
+    "total_width": 1792,
+    "total_height": 2625
+  },
+  "高炉 I": {
+    "x": 1664,
+    "y": 1536,
+    "width": 128,
+    "height": 128,
+    "padding": 0,
+    "total_width": 1792,
+    "total_height": 2625
+  },
+  "高炉 II": {
+    "x": 0,
+    "y": 1664,
+    "width": 128,
+    "height": 128,
+    "padding": 0,
+    "total_width": 1792,
+    "total_height": 2625
   },
   "MOX棒": {
     "x": 0,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "不纯铜": {
     "x": 64,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "中油": {
     "x": 128,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "乏汽": {
     "x": 192,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "乏燃料": {
     "x": 256,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "乙醇": {
     "x": 320,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "二氧化碳": {
     "x": 384,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "再加工铀（1%）": {
     "x": 448,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "冷冻水": {
     "x": 512,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "办公用品": {
     "x": 576,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "动物饲料": {
     "x": 640,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "化学燃料": {
     "x": 704,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "医用器材": {
     "x": 768,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "医疗用品 I": {
     "x": 832,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "医疗用品 II": {
     "x": 896,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "医疗用品 III": {
     "x": 960,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "单晶硅太阳能电池": {
     "x": 1024,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "印刷电路板": {
     "x": 1088,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "压实的可回收物": {
     "x": 1152,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "压缩的垃圾": {
     "x": 1216,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "压缩铝废料": {
     "x": 1280,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "压金废料": {
     "x": 1344,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "压铁废料": {
     "x": 1408,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "压铜废料": {
     "x": 1472,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "原油": {
     "x": 1536,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "可回收物": {
     "x": 1600,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "可回收的核废料": {
     "x": 1664,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "吗啡": {
     "x": 1728,
-    "y": 1664,
+    "y": 1792,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "土": {
     "x": 0,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "土豆": {
     "x": 64,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "垃圾": {
     "x": 128,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "基础复合芯材": {
     "x": 192,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "堆肥": {
     "x": 256,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "塑料": {
     "x": 320,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "复合芯材": {
     "x": 384,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "复合面板": {
     "x": 448,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "大豆": {
     "x": 512,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "太空宇航员": {
     "x": 576,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "太空探测器零件": {
     "x": 640,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "太空研究点数": {
     "x": 704,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "太阳能电池": {
     "x": 768,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "奢侈品": {
     "x": 832,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "实验室设备 I": {
     "x": 896,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "实验室设备 II": {
     "x": 960,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "实验室设备 III": {
     "x": 1024,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "实验室设备 IV": {
     "x": 1088,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "家庭用品": {
     "x": 1152,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "家用设备": {
     "x": 1216,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "小行星助推器零件": {
     "x": 1280,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "小麦": {
     "x": 1344,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "居民可回收物": {
     "x": 1408,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "居民垃圾": {
     "x": 1472,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "居民生物质": {
     "x": 1536,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "岩石": {
     "x": 1600,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "废气": {
     "x": 1664,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "废水": {
     "x": 1728,
-    "y": 1728,
+    "y": 1856,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "微芯片": {
     "x": 0,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "抗生素": {
     "x": 64,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "有毒浆液": {
     "x": 128,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "服务器": {
     "x": 192,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "木屑": {
     "x": 256,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "木材": {
     "x": 320,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "机制砂": {
     "x": 384,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "机械动力": {
     "x": 448,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "机械零件": {
     "x": 512,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "柴油": {
     "x": 576,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "树苗": {
     "x": 640,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "核心燃料": {
     "x": 704,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "核心燃料（用过）": {
     "x": 768,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "橡胶": {
     "x": 832,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "毯式燃料": {
     "x": 896,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "毯式燃料（浓缩）": {
     "x": 960,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氟化氢": {
     "x": 1024,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氢": {
     "x": 1088,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氧": {
     "x": 1152,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氧化铝": {
     "x": 1216,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氨": {
     "x": 1280,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氮": {
     "x": 1344,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氯": {
     "x": 1408,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氯化钛": {
     "x": 1472,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氯化钛（纯）": {
     "x": 1536,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "水": {
     "x": 1600,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "水合氧化铝": {
     "x": 1664,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "水果": {
     "x": 1728,
-    "y": 1792,
+    "y": 1920,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "水污染": {
     "x": 0,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "水泥": {
     "x": 64,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "污泥": {
     "x": 128,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "沙": {
     "x": 192,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "油菜": {
     "x": 256,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "浓缩铀（20%）": {
     "x": 320,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "浓缩铀（4%）": {
     "x": 384,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "海水": {
     "x": 448,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "海绵钛": {
     "x": 512,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "消毒剂": {
     "x": 576,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "消费类电子产品": {
     "x": 640,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "混凝土楼板": {
     "x": 704,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "热": {
     "x": 768,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "煤": {
     "x": 832,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "熔融玻璃": {
     "x": 896,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "熔融硅": {
     "x": 960,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "熔融钛": {
     "x": 1024,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "熔融钛合金": {
     "x": 1088,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "熔融铜": {
     "x": 1152,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "熔融铝": {
     "x": 1216,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "燃气": {
     "x": 1280,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "玉米": {
     "x": 1344,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "玉米泥": {
     "x": 1408,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "玻璃": {
     "x": 1472,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "玻璃混合物": {
     "x": 1536,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "甘蔗": {
     "x": 1600,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "生物质": {
     "x": 1664,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "用过的MOX": {
     "x": 1728,
-    "y": 1856,
+    "y": 1984,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "电": {
-    "x": 512,
-    "y": 2203,
+    "x": 640,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "电子产品 I": {
     "x": 64,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "电子产品 II": {
     "x": 128,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "电子产品 III": {
     "x": 192,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "电子产品 IV": {
     "x": 256,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "盐": {
     "x": 320,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "盐水": {
     "x": 384,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "石墨": {
     "x": 448,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "石灰石": {
     "x": 512,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "石脑油": {
     "x": 576,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "石英": {
     "x": 640,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "石英碎": {
     "x": 704,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "矿渣": {
     "x": 768,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "研究点数": {
     "x": 832,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 75,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "硅片": {
     "x": 896,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "硅（聚）": {
     "x": 960,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "硫": {
     "x": 1024,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "碎玻璃": {
     "x": 1088,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "碎石": {
     "x": 1152,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "碎矿渣": {
     "x": 1216,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "碎肉": {
     "x": 1280,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "碎金矿石": {
     "x": 1344,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "碎钛矿石": {
     "x": 1408,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "碎铁矿石": {
     "x": 1472,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "碎铜矿石": {
     "x": 1536,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "空气污染": {
     "x": 1600,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "空间站部件": {
     "x": 1664,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "空间站部件（基础）": {
     "x": 1728,
-    "y": 1920,
+    "y": 2048,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "算力": {
-    "x": 576,
-    "y": 2203,
+    "x": 704,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "箭头": {
     "x": 64,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "糖": {
     "x": 128,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "紧凑型反应堆": {
     "x": 192,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "纸": {
     "x": 256,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "结构件 I": {
     "x": 320,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "结构件 II": {
     "x": 384,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "结构件 III": {
     "x": 448,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "结构件 IV": {
     "x": 512,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "维护 I": {
-    "x": 640,
-    "y": 2203,
+    "x": 768,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "维护 II": {
-    "x": 704,
-    "y": 2203,
+    "x": 832,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "维护 III": {
-    "x": 768,
-    "y": 2203,
+    "x": 896,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "罂粟": {
     "x": 768,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "肉": {
     "x": 832,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "肥料 I": {
     "x": 896,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "肥料 II": {
     "x": 960,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "肥料": {
     "x": 1024,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 80,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "肥料（有机）": {
     "x": 1088,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "船员补给品": {
     "x": 1152,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "花": {
     "x": 1216,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蒸汽（低压）": {
     "x": 1280,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蒸汽（超高压）": {
     "x": 1344,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蒸汽（高压）": {
     "x": 1408,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蓝宝石晶片": {
     "x": 1472,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蔬菜": {
     "x": 1536,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蛋糕": {
     "x": 1600,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "裂变产物": {
     "x": 1664,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "豆腐": {
     "x": 1728,
-    "y": 1995,
+    "y": 2123,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "贫铀": {
     "x": 0,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "赤泥": {
     "x": 64,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "车辆零件 I": {
     "x": 128,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "车辆零件 II": {
     "x": 192,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "车辆零件 III": {
     "x": 256,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "轻油": {
     "x": 320,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "过滤介质": {
     "x": 384,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "进口商品": {
     "x": 448,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "透镜": {
     "x": 512,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "酸": {
     "x": 576,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "酸水": {
     "x": 640,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "重油": {
     "x": 704,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "金": {
     "x": 768,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "金刚石": {
     "x": 832,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "金刚石研磨膏": {
     "x": 896,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "金废料": {
     "x": 960,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "金矿石": {
     "x": 1024,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "金矿粉": {
     "x": 1088,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "金精矿": {
     "x": 1152,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "钚": {
     "x": 1216,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "钛合金": {
     "x": 1280,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "钛渣": {
     "x": 1344,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "钛矿石": {
     "x": 1408,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "钢": {
     "x": 1472,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "钢水": {
     "x": 1536,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铀棒": {
     "x": 1600,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铀矿石": {
     "x": 1664,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铀矿粉": {
     "x": 1728,
-    "y": 2075,
+    "y": 2203,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铁": {
     "x": 0,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铁废料": {
     "x": 64,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铁水": {
     "x": 128,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铁矿石": {
     "x": 192,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铁轨零件": {
     "x": 256,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铜": {
     "x": 320,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铜废料": {
     "x": 384,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铜矿石": {
     "x": 448,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铝": {
     "x": 512,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铝土矿": {
     "x": 576,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铝土矿粉末": {
     "x": 640,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "铝废料": {
     "x": 704,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "零食": {
     "x": 768,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "面包": {
     "x": 832,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "面粉": {
     "x": 896,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "食品包": {
     "x": 960,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "食用油": {
     "x": 1024,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "香肠": {
     "x": 1088,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "鸡": {
     "x": 1152,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "鸡蛋": {
     "x": 1216,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "鸡骨架": {
     "x": 1280,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "麻醉剂": {
     "x": 1344,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "黄饼": {
     "x": 1408,
-    "y": 2139,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
+  },
+  "1级": {
+    "x": 1472,
+    "y": 2267,
+    "width": 64,
+    "height": 64,
+    "padding": 0,
+    "total_width": 1792,
+    "total_height": 2625
+  },
+  "2级": {
+    "x": 1536,
+    "y": 2267,
+    "width": 64,
+    "height": 64,
+    "padding": 0,
+    "total_width": 1792,
+    "total_height": 2625
   },
   "人口": {
-    "x": 1472,
-    "y": 2139,
+    "x": 1600,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "凝聚力": {
-    "x": 1600,
-    "y": 2139,
+    "x": 1728,
+    "y": 2267,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "凝聚力每月": {
-    "x": 1664,
-    "y": 2139,
+    "x": 0,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "凝聚力每船": {
-    "x": 1728,
-    "y": 2139,
+    "x": 64,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "出口模块": {
-    "x": 0,
-    "y": 2203,
+    "x": 128,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "占地": {
-    "x": 64,
-    "y": 2203,
+    "x": 192,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "太空物流": {
-    "x": 128,
-    "y": 2203,
+    "x": 256,
+    "y": 2331,
     "width": 64,
     "height": 102,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "宇航员": {
-    "x": 192,
-    "y": 2203,
+    "x": 320,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "宇航物品": {
-    "x": 256,
-    "y": 2203,
+    "x": 384,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "工人": {
-    "x": 320,
-    "y": 2203,
+    "x": 448,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "模块等级": {
-    "x": 384,
-    "y": 2203,
+    "x": 512,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "海外矿井": {
-    "x": 448,
-    "y": 2203,
+    "x": 576,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蓝图": {
-    "x": 832,
-    "y": 2203,
+    "x": 960,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "货轮": {
-    "x": 896,
-    "y": 2203,
+    "x": 1024,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "进口模块": {
-    "x": 960,
-    "y": 2203,
+    "x": 1088,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "需求": {
-    "x": 1024,
-    "y": 2203,
+    "x": 1152,
+    "y": 2331,
     "width": 75,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "专注点": {
-    "x": 1099,
-    "y": 2203,
+    "x": 1227,
+    "y": 2331,
     "width": 64,
     "height": 74,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "农作物产量增加": {
-    "x": 1163,
-    "y": 2203,
+    "x": 1291,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "凝聚力产出增加": {
-    "x": 1227,
-    "y": 2203,
+    "x": 1355,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "合同凝聚力减少": {
-    "x": 1291,
-    "y": 2203,
+    "x": 1419,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "合同利润率增加": {
-    "x": 1355,
-    "y": 2203,
+    "x": 1483,
+    "y": 2331,
     "width": 64,
     "height": 65,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "商品与服务消耗减少": {
-    "x": 1419,
-    "y": 2203,
+    "x": 1547,
+    "y": 2331,
     "width": 64,
     "height": 66,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "回收效率增加": {
-    "x": 1483,
-    "y": 2203,
+    "x": 1611,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "太阳能发电增加": {
-    "x": 1547,
-    "y": 2203,
+    "x": 1675,
+    "y": 2331,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "污染减少": {
-    "x": 1611,
-    "y": 2203,
+    "x": 0,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "燃料消耗减少": {
-    "x": 1675,
-    "y": 2203,
+    "x": 64,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "研究效率增加": {
-    "x": 0,
-    "y": 2305,
+    "x": 128,
+    "y": 2433,
     "width": 67,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "维护产出增加": {
-    "x": 67,
-    "y": 2305,
+    "x": 195,
+    "y": 2433,
     "width": 68,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "维护消耗减少": {
-    "x": 135,
-    "y": 2305,
+    "x": 263,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "节水": {
-    "x": 199,
-    "y": 2305,
+    "x": 327,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "食物消耗减少": {
-    "x": 263,
-    "y": 2305,
+    "x": 391,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "两栖卡车": {
-    "x": 327,
-    "y": 2305,
+    "x": 455,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "两栖卡车【氢】": {
-    "x": 391,
-    "y": 2305,
+    "x": 519,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "伐木机": {
-    "x": 455,
-    "y": 2305,
+    "x": 583,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "卡车": {
-    "x": 519,
-    "y": 2305,
+    "x": 647,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "卡车【氢】": {
-    "x": 583,
-    "y": 2305,
+    "x": 711,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "大型伐木机": {
-    "x": 647,
-    "y": 2305,
+    "x": 775,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "大型伐木机【氢】": {
-    "x": 711,
-    "y": 2305,
+    "x": 839,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "小型挖掘机": {
-    "x": 775,
-    "y": 2305,
+    "x": 903,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "巨型卡车(散装)": {
-    "x": 839,
-    "y": 2305,
+    "x": 967,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "巨型卡车(散装)【氢】": {
-    "x": 903,
-    "y": 2305,
+    "x": 1031,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "巨型卡车(液体)": {
-    "x": 967,
-    "y": 2305,
+    "x": 1095,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "巨型卡车(液体)【氢】": {
-    "x": 1031,
-    "y": 2305,
+    "x": 1159,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "挖掘机": {
-    "x": 1095,
-    "y": 2305,
+    "x": 1223,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "挖掘机【氢】": {
-    "x": 1159,
-    "y": 2305,
+    "x": 1287,
+    "y": 2433,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "无火蒸汽机车": {
-    "x": 1223,
-    "y": 2305,
+    "x": 1351,
+    "y": 2433,
     "width": 112,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "柴油机车 II": {
-    "x": 1335,
-    "y": 2305,
+    "x": 1463,
+    "y": 2433,
     "width": 224,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "柴油机车": {
-    "x": 1559,
-    "y": 2305,
+    "x": 0,
+    "y": 2497,
     "width": 112,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "核动力机车": {
-    "x": 0,
-    "y": 2369,
+    "x": 112,
+    "y": 2497,
     "width": 179,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "植树机": {
-    "x": 179,
-    "y": 2369,
+    "x": 291,
+    "y": 2497,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "植树机【氢】": {
-    "x": 243,
-    "y": 2369,
+    "x": 355,
+    "y": 2497,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氢能机车 II": {
-    "x": 307,
-    "y": 2369,
+    "x": 419,
+    "y": 2497,
     "width": 224,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "氢能机车": {
-    "x": 531,
-    "y": 2369,
+    "x": 643,
+    "y": 2497,
     "width": 112,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "水陆两用挖掘机": {
-    "x": 643,
-    "y": 2369,
+    "x": 755,
+    "y": 2497,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "水陆两用挖掘机【氢】": {
-    "x": 707,
-    "y": 2369,
+    "x": 819,
+    "y": 2497,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "火箭 I": {
-    "x": 771,
-    "y": 2369,
+    "x": 883,
+    "y": 2497,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "火箭 II": {
-    "x": 835,
-    "y": 2369,
+    "x": 947,
+    "y": 2497,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "燃气涡轮机车": {
-    "x": 899,
-    "y": 2369,
+    "x": 1011,
+    "y": 2497,
     "width": 226,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "电力机车 II": {
-    "x": 1125,
-    "y": 2369,
+    "x": 1237,
+    "y": 2497,
     "width": 224,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "电力机车": {
-    "x": 1349,
-    "y": 2369,
+    "x": 1461,
+    "y": 2497,
     "width": 112,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "皮卡": {
-    "x": 1461,
-    "y": 2369,
+    "x": 1573,
+    "y": 2497,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蒸汽机车 II": {
-    "x": 1525,
-    "y": 2369,
+    "x": 0,
+    "y": 2561,
     "width": 224,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "蒸汽机车": {
-    "x": 0,
-    "y": 2433,
+    "x": 224,
+    "y": 2561,
     "width": 135,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "超大型挖掘机": {
-    "x": 135,
-    "y": 2433,
+    "x": 359,
+    "y": 2561,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   },
   "超大型挖掘机【氢】": {
-    "x": 199,
-    "y": 2433,
+    "x": 423,
+    "y": 2561,
     "width": 64,
     "height": 64,
     "padding": 0,
     "total_width": 1792,
-    "total_height": 2497
+    "total_height": 2625
   }
 }

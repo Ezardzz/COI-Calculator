@@ -21,7 +21,7 @@
           "水": 6
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 2,
@@ -43,7 +43,7 @@
           "混凝土楼板": 6
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 3,
@@ -64,7 +64,7 @@
           "电子产品 I": 3
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 4,
@@ -84,7 +84,7 @@
           "铁": 7.5
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 5,
@@ -105,7 +105,7 @@
           "电子产品 I": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 6,
@@ -126,7 +126,7 @@
           "铜": 6
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 7,
@@ -149,7 +149,7 @@
           "混凝土楼板": 12
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 8,
@@ -171,7 +171,7 @@
           "电子产品 I": 6
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 9,
@@ -193,7 +193,7 @@
           "钢": 3
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 10,
@@ -214,7 +214,7 @@
           "铁": 15
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 11,
@@ -236,7 +236,7 @@
           "电子产品 I": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 12,
@@ -258,7 +258,7 @@
           "电子产品 I": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 13,
@@ -281,7 +281,7 @@
           "木材": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 14,
@@ -303,7 +303,7 @@
           "铜": 12
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 15,
@@ -326,7 +326,7 @@
           "混凝土楼板": 24
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 16,
@@ -349,7 +349,7 @@
           "混凝土楼板": 18
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 17,
@@ -371,7 +371,7 @@
           "电子产品 I": 12
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 18,
@@ -393,7 +393,7 @@
           "钢": 6
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 19,
@@ -415,7 +415,7 @@
           "电子产品 II": 3
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 20,
@@ -436,7 +436,7 @@
           "铁": 30
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 21,
@@ -457,7 +457,7 @@
           "钢": 12
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 22,
@@ -479,7 +479,7 @@
           "电子产品 I": 8
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 23,
@@ -502,7 +502,7 @@
           "玻璃": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 24,
@@ -524,7 +524,7 @@
           "电子产品 II": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 25,
@@ -546,7 +546,7 @@
           "电子产品 I": 8
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 26,
@@ -569,7 +569,7 @@
           "玻璃": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 27,
@@ -591,7 +591,7 @@
           "电子产品 II": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 28,
@@ -613,7 +613,7 @@
           "钢": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 29,
@@ -636,7 +636,7 @@
           "木材": 8
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 30,
@@ -659,7 +659,7 @@
           "钢": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 31,
@@ -681,7 +681,7 @@
           "进口商品": 6
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 32,
@@ -704,7 +704,7 @@
           "铜": 3
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 33,
@@ -726,7 +726,7 @@
           "铜": 24
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 34,
@@ -749,7 +749,7 @@
           "硅（聚）": 3
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 35,
@@ -772,7 +772,7 @@
           "玻璃": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 36,
@@ -795,7 +795,7 @@
           "电子产品 II": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 37,
@@ -818,7 +818,7 @@
           "塑料": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 38,
@@ -841,7 +841,7 @@
           "电子产品 II": 1
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 39,
@@ -864,7 +864,7 @@
           "化学燃料": 1
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 40,
@@ -888,7 +888,7 @@
           "混凝土楼板": 48
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 41,
@@ -912,7 +912,7 @@
           "混凝土楼板": 36
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 42,
@@ -935,7 +935,7 @@
           "电子产品 I": 24
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 43,
@@ -958,7 +958,7 @@
           "钢": 12
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 44,
@@ -981,7 +981,7 @@
           "电子产品 II": 6
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 45,
@@ -1003,7 +1003,7 @@
           "铁": 60
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 46,
@@ -1025,7 +1025,7 @@
           "钢": 24
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 47,
@@ -1048,7 +1048,7 @@
           "电子产品 I": 16
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 48,
@@ -1072,7 +1072,7 @@
           "玻璃": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 49,
@@ -1095,7 +1095,7 @@
           "电子产品 II": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 50,
@@ -1118,7 +1118,7 @@
           "电子产品 I": 16
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 51,
@@ -1142,7 +1142,7 @@
           "玻璃": 8
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 52,
@@ -1165,7 +1165,7 @@
           "电子产品 II": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 53,
@@ -1188,7 +1188,7 @@
           "电子产品 III": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 54,
@@ -1211,7 +1211,7 @@
           "钢": 8
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 55,
@@ -1235,7 +1235,7 @@
           "木材": 16
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 56,
@@ -1259,7 +1259,7 @@
           "钢": 8
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 57,
@@ -1282,7 +1282,7 @@
           "进口商品": 12
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 58,
@@ -1306,7 +1306,7 @@
           "铜": 6
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 59,
@@ -1329,7 +1329,7 @@
           "铜": 48
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 60,
@@ -1353,7 +1353,7 @@
           "硅（聚）": 6
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 61,
@@ -1377,7 +1377,7 @@
           "玻璃": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 62,
@@ -1400,7 +1400,7 @@
           "电子产品 II": 6
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 63,
@@ -1423,7 +1423,7 @@
           "电子产品 III": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 64,
@@ -1447,7 +1447,7 @@
           "电子产品 II": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 65,
@@ -1471,7 +1471,7 @@
           "塑料": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 66,
@@ -1495,7 +1495,7 @@
           "电子产品 II": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 67,
@@ -1519,7 +1519,7 @@
           "化学燃料": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 68,
@@ -1542,7 +1542,7 @@
           "混凝土楼板": 96
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 69,
@@ -1565,7 +1565,7 @@
           "混凝土楼板": 72
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 70,
@@ -1587,7 +1587,7 @@
           "电子产品 I": 48
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 71,
@@ -1609,7 +1609,7 @@
           "钢": 24
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 72,
@@ -1631,7 +1631,7 @@
           "电子产品 II": 12
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 73,
@@ -1652,7 +1652,7 @@
           "铁": 120
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 74,
@@ -1673,7 +1673,7 @@
           "钢": 48
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 75,
@@ -1694,7 +1694,7 @@
           "车辆零件 I": 64
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 76,
@@ -1717,7 +1717,7 @@
           "玻璃": 8
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 77,
@@ -1739,7 +1739,7 @@
           "电子产品 II": 8
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 78,
@@ -1761,7 +1761,7 @@
           "电子产品 I": 32
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 79,
@@ -1784,7 +1784,7 @@
           "玻璃": 16
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 80,
@@ -1806,7 +1806,7 @@
           "电子产品 II": 8
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 81,
@@ -1828,7 +1828,7 @@
           "电子产品 III": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 82,
@@ -1850,7 +1850,7 @@
           "钢": 16
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 83,
@@ -1873,7 +1873,7 @@
           "木材": 32
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 84,
@@ -1896,7 +1896,7 @@
           "钢": 16
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 85,
@@ -1918,7 +1918,7 @@
           "进口商品": 24
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 86,
@@ -1941,7 +1941,7 @@
           "铜": 12
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 87,
@@ -1963,7 +1963,7 @@
           "铜": 96
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 88,
@@ -1986,7 +1986,7 @@
           "硅（聚）": 12
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 89,
@@ -2009,7 +2009,7 @@
           "玻璃": 6
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 90,
@@ -2032,7 +2032,7 @@
           "玻璃": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 91,
@@ -2054,7 +2054,7 @@
           "电子产品 II": 12
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 92,
@@ -2077,7 +2077,7 @@
           "金刚石": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 93,
@@ -2099,7 +2099,7 @@
           "电子产品 III": 8
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 94,
@@ -2122,7 +2122,7 @@
           "铝": 3
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 95,
@@ -2145,7 +2145,7 @@
           "电子产品 II": 8
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 96,
@@ -2168,7 +2168,7 @@
           "塑料": 8
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 97,
@@ -2191,7 +2191,7 @@
           "电子产品 II": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 98,
@@ -2214,7 +2214,7 @@
           "电子产品 III": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 99,
@@ -2237,7 +2237,7 @@
           "化学燃料": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 100,
@@ -2260,7 +2260,7 @@
           "化学燃料": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 101,
@@ -2283,7 +2283,7 @@
           "钚": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 102,
@@ -2306,7 +2306,7 @@
           "浓缩铀（20%）": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 103,
@@ -2329,33 +2329,144 @@
           "金刚石": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 104,
       "Factory": {
-        "name": "钻石反应堆",
+        "name": "破碎机",
         "consumption": {
-          "占地": 49,
-          "工人": 8.0,
-          "维护 III": 8.0,
-          "电": 2000.0,
-          "算力": 2.0
+          "占地": 15,
+          "工人": 1.0,
+          "维护 I": 1.0,
+          "电": 100.0
         }
       },
       "Items": {
         "product": {
-          "金刚石": 2
+          "木屑": 24
         },
         "material": {
-          "石墨": 2,
-          "盐": 2
+          "木材": 24
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
       "ID": 105,
+      "Factory": {
+        "name": "化工厂 I",
+        "consumption": {
+          "占地": 49,
+          "工人": 8.0,
+          "维护 I": 4.0,
+          "电": 250.0
+        }
+      },
+      "Items": {
+        "product": {
+          "纸": 12
+        },
+        "material": {
+          "木屑": 6,
+          "石灰石": 1.5,
+          "蒸汽（高压）": 1.5
+        }
+      },
+      "Category": "制造"
+    },
+    {
+      "ID": 106,
+      "Factory": {
+        "name": "化工厂 II",
+        "consumption": {
+          "占地": 49,
+          "工人": 14.0,
+          "维护 II": 4.0,
+          "电": 400.0
+        }
+      },
+      "Items": {
+        "product": {
+          "纸": 24
+        },
+        "material": {
+          "木屑": 12,
+          "石灰石": 3,
+          "蒸汽（高压）": 3
+        }
+      },
+      "Category": "制造"
+    },
+    {
+      "ID": 107,
+      "Factory": {
+        "name": "化工厂 II",
+        "consumption": {
+          "占地": 49,
+          "工人": 14.0,
+          "维护 II": 4.0,
+          "电": 400.0
+        }
+      },
+      "Items": {
+        "product": {
+          "金刚石研磨膏": 16
+        },
+        "material": {
+          "金刚石": 4,
+          "食用油": 4
+        }
+      },
+      "Category": "制造"
+    },
+    {
+      "ID": 108,
+      "Factory": {
+        "name": "化工厂 II",
+        "consumption": {
+          "占地": 49,
+          "工人": 14.0,
+          "维护 II": 4.0,
+          "电": 400.0
+        }
+      },
+      "Items": {
+        "product": {
+          "金刚石研磨膏": 16
+        },
+        "material": {
+          "金刚石": 4,
+          "重油": 2
+        }
+      },
+      "Category": "制造"
+    },
+    {
+      "ID": 109,
+      "Factory": {
+        "name": "化工厂 II",
+        "consumption": {
+          "占地": 49,
+          "工人": 14.0,
+          "维护 II": 4.0,
+          "电": 400.0
+        }
+      },
+      "Items": {
+        "product": {
+          "化学燃料": 8
+        },
+        "material": {
+          "氨": 12,
+          "燃气": 12,
+          "铝": 8
+        }
+      },
+      "Category": "制造"
+    },
+    {
+      "ID": 110,
       "Factory": {
         "name": "镜面抛光机",
         "consumption": {
@@ -2376,10 +2487,10 @@
           "乙醇": 2
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
-      "ID": 106,
+      "ID": 111,
       "Factory": {
         "name": "结晶器",
         "consumption": {
@@ -2399,10 +2510,10 @@
           "水": 4
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
-      "ID": 107,
+      "ID": 112,
       "Factory": {
         "name": "结晶器",
         "consumption": {
@@ -2421,10 +2532,10 @@
           "氧化铝": 8
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
-      "ID": 108,
+      "ID": 113,
       "Factory": {
         "name": "微芯片机 I",
         "consumption": {
@@ -2448,10 +2559,10 @@
           "塑料": 8
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
-      "ID": 109,
+      "ID": 114,
       "Factory": {
         "name": "微芯片机 II",
         "consumption": {
@@ -2475,10 +2586,10 @@
           "塑料": 24
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
-      "ID": 110,
+      "ID": 115,
       "Factory": {
         "name": "大型机",
         "consumption": {
@@ -2494,10 +2605,31 @@
         },
         "material": {}
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
-      "ID": 111,
+      "ID": 116,
+      "Factory": {
+        "name": "水冷装置",
+        "consumption": {
+          "占地": 16,
+          "工人": 3.0,
+          "维护 I": 2.0,
+          "电": 1000.0
+        }
+      },
+      "Items": {
+        "product": {
+          "冷冻水": 24
+        },
+        "material": {
+          "水": 30
+        }
+      },
+      "Category": "制造"
+    },
+    {
+      "ID": 117,
       "Factory": {
         "name": "数据中心",
         "consumption": {
@@ -2516,10 +2648,10 @@
           "冷冻水": 24
         }
       },
-      "Category": "装配"
+      "Category": "制造"
     },
     {
-      "ID": 112,
+      "ID": 118,
       "Factory": {
         "name": "木炭炉",
         "consumption": {
@@ -2539,7 +2671,27 @@
       "Category": "冶炼"
     },
     {
-      "ID": 113,
+      "ID": 119,
+      "Factory": {
+        "name": "空气分离装置",
+        "consumption": {
+          "占地": 54,
+          "工人": 6,
+          "维护 I": 6.0,
+          "电": 400.0
+        }
+      },
+      "Items": {
+        "product": {
+          "氧": 36,
+          "氮": 36
+        },
+        "material": {}
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 120,
       "Factory": {
         "name": "粉碎机",
         "consumption": {
@@ -2560,7 +2712,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 114,
+      "ID": 121,
       "Factory": {
         "name": "粉碎机",
         "consumption": {
@@ -2581,7 +2733,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 115,
+      "ID": 122,
       "Factory": {
         "name": "粉碎机",
         "consumption": {
@@ -2602,7 +2754,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 116,
+      "ID": 123,
       "Factory": {
         "name": "粉碎机",
         "consumption": {
@@ -2623,7 +2775,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 117,
+      "ID": 124,
       "Factory": {
         "name": "粉碎机",
         "consumption": {
@@ -2644,7 +2796,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 118,
+      "ID": 125,
       "Factory": {
         "name": "粉碎机",
         "consumption": {
@@ -2665,7 +2817,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 119,
+      "ID": 126,
       "Factory": {
         "name": "粉碎机",
         "consumption": {
@@ -2686,7 +2838,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 120,
+      "ID": 127,
       "Factory": {
         "name": "粉碎机",
         "consumption": {
@@ -2707,7 +2859,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 121,
+      "ID": 128,
       "Factory": {
         "name": "粉碎机",
         "consumption": {
@@ -2728,7 +2880,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 122,
+      "ID": 129,
       "Factory": {
         "name": "粉碎机",
         "consumption": {
@@ -2749,7 +2901,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 123,
+      "ID": 130,
       "Factory": {
         "name": "粉碎机",
         "consumption": {
@@ -2770,7 +2922,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 124,
+      "ID": 131,
       "Factory": {
         "name": "粉碎机",
         "consumption": {
@@ -2791,7 +2943,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 125,
+      "ID": 132,
       "Factory": {
         "name": "粉碎机（大型）",
         "consumption": {
@@ -2812,7 +2964,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 126,
+      "ID": 133,
       "Factory": {
         "name": "粉碎机（大型）",
         "consumption": {
@@ -2833,7 +2985,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 127,
+      "ID": 134,
       "Factory": {
         "name": "粉碎机（大型）",
         "consumption": {
@@ -2854,7 +3006,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 128,
+      "ID": 135,
       "Factory": {
         "name": "粉碎机（大型）",
         "consumption": {
@@ -2875,7 +3027,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 129,
+      "ID": 136,
       "Factory": {
         "name": "粉碎机（大型）",
         "consumption": {
@@ -2896,7 +3048,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 130,
+      "ID": 137,
       "Factory": {
         "name": "粉碎机（大型）",
         "consumption": {
@@ -2917,7 +3069,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 131,
+      "ID": 138,
       "Factory": {
         "name": "粉碎机（大型）",
         "consumption": {
@@ -2938,7 +3090,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 132,
+      "ID": 139,
       "Factory": {
         "name": "粉碎机（大型）",
         "consumption": {
@@ -2959,7 +3111,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 133,
+      "ID": 140,
       "Factory": {
         "name": "粉碎机（大型）",
         "consumption": {
@@ -2980,7 +3132,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 134,
+      "ID": 141,
       "Factory": {
         "name": "粉碎机（大型）",
         "consumption": {
@@ -3001,7 +3153,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 135,
+      "ID": 142,
       "Factory": {
         "name": "粉碎机（大型）",
         "consumption": {
@@ -3022,7 +3174,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 136,
+      "ID": 143,
       "Factory": {
         "name": "粉碎机（大型）",
         "consumption": {
@@ -3043,7 +3195,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 137,
+      "ID": 144,
       "Factory": {
         "name": "搅拌机 I",
         "consumption": {
@@ -3066,7 +3218,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 138,
+      "ID": 145,
       "Factory": {
         "name": "搅拌机 I",
         "consumption": {
@@ -3090,7 +3242,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 139,
+      "ID": 146,
       "Factory": {
         "name": "搅拌机 I",
         "consumption": {
@@ -3112,7 +3264,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 140,
+      "ID": 147,
       "Factory": {
         "name": "搅拌机 I",
         "consumption": {
@@ -3134,7 +3286,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 141,
+      "ID": 148,
       "Factory": {
         "name": "搅拌机 I",
         "consumption": {
@@ -3156,7 +3308,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 142,
+      "ID": 149,
       "Factory": {
         "name": "搅拌机 I",
         "consumption": {
@@ -3179,7 +3331,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 143,
+      "ID": 150,
       "Factory": {
         "name": "搅拌机 I",
         "consumption": {
@@ -3202,7 +3354,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 144,
+      "ID": 151,
       "Factory": {
         "name": "搅拌机 I",
         "consumption": {
@@ -3224,7 +3376,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 145,
+      "ID": 152,
       "Factory": {
         "name": "搅拌机 II",
         "consumption": {
@@ -3247,7 +3399,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 146,
+      "ID": 153,
       "Factory": {
         "name": "搅拌机 II",
         "consumption": {
@@ -3271,7 +3423,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 147,
+      "ID": 154,
       "Factory": {
         "name": "搅拌机 II",
         "consumption": {
@@ -3293,7 +3445,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 148,
+      "ID": 155,
       "Factory": {
         "name": "搅拌机 II",
         "consumption": {
@@ -3315,7 +3467,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 149,
+      "ID": 156,
       "Factory": {
         "name": "搅拌机 II",
         "consumption": {
@@ -3337,7 +3489,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 150,
+      "ID": 157,
       "Factory": {
         "name": "搅拌机 II",
         "consumption": {
@@ -3360,7 +3512,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 151,
+      "ID": 158,
       "Factory": {
         "name": "搅拌机 II",
         "consumption": {
@@ -3383,7 +3535,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 152,
+      "ID": 159,
       "Factory": {
         "name": "搅拌机 II",
         "consumption": {
@@ -3405,7 +3557,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 153,
+      "ID": 160,
       "Factory": {
         "name": "回转窑",
         "consumption": {
@@ -3428,7 +3580,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 154,
+      "ID": 161,
       "Factory": {
         "name": "回转窑（燃气）",
         "consumption": {
@@ -3451,7 +3603,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 155,
+      "ID": 162,
       "Factory": {
         "name": "回转窑（燃气）",
         "consumption": {
@@ -3474,191 +3626,25 @@
       "Category": "冶炼"
     },
     {
-      "ID": 156,
-      "Factory": {
-        "name": "回转窑（燃气）",
-        "consumption": {
-          "占地": 56,
-          "工人": 10,
-          "维护 I": 3.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "氧化铝": 24,
-          "二氧化碳": 6
-        },
-        "material": {
-          "水合氧化铝": 36,
-          "燃气": 6
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 157,
-      "Factory": {
-        "name": "回转窑（燃气）",
-        "consumption": {
-          "占地": 56,
-          "工人": 10,
-          "维护 I": 3.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "氧化铝": 24,
-          "乏汽": 12
-        },
-        "material": {
-          "水合氧化铝": 36,
-          "氢": 6
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 158,
-      "Factory": {
-        "name": "混凝土搅拌机 I",
-        "consumption": {
-          "占地": 30,
-          "工人": 4,
-          "维护 I": 2.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "混凝土楼板": 12
-        },
-        "material": {
-          "水泥": 1.5,
-          "沙": 3,
-          "碎矿渣": 9,
-          "水": 6
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 159,
-      "Factory": {
-        "name": "混凝土搅拌机 I",
-        "consumption": {
-          "占地": 30,
-          "工人": 4,
-          "维护 I": 2.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "混凝土楼板": 12
-        },
-        "material": {
-          "水泥": 1.5,
-          "沙": 3,
-          "碎石": 9,
-          "水": 6
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 160,
-      "Factory": {
-        "name": "混凝土搅拌机 I",
-        "consumption": {
-          "占地": 30,
-          "工人": 4,
-          "维护 I": 2.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "混凝土楼板": 12
-        },
-        "material": {
-          "水泥": 1.5,
-          "机制砂": 3,
-          "碎石": 9,
-          "水": 6
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 161,
-      "Factory": {
-        "name": "混凝土搅拌机 I",
-        "consumption": {
-          "占地": 30,
-          "工人": 4,
-          "维护 I": 2.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "混凝土楼板": 12
-        },
-        "material": {
-          "水泥": 1.5,
-          "机制砂": 3,
-          "碎矿渣": 9,
-          "水": 6
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 162,
-      "Factory": {
-        "name": "混凝土搅拌机 II",
-        "consumption": {
-          "占地": 30,
-          "工人": 7,
-          "维护 I": 4.0,
-          "电": 200.0
-        }
-      },
-      "Items": {
-        "product": {
-          "混凝土楼板": 24
-        },
-        "material": {
-          "水泥": 3,
-          "沙": 6,
-          "碎矿渣": 18,
-          "水": 12
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
       "ID": 163,
       "Factory": {
-        "name": "混凝土搅拌机 II",
+        "name": "混凝土搅拌机 I",
         "consumption": {
           "占地": 30,
-          "工人": 7,
-          "维护 I": 4.0,
-          "电": 200.0
+          "工人": 4,
+          "维护 I": 2.0,
+          "电": 100.0
         }
       },
       "Items": {
         "product": {
-          "混凝土楼板": 24
+          "混凝土楼板": 12
         },
         "material": {
-          "水泥": 3,
-          "沙": 6,
-          "碎石": 18,
-          "水": 12
+          "水泥": 1.5,
+          "沙": 3,
+          "碎矿渣": 9,
+          "水": 6
         }
       },
       "Category": "冶炼"
@@ -3666,6 +3652,126 @@
     {
       "ID": 164,
       "Factory": {
+        "name": "混凝土搅拌机 I",
+        "consumption": {
+          "占地": 30,
+          "工人": 4,
+          "维护 I": 2.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "混凝土楼板": 12
+        },
+        "material": {
+          "水泥": 1.5,
+          "沙": 3,
+          "碎石": 9,
+          "水": 6
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 165,
+      "Factory": {
+        "name": "混凝土搅拌机 I",
+        "consumption": {
+          "占地": 30,
+          "工人": 4,
+          "维护 I": 2.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "混凝土楼板": 12
+        },
+        "material": {
+          "水泥": 1.5,
+          "机制砂": 3,
+          "碎石": 9,
+          "水": 6
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 166,
+      "Factory": {
+        "name": "混凝土搅拌机 I",
+        "consumption": {
+          "占地": 30,
+          "工人": 4,
+          "维护 I": 2.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "混凝土楼板": 12
+        },
+        "material": {
+          "水泥": 1.5,
+          "机制砂": 3,
+          "碎矿渣": 9,
+          "水": 6
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 167,
+      "Factory": {
+        "name": "混凝土搅拌机 II",
+        "consumption": {
+          "占地": 30,
+          "工人": 7,
+          "维护 I": 4.0,
+          "电": 200.0
+        }
+      },
+      "Items": {
+        "product": {
+          "混凝土楼板": 24
+        },
+        "material": {
+          "水泥": 3,
+          "沙": 6,
+          "碎矿渣": 18,
+          "水": 12
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 168,
+      "Factory": {
+        "name": "混凝土搅拌机 II",
+        "consumption": {
+          "占地": 30,
+          "工人": 7,
+          "维护 I": 4.0,
+          "电": 200.0
+        }
+      },
+      "Items": {
+        "product": {
+          "混凝土楼板": 24
+        },
+        "material": {
+          "水泥": 3,
+          "沙": 6,
+          "碎石": 18,
+          "水": 12
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 169,
+      "Factory": {
         "name": "混凝土搅拌机 II",
         "consumption": {
           "占地": 30,
@@ -3688,7 +3794,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 165,
+      "ID": 170,
       "Factory": {
         "name": "混凝土搅拌机 II",
         "consumption": {
@@ -3712,7 +3818,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 166,
+      "ID": 171,
       "Factory": {
         "name": "混凝土搅拌机 III",
         "consumption": {
@@ -3736,7 +3842,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 167,
+      "ID": 172,
       "Factory": {
         "name": "混凝土搅拌机 III",
         "consumption": {
@@ -3760,7 +3866,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 168,
+      "ID": 173,
       "Factory": {
         "name": "混凝土搅拌机 III",
         "consumption": {
@@ -3784,7 +3890,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 169,
+      "ID": 174,
       "Factory": {
         "name": "混凝土搅拌机 III",
         "consumption": {
@@ -3808,7 +3914,74 @@
       "Category": "冶炼"
     },
     {
-      "ID": 170,
+      "ID": 175,
+      "Factory": {
+        "name": "化工厂 I",
+        "consumption": {
+          "占地": 49,
+          "工人": 8,
+          "维护 I": 4.0,
+          "电": 500.0
+        }
+      },
+      "Items": {
+        "product": {
+          "石墨": 12,
+          "酸水": 4
+        },
+        "material": {
+          "煤": 4,
+          "氯": 12
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 176,
+      "Factory": {
+        "name": "化工厂 II",
+        "consumption": {
+          "占地": 49,
+          "工人": 14,
+          "维护 II": 4.0,
+          "电": 800.0
+        }
+      },
+      "Items": {
+        "product": {
+          "石墨": 24,
+          "酸水": 8
+        },
+        "material": {
+          "煤": 8,
+          "氯": 24
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 177,
+      "Factory": {
+        "name": "化工厂 II",
+        "consumption": {
+          "占地": 49,
+          "工人": 14,
+          "维护 II": 4.0,
+          "电": 400.0
+        }
+      },
+      "Items": {
+        "product": {
+          "石墨": 6
+        },
+        "material": {
+          "二氧化碳": 144
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 178,
       "Factory": {
         "name": "高炉 I",
         "consumption": {
@@ -3829,7 +4002,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 171,
+      "ID": 179,
       "Factory": {
         "name": "高炉 I",
         "consumption": {
@@ -3851,7 +4024,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 172,
+      "ID": 180,
       "Factory": {
         "name": "高炉 I",
         "consumption": {
@@ -3872,7 +4045,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 173,
+      "ID": 181,
       "Factory": {
         "name": "高炉 I",
         "consumption": {
@@ -3894,7 +4067,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 174,
+      "ID": 182,
       "Factory": {
         "name": "高炉 I",
         "consumption": {
@@ -3916,7 +4089,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 175,
+      "ID": 183,
       "Factory": {
         "name": "高炉 I",
         "consumption": {
@@ -3937,7 +4110,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 176,
+      "ID": 184,
       "Factory": {
         "name": "高炉 II",
         "consumption": {
@@ -3959,7 +4132,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 177,
+      "ID": 185,
       "Factory": {
         "name": "高炉 II",
         "consumption": {
@@ -3983,7 +4156,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 178,
+      "ID": 186,
       "Factory": {
         "name": "高炉 II",
         "consumption": {
@@ -4005,7 +4178,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 179,
+      "ID": 187,
       "Factory": {
         "name": "高炉 II",
         "consumption": {
@@ -4029,7 +4202,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 180,
+      "ID": 188,
       "Factory": {
         "name": "高炉 II",
         "consumption": {
@@ -4052,7 +4225,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 181,
+      "ID": 189,
       "Factory": {
         "name": "高炉 II",
         "consumption": {
@@ -4074,7 +4247,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 182,
+      "ID": 190,
       "Factory": {
         "name": "电弧炉 I",
         "consumption": {
@@ -4097,7 +4270,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 183,
+      "ID": 191,
       "Factory": {
         "name": "电弧炉 I",
         "consumption": {
@@ -4122,7 +4295,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 184,
+      "ID": 192,
       "Factory": {
         "name": "电弧炉 I",
         "consumption": {
@@ -4145,7 +4318,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 185,
+      "ID": 193,
       "Factory": {
         "name": "电弧炉 I",
         "consumption": {
@@ -4170,7 +4343,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 186,
+      "ID": 194,
       "Factory": {
         "name": "电弧炉 I",
         "consumption": {
@@ -4194,7 +4367,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 187,
+      "ID": 195,
       "Factory": {
         "name": "电弧炉 I",
         "consumption": {
@@ -4217,7 +4390,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 188,
+      "ID": 196,
       "Factory": {
         "name": "电弧炉 I",
         "consumption": {
@@ -4242,7 +4415,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 189,
+      "ID": 197,
       "Factory": {
         "name": "电弧炉 I",
         "consumption": {
@@ -4265,7 +4438,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 190,
+      "ID": 198,
       "Factory": {
         "name": "电弧炉 II",
         "consumption": {
@@ -4290,7 +4463,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 191,
+      "ID": 199,
       "Factory": {
         "name": "电弧炉 II",
         "consumption": {
@@ -4317,7 +4490,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 192,
+      "ID": 200,
       "Factory": {
         "name": "电弧炉 II",
         "consumption": {
@@ -4342,7 +4515,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 193,
+      "ID": 201,
       "Factory": {
         "name": "电弧炉 II",
         "consumption": {
@@ -4369,7 +4542,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 194,
+      "ID": 202,
       "Factory": {
         "name": "电弧炉 II",
         "consumption": {
@@ -4395,7 +4568,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 195,
+      "ID": 203,
       "Factory": {
         "name": "电弧炉 II",
         "consumption": {
@@ -4420,7 +4593,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 196,
+      "ID": 204,
       "Factory": {
         "name": "电弧炉 II",
         "consumption": {
@@ -4447,7 +4620,565 @@
       "Category": "冶炼"
     },
     {
-      "ID": 197,
+      "ID": 205,
+      "Factory": {
+        "name": "水冷铸造机 I",
+        "consumption": {
+          "占地": 42,
+          "工人": 2
+        }
+      },
+      "Items": {
+        "product": {
+          "钢": 12
+        },
+        "material": {
+          "钢水": 12,
+          "水": 6
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 206,
+      "Factory": {
+        "name": "水冷铸造机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 2
+        }
+      },
+      "Items": {
+        "product": {
+          "钢": 24
+        },
+        "material": {
+          "钢水": 24,
+          "水": 12
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 207,
+      "Factory": {
+        "name": "水冷铸造机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 2
+        }
+      },
+      "Items": {
+        "product": {
+          "钛合金": 24
+        },
+        "material": {
+          "熔融钛合金": 24,
+          "水": 12
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 208,
+      "Factory": {
+        "name": "金属铸造机 I",
+        "consumption": {
+          "占地": 42,
+          "工人": 2
+        }
+      },
+      "Items": {
+        "product": {
+          "铁": 12
+        },
+        "material": {
+          "铁水": 12
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 209,
+      "Factory": {
+        "name": "金属铸造机 I",
+        "consumption": {
+          "占地": 42,
+          "工人": 2
+        }
+      },
+      "Items": {
+        "product": {
+          "不纯铜": 12
+        },
+        "material": {
+          "熔融铜": 12
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 210,
+      "Factory": {
+        "name": "金属铸造机 I",
+        "consumption": {
+          "占地": 42,
+          "工人": 2
+        }
+      },
+      "Items": {
+        "product": {
+          "铝": 12
+        },
+        "material": {
+          "熔融铝": 12
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 211,
+      "Factory": {
+        "name": "金属铸造机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 2
+        }
+      },
+      "Items": {
+        "product": {
+          "铁": 24
+        },
+        "material": {
+          "铁水": 24
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 212,
+      "Factory": {
+        "name": "金属铸造机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 2
+        }
+      },
+      "Items": {
+        "product": {
+          "不纯铜": 24
+        },
+        "material": {
+          "熔融铜": 24
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 213,
+      "Factory": {
+        "name": "金属铸造机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 2
+        }
+      },
+      "Items": {
+        "product": {
+          "铝": 24
+        },
+        "material": {
+          "熔融铝": 24
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 214,
+      "Factory": {
+        "name": "氧气转炉 I",
+        "consumption": {
+          "占地": 42,
+          "工人": 4,
+          "维护 I": 4.0,
+          "电": 120.0
+        }
+      },
+      "Items": {
+        "product": {
+          "钢水": 12,
+          "废气": 24
+        },
+        "material": {
+          "铁水": 24,
+          "氧": 18
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 215,
+      "Factory": {
+        "name": "氧气转炉 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 6,
+          "维护 I": 6.0,
+          "电": 200.0
+        }
+      },
+      "Items": {
+        "product": {
+          "钢水": 24,
+          "废气": 36
+        },
+        "material": {
+          "铁水": 48,
+          "氧": 18
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 216,
+      "Factory": {
+        "name": "铜电解槽",
+        "consumption": {
+          "占地": 35,
+          "工人": 5,
+          "维护 I": 4.0,
+          "电": 400.0
+        }
+      },
+      "Items": {
+        "product": {
+          "铜": 24
+        },
+        "material": {
+          "不纯铜": 24,
+          "酸": 6
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 217,
+      "Factory": {
+        "name": "铜电解槽",
+        "consumption": {
+          "占地": 35,
+          "工人": 5,
+          "维护 I": 4.0,
+          "电": 400.0
+        }
+      },
+      "Items": {
+        "product": {
+          "铜": 19.5
+        },
+        "material": {
+          "不纯铜": 24,
+          "水": 6
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 218,
+      "Factory": {
+        "name": "玻璃制造机 I",
+        "consumption": {
+          "占地": 60,
+          "工人": 6,
+          "维护 I": 4.0,
+          "电": 300.0
+        }
+      },
+      "Items": {
+        "product": {
+          "玻璃": 12,
+          "碎玻璃": 12
+        },
+        "material": {
+          "熔融玻璃": 24
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 219,
+      "Factory": {
+        "name": "玻璃制造机 II",
+        "consumption": {
+          "占地": 140,
+          "工人": 8,
+          "维护 II": 4.0,
+          "电": 500.0
+        }
+      },
+      "Items": {
+        "product": {
+          "玻璃": 24
+        },
+        "material": {
+          "熔融玻璃": 24
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 220,
+      "Factory": {
+        "name": "硅反应器",
+        "consumption": {
+          "占地": 12,
+          "工人": 2,
+          "维护 I": 1.0,
+          "电": 80.0
+        }
+      },
+      "Items": {
+        "product": {
+          "硅（聚）": 12
+        },
+        "material": {
+          "熔融硅": 12,
+          "氢": 4
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 221,
+      "Factory": {
+        "name": "金炉",
+        "consumption": {
+          "占地": 24,
+          "工人": 6,
+          "维护 I": 2.0,
+          "电": 800.0
+        }
+      },
+      "Items": {
+        "product": {
+          "金": 9,
+          "废气": 12
+        },
+        "material": {
+          "金精矿": 18,
+          "沙": 3
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 222,
+      "Factory": {
+        "name": "金炉",
+        "consumption": {
+          "占地": 24,
+          "工人": 6,
+          "维护 I": 2.0,
+          "电": 480.0
+        }
+      },
+      "Items": {
+        "product": {
+          "金": 9
+        },
+        "material": {
+          "金废料": 9
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 223,
+      "Factory": {
+        "name": "沉淀池",
+        "consumption": {
+          "占地": 45,
+          "工人": 6,
+          "维护 I": 2.0,
+          "电": 120.0
+        }
+      },
+      "Items": {
+        "product": {
+          "金精矿": 9,
+          "有毒浆液": 27
+        },
+        "material": {
+          "金矿粉": 36,
+          "酸": 12
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 224,
+      "Factory": {
+        "name": "沉淀池",
+        "consumption": {
+          "占地": 45,
+          "工人": 6,
+          "维护 I": 2.0,
+          "电": 120.0
+        }
+      },
+      "Items": {
+        "product": {
+          "氟化氢": 12,
+          "矿渣": 3
+        },
+        "material": {
+          "岩石": 12,
+          "酸": 6
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 225,
+      "Factory": {
+        "name": "化工厂 II",
+        "consumption": {
+          "占地": 49,
+          "工人": 14,
+          "维护 II": 4.0,
+          "电": 400.0
+        }
+      },
+      "Items": {
+        "product": {
+          "水合氧化铝": 36,
+          "赤泥": 36
+        },
+        "material": {
+          "铝土矿粉末": 72,
+          "盐水": 24
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 226,
+      "Factory": {
+        "name": "沉淀池",
+        "consumption": {
+          "占地": 45,
+          "工人": 6,
+          "维护 I": 2.0,
+          "电": 120.0
+        }
+      },
+      "Items": {
+        "product": {
+          "矿渣": 12
+        },
+        "material": {
+          "赤泥": 18,
+          "海水": 8,
+          "石灰石": 2
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 227,
+      "Factory": {
+        "name": "沉淀池",
+        "consumption": {
+          "占地": 45,
+          "工人": 6,
+          "维护 I": 2.0,
+          "电": 120.0
+        }
+      },
+      "Items": {
+        "product": {
+          "矿渣": 8,
+          "碎铁矿石": 4
+        },
+        "material": {
+          "赤泥": 18,
+          "酸": 12,
+          "石灰石": 2
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 228,
+      "Factory": {
+        "name": "回转窑（燃气）",
+        "consumption": {
+          "占地": 56,
+          "工人": 10,
+          "维护 I": 3.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "氧化铝": 24,
+          "二氧化碳": 6
+        },
+        "material": {
+          "水合氧化铝": 36,
+          "燃气": 6
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 229,
+      "Factory": {
+        "name": "回转窑（燃气）",
+        "consumption": {
+          "占地": 56,
+          "工人": 10,
+          "维护 I": 3.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "氧化铝": 24,
+          "乏汽": 12
+        },
+        "material": {
+          "水合氧化铝": 36,
+          "氢": 6
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 230,
+      "Factory": {
+        "name": "铝电解槽",
+        "consumption": {
+          "占地": 170,
+          "工人": 14,
+          "维护 II": 12.0,
+          "电": 8000.0
+        }
+      },
+      "Items": {
+        "product": {
+          "熔融铝": 24,
+          "二氧化碳": 18
+        },
+        "material": {
+          "氧化铝": 24,
+          "石墨": 6
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 231,
       "Factory": {
         "name": "电弧炉 II",
         "consumption": {
@@ -4472,7 +5203,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 198,
+      "ID": 232,
       "Factory": {
         "name": "电弧炉 II",
         "consumption": {
@@ -4498,7 +5229,77 @@
       "Category": "冶炼"
     },
     {
-      "ID": 199,
+      "ID": 233,
+      "Factory": {
+        "name": "化工厂 II",
+        "consumption": {
+          "占地": 49,
+          "工人": 14,
+          "维护 II": 4.0,
+          "电": 800.0
+        }
+      },
+      "Items": {
+        "product": {
+          "氯化钛": 12,
+          "矿渣": 12,
+          "二氧化碳": 12
+        },
+        "material": {
+          "钛渣": 36,
+          "氯": 18,
+          "石墨": 3
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 234,
+      "Factory": {
+        "name": "蒸馏（阶段III）",
+        "consumption": {
+          "占地": 25,
+          "工人": 8,
+          "维护 I": 6.0
+        }
+      },
+      "Items": {
+        "product": {
+          "氯化钛（纯）": 12,
+          "乏汽": 3
+        },
+        "material": {
+          "氯化钛": 12,
+          "蒸汽（高压）": 3
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 235,
+      "Factory": {
+        "name": "化工厂 II",
+        "consumption": {
+          "占地": 49,
+          "工人": 14,
+          "维护 II": 4.0,
+          "电": 800.0
+        }
+      },
+      "Items": {
+        "product": {
+          "海绵钛": 24,
+          "氯": 12
+        },
+        "material": {
+          "氯化钛（纯）": 24,
+          "盐": 12
+        }
+      },
+      "Category": "冶炼"
+    },
+    {
+      "ID": 236,
       "Factory": {
         "name": "电弧炉 II",
         "consumption": {
@@ -4523,30 +5324,7 @@
       "Category": "冶炼"
     },
     {
-      "ID": 200,
-      "Factory": {
-        "name": "铝电解槽",
-        "consumption": {
-          "占地": 170,
-          "工人": 14,
-          "维护 II": 12.0,
-          "电": 8000.0
-        }
-      },
-      "Items": {
-        "product": {
-          "熔融铝": 24,
-          "二氧化碳": 18
-        },
-        "material": {
-          "氧化铝": 24,
-          "石墨": 6
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 201,
+      "ID": 237,
       "Factory": {
         "name": "合金混合器",
         "consumption": {
@@ -4568,493 +5346,30 @@
       "Category": "冶炼"
     },
     {
-      "ID": 202,
+      "ID": 238,
       "Factory": {
-        "name": "水冷铸造机 I",
+        "name": "钻石反应堆",
         "consumption": {
-          "占地": 42,
-          "工人": 2
-        }
-      },
-      "Items": {
-        "product": {
-          "钢": 12
-        },
-        "material": {
-          "钢水": 12,
-          "水": 6
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 203,
-      "Factory": {
-        "name": "水冷铸造机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 2
-        }
-      },
-      "Items": {
-        "product": {
-          "钢": 24
-        },
-        "material": {
-          "钢水": 24,
-          "水": 12
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 204,
-      "Factory": {
-        "name": "水冷铸造机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 2
-        }
-      },
-      "Items": {
-        "product": {
-          "钛合金": 24
-        },
-        "material": {
-          "熔融钛合金": 24,
-          "水": 12
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 205,
-      "Factory": {
-        "name": "金属铸造机 I",
-        "consumption": {
-          "占地": 42,
-          "工人": 2
-        }
-      },
-      "Items": {
-        "product": {
-          "铁": 12
-        },
-        "material": {
-          "铁水": 12
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 206,
-      "Factory": {
-        "name": "金属铸造机 I",
-        "consumption": {
-          "占地": 42,
-          "工人": 2
-        }
-      },
-      "Items": {
-        "product": {
-          "不纯铜": 12
-        },
-        "material": {
-          "熔融铜": 12
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 207,
-      "Factory": {
-        "name": "金属铸造机 I",
-        "consumption": {
-          "占地": 42,
-          "工人": 2
-        }
-      },
-      "Items": {
-        "product": {
-          "铝": 12
-        },
-        "material": {
-          "熔融铝": 12
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 208,
-      "Factory": {
-        "name": "金属铸造机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 2
-        }
-      },
-      "Items": {
-        "product": {
-          "铁": 24
-        },
-        "material": {
-          "铁水": 24
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 209,
-      "Factory": {
-        "name": "金属铸造机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 2
-        }
-      },
-      "Items": {
-        "product": {
-          "不纯铜": 24
-        },
-        "material": {
-          "熔融铜": 24
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 210,
-      "Factory": {
-        "name": "金属铸造机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 2
-        }
-      },
-      "Items": {
-        "product": {
-          "铝": 24
-        },
-        "material": {
-          "熔融铝": 24
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 211,
-      "Factory": {
-        "name": "氧气转炉 I",
-        "consumption": {
-          "占地": 42,
-          "工人": 4,
-          "维护 I": 4.0,
-          "电": 120.0
-        }
-      },
-      "Items": {
-        "product": {
-          "钢水": 12,
-          "废气": 24
-        },
-        "material": {
-          "铁水": 24,
-          "氧": 18
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 212,
-      "Factory": {
-        "name": "氧气转炉 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 6,
-          "维护 I": 6.0,
-          "电": 200.0
-        }
-      },
-      "Items": {
-        "product": {
-          "钢水": 24,
-          "废气": 36
-        },
-        "material": {
-          "铁水": 48,
-          "氧": 18
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 213,
-      "Factory": {
-        "name": "铜电解槽",
-        "consumption": {
-          "占地": 35,
-          "工人": 5,
-          "维护 I": 4.0,
-          "电": 400.0
-        }
-      },
-      "Items": {
-        "product": {
-          "铜": 24
-        },
-        "material": {
-          "不纯铜": 24,
-          "酸": 6
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 214,
-      "Factory": {
-        "name": "铜电解槽",
-        "consumption": {
-          "占地": 35,
-          "工人": 5,
-          "维护 I": 4.0,
-          "电": 400.0
-        }
-      },
-      "Items": {
-        "product": {
-          "铜": 19.5
-        },
-        "material": {
-          "不纯铜": 24,
-          "水": 6
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 215,
-      "Factory": {
-        "name": "玻璃制造机 I",
-        "consumption": {
-          "占地": 60,
-          "工人": 6,
-          "维护 I": 4.0,
-          "电": 300.0
-        }
-      },
-      "Items": {
-        "product": {
-          "玻璃": 12,
-          "碎玻璃": 12
-        },
-        "material": {
-          "熔融玻璃": 24
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 216,
-      "Factory": {
-        "name": "玻璃制造机 II",
-        "consumption": {
-          "占地": 140,
+          "占地": 49,
           "工人": 8,
-          "维护 II": 4.0,
-          "电": 500.0
+          "维护 III": 8.0,
+          "电": 2000.0,
+          "算力": 2.0
         }
       },
       "Items": {
         "product": {
-          "玻璃": 24
+          "金刚石": 2
         },
         "material": {
-          "熔融玻璃": 24
+          "石墨": 2,
+          "盐": 2
         }
       },
       "Category": "冶炼"
     },
     {
-      "ID": 217,
-      "Factory": {
-        "name": "硅反应器",
-        "consumption": {
-          "占地": 12,
-          "工人": 2,
-          "维护 I": 1.0,
-          "电": 80.0
-        }
-      },
-      "Items": {
-        "product": {
-          "硅（聚）": 12
-        },
-        "material": {
-          "熔融硅": 12,
-          "氢": 4
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 218,
-      "Factory": {
-        "name": "金炉",
-        "consumption": {
-          "占地": 24,
-          "工人": 6,
-          "维护 I": 2.0,
-          "电": 800.0
-        }
-      },
-      "Items": {
-        "product": {
-          "金": 9,
-          "废气": 12
-        },
-        "material": {
-          "金精矿": 18,
-          "沙": 3
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 219,
-      "Factory": {
-        "name": "金炉",
-        "consumption": {
-          "占地": 24,
-          "工人": 6,
-          "维护 I": 2.0,
-          "电": 480.0
-        }
-      },
-      "Items": {
-        "product": {
-          "金": 9
-        },
-        "material": {
-          "金废料": 9
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 220,
-      "Factory": {
-        "name": "沉淀池",
-        "consumption": {
-          "占地": 45,
-          "工人": 6,
-          "维护 I": 2.0,
-          "电": 120.0
-        }
-      },
-      "Items": {
-        "product": {
-          "金精矿": 9,
-          "有毒浆液": 27
-        },
-        "material": {
-          "金矿粉": 36,
-          "酸": 12
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 221,
-      "Factory": {
-        "name": "沉淀池",
-        "consumption": {
-          "占地": 45,
-          "工人": 6,
-          "维护 I": 2.0,
-          "电": 120.0
-        }
-      },
-      "Items": {
-        "product": {
-          "氟化氢": 12,
-          "矿渣": 3
-        },
-        "material": {
-          "岩石": 12,
-          "酸": 6
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 222,
-      "Factory": {
-        "name": "沉淀池",
-        "consumption": {
-          "占地": 45,
-          "工人": 6,
-          "维护 I": 2.0,
-          "电": 120.0
-        }
-      },
-      "Items": {
-        "product": {
-          "矿渣": 12
-        },
-        "material": {
-          "赤泥": 18,
-          "海水": 8,
-          "石灰石": 2
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 223,
-      "Factory": {
-        "name": "沉淀池",
-        "consumption": {
-          "占地": 45,
-          "工人": 6,
-          "维护 I": 2.0,
-          "电": 120.0
-        }
-      },
-      "Items": {
-        "product": {
-          "矿渣": 8,
-          "碎铁矿石": 4
-        },
-        "material": {
-          "赤泥": 18,
-          "酸": 12,
-          "石灰石": 2
-        }
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 224,
-      "Factory": {
-        "name": "空气分离装置",
-        "consumption": {
-          "占地": 54,
-          "工人": 6,
-          "维护 I": 6.0,
-          "电": 400.0
-        }
-      },
-      "Items": {
-        "product": {
-          "氧": 36,
-          "氮": 36
-        },
-        "material": {}
-      },
-      "Category": "冶炼"
-    },
-    {
-      "ID": 225,
+      "ID": 239,
       "Factory": {
         "name": "雨水收集器",
         "consumption": {
@@ -5068,10 +5383,10 @@
         },
         "material": {}
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 226,
+      "ID": 240,
       "Factory": {
         "name": "海水泵",
         "consumption": {
@@ -5087,10 +5402,10 @@
         },
         "material": {}
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 227,
+      "ID": 241,
       "Factory": {
         "name": "海水泵",
         "consumption": {
@@ -5106,10 +5421,10 @@
         },
         "material": {}
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 228,
+      "ID": 242,
       "Factory": {
         "name": "海水泵（高）",
         "consumption": {
@@ -5125,10 +5440,10 @@
         },
         "material": {}
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 229,
+      "ID": 243,
       "Factory": {
         "name": "海水泵（高）",
         "consumption": {
@@ -5144,10 +5459,10 @@
         },
         "material": {}
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 230,
+      "ID": 244,
       "Factory": {
         "name": "蒸发池",
         "consumption": {
@@ -5164,10 +5479,10 @@
           "海水": 48
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 231,
+      "ID": 245,
       "Factory": {
         "name": "蒸发池",
         "consumption": {
@@ -5184,10 +5499,10 @@
           "海水": 48
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 232,
+      "ID": 246,
       "Factory": {
         "name": "蒸发池",
         "consumption": {
@@ -5204,10 +5519,10 @@
           "盐水": 48
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 233,
+      "ID": 247,
       "Factory": {
         "name": "蒸发池（加热）",
         "consumption": {
@@ -5225,10 +5540,10 @@
           "海水": 96
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 234,
+      "ID": 248,
       "Factory": {
         "name": "蒸发池（加热）",
         "consumption": {
@@ -5246,10 +5561,10 @@
           "海水": 96
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 235,
+      "ID": 249,
       "Factory": {
         "name": "蒸发池（加热）",
         "consumption": {
@@ -5267,10 +5582,10 @@
           "盐水": 96
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 236,
+      "ID": 250,
       "Factory": {
         "name": "热脱盐器",
         "consumption": {
@@ -5290,10 +5605,10 @@
           "蒸汽（超高压）": 6
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 237,
+      "ID": 251,
       "Factory": {
         "name": "热脱盐器",
         "consumption": {
@@ -5313,10 +5628,10 @@
           "蒸汽（高压）": 12
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 238,
+      "ID": 252,
       "Factory": {
         "name": "热脱盐器",
         "consumption": {
@@ -5336,10 +5651,10 @@
           "蒸汽（低压）": 24
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 239,
+      "ID": 253,
       "Factory": {
         "name": "热脱盐器",
         "consumption": {
@@ -5359,31 +5674,10 @@
           "乏汽": 24
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 240,
-      "Factory": {
-        "name": "水冷装置",
-        "consumption": {
-          "占地": 16,
-          "工人": 3.0,
-          "维护 I": 2.0,
-          "电": 1000.0
-        }
-      },
-      "Items": {
-        "product": {
-          "冷冻水": 24
-        },
-        "material": {
-          "水": 30
-        }
-      },
-      "Category": "水提取和处理"
-    },
-    {
-      "ID": 241,
+      "ID": 254,
       "Factory": {
         "name": "电解槽 I",
         "consumption": {
@@ -5401,10 +5695,10 @@
           "盐水": 18
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 242,
+      "ID": 255,
       "Factory": {
         "name": "电解槽 I",
         "consumption": {
@@ -5423,10 +5717,10 @@
           "水": 2
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 243,
+      "ID": 256,
       "Factory": {
         "name": "电解槽 I",
         "consumption": {
@@ -5445,10 +5739,10 @@
           "氨": 12
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 244,
+      "ID": 257,
       "Factory": {
         "name": "电解槽 II",
         "consumption": {
@@ -5466,10 +5760,10 @@
           "盐水": 72
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 245,
+      "ID": 258,
       "Factory": {
         "name": "电解槽 II",
         "consumption": {
@@ -5488,10 +5782,10 @@
           "水": 8
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 246,
+      "ID": 259,
       "Factory": {
         "name": "电解槽 II",
         "consumption": {
@@ -5510,10 +5804,10 @@
           "氨": 48
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 247,
+      "ID": 260,
       "Factory": {
         "name": "冷却塔",
         "consumption": {
@@ -5528,10 +5822,10 @@
           "蒸汽（高压）": 24
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 248,
+      "ID": 261,
       "Factory": {
         "name": "冷却塔",
         "consumption": {
@@ -5546,10 +5840,10 @@
           "蒸汽（低压）": 24
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 249,
+      "ID": 262,
       "Factory": {
         "name": "冷却塔",
         "consumption": {
@@ -5564,10 +5858,10 @@
           "乏汽": 24
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 250,
+      "ID": 263,
       "Factory": {
         "name": "冷却塔（大）",
         "consumption": {
@@ -5582,10 +5876,10 @@
           "蒸汽（超高压）": 96
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 251,
+      "ID": 264,
       "Factory": {
         "name": "冷却塔（大）",
         "consumption": {
@@ -5600,10 +5894,10 @@
           "蒸汽（高压）": 96
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 252,
+      "ID": 265,
       "Factory": {
         "name": "冷却塔（大）",
         "consumption": {
@@ -5618,10 +5912,10 @@
           "蒸汽（低压）": 96
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 253,
+      "ID": 266,
       "Factory": {
         "name": "冷却塔（大）",
         "consumption": {
@@ -5636,10 +5930,10 @@
           "乏汽": 96
         }
       },
-      "Category": "水提取和处理"
+      "Category": "水"
     },
     {
-      "ID": 254,
+      "ID": 267,
       "Factory": {
         "name": "蒸馏（阶段I）",
         "consumption": {
@@ -5662,7 +5956,7 @@
       "Category": "石化"
     },
     {
-      "ID": 255,
+      "ID": 268,
       "Factory": {
         "name": "蒸馏（阶段II）",
         "consumption": {
@@ -5684,7 +5978,7 @@
       "Category": "石化"
     },
     {
-      "ID": 256,
+      "ID": 269,
       "Factory": {
         "name": "蒸馏（阶段III）",
         "consumption": {
@@ -5706,29 +6000,7 @@
       "Category": "石化"
     },
     {
-      "ID": 257,
-      "Factory": {
-        "name": "蒸馏（阶段III）",
-        "consumption": {
-          "占地": 25,
-          "工人": 8,
-          "维护 I": 6.0
-        }
-      },
-      "Items": {
-        "product": {
-          "氯化钛（纯）": 12,
-          "乏汽": 3
-        },
-        "material": {
-          "氯化钛": 12,
-          "蒸汽（高压）": 3
-        }
-      },
-      "Category": "石化"
-    },
-    {
-      "ID": 258,
+      "ID": 270,
       "Factory": {
         "name": "裂解装置",
         "consumption": {
@@ -5751,7 +6023,7 @@
       "Category": "石化"
     },
     {
-      "ID": 259,
+      "ID": 271,
       "Factory": {
         "name": "裂解装置",
         "consumption": {
@@ -5774,7 +6046,7 @@
       "Category": "石化"
     },
     {
-      "ID": 260,
+      "ID": 272,
       "Factory": {
         "name": "裂解装置",
         "consumption": {
@@ -5797,7 +6069,7 @@
       "Category": "石化"
     },
     {
-      "ID": 261,
+      "ID": 273,
       "Factory": {
         "name": "裂解装置",
         "consumption": {
@@ -5820,7 +6092,7 @@
       "Category": "石化"
     },
     {
-      "ID": 262,
+      "ID": 274,
       "Factory": {
         "name": "裂解装置",
         "consumption": {
@@ -5843,7 +6115,7 @@
       "Category": "石化"
     },
     {
-      "ID": 263,
+      "ID": 275,
       "Factory": {
         "name": "裂解装置",
         "consumption": {
@@ -5866,7 +6138,7 @@
       "Category": "石化"
     },
     {
-      "ID": 264,
+      "ID": 276,
       "Factory": {
         "name": "酸水汽提器",
         "consumption": {
@@ -5890,7 +6162,7 @@
       "Category": "石化"
     },
     {
-      "ID": 265,
+      "ID": 277,
       "Factory": {
         "name": "氢重整器",
         "consumption": {
@@ -5913,7 +6185,7 @@
       "Category": "石化"
     },
     {
-      "ID": 266,
+      "ID": 278,
       "Factory": {
         "name": "氢重整器",
         "consumption": {
@@ -5937,7 +6209,7 @@
       "Category": "石化"
     },
     {
-      "ID": 267,
+      "ID": 279,
       "Factory": {
         "name": "橡胶制造机",
         "consumption": {
@@ -5959,7 +6231,7 @@
       "Category": "石化"
     },
     {
-      "ID": 268,
+      "ID": 280,
       "Factory": {
         "name": "橡胶制造机",
         "consumption": {
@@ -5982,7 +6254,7 @@
       "Category": "石化"
     },
     {
-      "ID": 269,
+      "ID": 281,
       "Factory": {
         "name": "橡胶制造机",
         "consumption": {
@@ -6004,7 +6276,7 @@
       "Category": "石化"
     },
     {
-      "ID": 270,
+      "ID": 282,
       "Factory": {
         "name": "橡胶制造机",
         "consumption": {
@@ -6026,7 +6298,7 @@
       "Category": "石化"
     },
     {
-      "ID": 271,
+      "ID": 283,
       "Factory": {
         "name": "橡胶制造机",
         "consumption": {
@@ -6049,7 +6321,7 @@
       "Category": "石化"
     },
     {
-      "ID": 272,
+      "ID": 284,
       "Factory": {
         "name": "聚合装置",
         "consumption": {
@@ -6072,7 +6344,7 @@
       "Category": "石化"
     },
     {
-      "ID": 273,
+      "ID": 285,
       "Factory": {
         "name": "聚合装置",
         "consumption": {
@@ -6095,120 +6367,7 @@
       "Category": "石化"
     },
     {
-      "ID": 274,
-      "Factory": {
-        "name": "化工厂 I",
-        "consumption": {
-          "占地": 49,
-          "工人": 8,
-          "维护 I": 4.0,
-          "电": 250.0
-        }
-      },
-      "Items": {
-        "product": {
-          "肥料 I": 30
-        },
-        "material": {
-          "氨": 12,
-          "氧": 18
-        }
-      },
-      "Category": "石化"
-    },
-    {
-      "ID": 275,
-      "Factory": {
-        "name": "化工厂 I",
-        "consumption": {
-          "占地": 49,
-          "工人": 8,
-          "维护 I": 4.0,
-          "电": 500.0
-        }
-      },
-      "Items": {
-        "product": {
-          "氨": 6
-        },
-        "material": {
-          "氢": 6,
-          "氮": 12
-        }
-      },
-      "Category": "石化"
-    },
-    {
-      "ID": 276,
-      "Factory": {
-        "name": "化工厂 I",
-        "consumption": {
-          "占地": 49,
-          "工人": 8,
-          "维护 I": 4.0,
-          "电": 250.0
-        }
-      },
-      "Items": {
-        "product": {
-          "纸": 12
-        },
-        "material": {
-          "木屑": 6,
-          "石灰石": 1.5,
-          "蒸汽（高压）": 1.5
-        }
-      },
-      "Category": "石化"
-    },
-    {
-      "ID": 277,
-      "Factory": {
-        "name": "化工厂 I",
-        "consumption": {
-          "占地": 49,
-          "工人": 8,
-          "维护 I": 4.0,
-          "电": 500.0
-        }
-      },
-      "Items": {
-        "product": {
-          "石墨": 12,
-          "酸水": 4
-        },
-        "material": {
-          "煤": 4,
-          "氯": 12
-        }
-      },
-      "Category": "石化"
-    },
-    {
-      "ID": 278,
-      "Factory": {
-        "name": "化工厂 II",
-        "consumption": {
-          "占地": 49,
-          "工人": 14,
-          "维护 II": 4.0,
-          "电": 400.0
-        }
-      },
-      "Items": {
-        "product": {
-          "纸": 24
-        },
-        "material": {
-          "木屑": 12,
-          "石灰石": 3,
-          "蒸汽（高压）": 3
-        }
-      },
-      "Category": "石化"
-    },
-    {
-      "ID": 279,
+      "ID": 286,
       "Factory": {
         "name": "化工厂 II",
         "consumption": {
@@ -6231,212 +6390,571 @@
       "Category": "石化"
     },
     {
-      "ID": 280,
-      "Factory": {
-        "name": "化工厂 II",
-        "consumption": {
-          "占地": 49,
-          "工人": 14,
-          "维护 II": 4.0,
-          "电": 800.0
-        }
-      },
-      "Items": {
-        "product": {
-          "石墨": 24,
-          "酸水": 8
-        },
-        "material": {
-          "煤": 8,
-          "氯": 24
-        }
-      },
-      "Category": "石化"
-    },
-    {
-      "ID": 281,
-      "Factory": {
-        "name": "化工厂 II",
-        "consumption": {
-          "占地": 49,
-          "工人": 14,
-          "维护 II": 4.0,
-          "电": 400.0
-        }
-      },
-      "Items": {
-        "product": {
-          "石墨": 6
-        },
-        "material": {
-          "二氧化碳": 144
-        }
-      },
-      "Category": "石化"
-    },
-    {
-      "ID": 282,
-      "Factory": {
-        "name": "化工厂 II",
-        "consumption": {
-          "占地": 49,
-          "工人": 14,
-          "维护 II": 4.0,
-          "电": 400.0
-        }
-      },
-      "Items": {
-        "product": {
-          "乙醇": 18,
-          "水": 9
-        },
-        "material": {
-          "氢": 36,
-          "二氧化碳": 27
-        }
-      },
-      "Category": "石化"
-    },
-    {
-      "ID": 283,
-      "Factory": {
-        "name": "化工厂 II",
-        "consumption": {
-          "占地": 49,
-          "工人": 14,
-          "维护 II": 4.0,
-          "电": 400.0
-        }
-      },
-      "Items": {
-        "product": {
-          "水合氧化铝": 36,
-          "赤泥": 36
-        },
-        "material": {
-          "铝土矿粉末": 72,
-          "盐水": 24
-        }
-      },
-      "Category": "石化"
-    },
-    {
-      "ID": 284,
-      "Factory": {
-        "name": "化工厂 II",
-        "consumption": {
-          "占地": 49,
-          "工人": 14,
-          "维护 II": 4.0,
-          "电": 800.0
-        }
-      },
-      "Items": {
-        "product": {
-          "氯化钛": 12,
-          "矿渣": 12,
-          "二氧化碳": 12
-        },
-        "material": {
-          "钛渣": 36,
-          "氯": 18,
-          "石墨": 3
-        }
-      },
-      "Category": "石化"
-    },
-    {
-      "ID": 285,
-      "Factory": {
-        "name": "化工厂 II",
-        "consumption": {
-          "占地": 49,
-          "工人": 14,
-          "维护 II": 4.0,
-          "电": 800.0
-        }
-      },
-      "Items": {
-        "product": {
-          "海绵钛": 24,
-          "氯": 12
-        },
-        "material": {
-          "氯化钛（纯）": 24,
-          "盐": 12
-        }
-      },
-      "Category": "石化"
-    },
-    {
-      "ID": 286,
-      "Factory": {
-        "name": "化工厂 II",
-        "consumption": {
-          "占地": 49,
-          "工人": 14,
-          "维护 II": 4.0,
-          "电": 400.0
-        }
-      },
-      "Items": {
-        "product": {
-          "化学燃料": 8
-        },
-        "material": {
-          "氨": 12,
-          "燃气": 12,
-          "铝": 8
-        }
-      },
-      "Category": "石化"
-    },
-    {
       "ID": 287,
       "Factory": {
-        "name": "化工厂 II",
+        "name": "搅拌机 I",
         "consumption": {
-          "占地": 49,
-          "工人": 14,
-          "维护 II": 4.0,
-          "电": 400.0
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 2.0,
+          "电": 100.0
         }
       },
       "Items": {
         "product": {
-          "金刚石研磨膏": 16
+          "肥料（有机）": 48
         },
         "material": {
-          "金刚石": 4,
-          "食用油": 4
+          "堆肥": 36,
+          "水": 12
         }
       },
-      "Category": "石化"
+      "Category": "食品"
     },
     {
       "ID": 288,
       "Factory": {
+        "name": "搅拌机 I",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 2.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "肥料（有机）": 48
+        },
+        "material": {
+          "堆肥": 12,
+          "土": 24,
+          "水": 12
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 289,
+      "Factory": {
+        "name": "化工厂 I",
+        "consumption": {
+          "占地": 49,
+          "工人": 8.0,
+          "维护 I": 4.0,
+          "电": 500.0
+        }
+      },
+      "Items": {
+        "product": {
+          "氨": 6
+        },
+        "material": {
+          "氢": 6,
+          "氮": 12
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 290,
+      "Factory": {
+        "name": "化工厂 I",
+        "consumption": {
+          "占地": 49,
+          "工人": 8.0,
+          "维护 I": 4.0,
+          "电": 250.0
+        }
+      },
+      "Items": {
+        "product": {
+          "肥料 I": 30
+        },
+        "material": {
+          "氨": 12,
+          "氧": 18
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 291,
+      "Factory": {
+        "name": "化工厂 I",
+        "consumption": {
+          "占地": 49,
+          "工人": 8.0,
+          "维护 I": 4.0,
+          "电": 250.0
+        }
+      },
+      "Items": {
+        "product": {
+          "肥料 I": 45
+        },
+        "material": {
+          "肥料（有机）": 30,
+          "氨": 12,
+          "氧": 18
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 292,
+      "Factory": {
+        "name": "搅拌机 I",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 2.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "肥料 II": 36
+        },
+        "material": {
+          "肥料 I": 30,
+          "石灰石": 6,
+          "硫": 6
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 293,
+      "Factory": {
+        "name": "搅拌机 I",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 2.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "动物饲料": 48
+        },
+        "material": {
+          "土豆": 60
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 294,
+      "Factory": {
+        "name": "搅拌机 I",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 2.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "动物饲料": 96
+        },
+        "material": {
+          "小麦": 60
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 295,
+      "Factory": {
+        "name": "搅拌机 I",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 2.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "动物饲料": 72
+        },
+        "material": {
+          "玉米": 60
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 296,
+      "Factory": {
+        "name": "搅拌机 I",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 2.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "动物饲料": 108
+        },
+        "material": {
+          "大豆": 60
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 297,
+      "Factory": {
+        "name": "搅拌机 I",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 2.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "堆肥": 6
+        },
+        "material": {
+          "动物饲料": 12
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 298,
+      "Factory": {
+        "name": "搅拌机 I",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 2.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "堆肥": 8
+        },
+        "material": {
+          "生物质": 12
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 299,
+      "Factory": {
+        "name": "搅拌机 I",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 2.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "堆肥": 4
+        },
+        "material": {
+          "碎肉": 12
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 300,
+      "Factory": {
+        "name": "搅拌机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 4.0,
+          "电": 200.0
+        }
+      },
+      "Items": {
+        "product": {
+          "肥料（有机）": 96
+        },
+        "material": {
+          "堆肥": 72,
+          "水": 24
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 301,
+      "Factory": {
+        "name": "搅拌机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 4.0,
+          "电": 200.0
+        }
+      },
+      "Items": {
+        "product": {
+          "肥料（有机）": 96
+        },
+        "material": {
+          "堆肥": 24,
+          "土": 48,
+          "水": 24
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 302,
+      "Factory": {
         "name": "化工厂 II",
         "consumption": {
           "占地": 49,
-          "工人": 14,
+          "工人": 14.0,
+          "维护 II": 4.0,
+          "电": 800.0
+        }
+      },
+      "Items": {
+        "product": {
+          "氨": 12
+        },
+        "material": {
+          "氢": 12,
+          "氮": 24
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 303,
+      "Factory": {
+        "name": "化工厂 II",
+        "consumption": {
+          "占地": 49,
+          "工人": 14.0,
           "维护 II": 4.0,
           "电": 400.0
         }
       },
       "Items": {
         "product": {
-          "金刚石研磨膏": 16
+          "肥料 I": 60
         },
         "material": {
-          "金刚石": 4,
-          "重油": 2
+          "氨": 24,
+          "氧": 36
         }
       },
-      "Category": "石化"
+      "Category": "食品"
     },
     {
-      "ID": 289,
+      "ID": 304,
+      "Factory": {
+        "name": "化工厂 II",
+        "consumption": {
+          "占地": 49,
+          "工人": 14.0,
+          "维护 II": 4.0,
+          "电": 400.0
+        }
+      },
+      "Items": {
+        "product": {
+          "肥料 I": 90
+        },
+        "material": {
+          "肥料（有机）": 60,
+          "氨": 24,
+          "氧": 36
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 305,
+      "Factory": {
+        "name": "搅拌机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 4.0,
+          "电": 200.0
+        }
+      },
+      "Items": {
+        "product": {
+          "肥料 II": 72
+        },
+        "material": {
+          "肥料 I": 60,
+          "石灰石": 12,
+          "硫": 12
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 306,
+      "Factory": {
+        "name": "搅拌机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 4.0,
+          "电": 200.0
+        }
+      },
+      "Items": {
+        "product": {
+          "动物饲料": 96
+        },
+        "material": {
+          "土豆": 120
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 307,
+      "Factory": {
+        "name": "搅拌机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 4.0,
+          "电": 200.0
+        }
+      },
+      "Items": {
+        "product": {
+          "动物饲料": 192
+        },
+        "material": {
+          "小麦": 120
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 308,
+      "Factory": {
+        "name": "搅拌机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 4.0,
+          "电": 200.0
+        }
+      },
+      "Items": {
+        "product": {
+          "动物饲料": 144
+        },
+        "material": {
+          "玉米": 120
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 309,
+      "Factory": {
+        "name": "搅拌机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 4.0,
+          "电": 200.0
+        }
+      },
+      "Items": {
+        "product": {
+          "动物饲料": 216
+        },
+        "material": {
+          "大豆": 120
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 310,
+      "Factory": {
+        "name": "搅拌机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 4.0,
+          "电": 200.0
+        }
+      },
+      "Items": {
+        "product": {
+          "堆肥": 12
+        },
+        "material": {
+          "动物饲料": 24
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 311,
+      "Factory": {
+        "name": "搅拌机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 4.0,
+          "电": 200.0
+        }
+      },
+      "Items": {
+        "product": {
+          "堆肥": 16
+        },
+        "material": {
+          "生物质": 24
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 312,
+      "Factory": {
+        "name": "搅拌机 II",
+        "consumption": {
+          "占地": 42,
+          "工人": 4.0,
+          "维护 I": 4.0,
+          "电": 200.0
+        }
+      },
+      "Items": {
+        "product": {
+          "堆肥": 8
+        },
+        "material": {
+          "碎肉": 24
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 313,
       "Factory": {
         "name": "养鸡场",
         "consumption": {
@@ -6454,10 +6972,10 @@
           "水": 18.1
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 290,
+      "ID": 314,
       "Factory": {
         "name": "磨",
         "consumption": {
@@ -6476,10 +6994,10 @@
           "小麦": 16
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 291,
+      "ID": 315,
       "Factory": {
         "name": "磨",
         "consumption": {
@@ -6498,10 +7016,10 @@
           "大豆": 16
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 292,
+      "ID": 316,
       "Factory": {
         "name": "磨",
         "consumption": {
@@ -6520,10 +7038,10 @@
           "油菜": 16
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 293,
+      "ID": 317,
       "Factory": {
         "name": "磨",
         "consumption": {
@@ -6543,10 +7061,10 @@
           "水": 3
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 294,
+      "ID": 318,
       "Factory": {
         "name": "食品加工机",
         "consumption": {
@@ -6568,10 +7086,10 @@
           "石灰石": 1.5
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 295,
+      "ID": 319,
       "Factory": {
         "name": "食品加工机",
         "consumption": {
@@ -6592,10 +7110,10 @@
           "盐": 3
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 296,
+      "ID": 320,
       "Factory": {
         "name": "食品加工机",
         "consumption": {
@@ -6613,10 +7131,10 @@
           "鸡骨架": 30
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 297,
+      "ID": 321,
       "Factory": {
         "name": "食品加工机",
         "consumption": {
@@ -6636,10 +7154,10 @@
           "盐": 9
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 298,
+      "ID": 322,
       "Factory": {
         "name": "食品加工机",
         "consumption": {
@@ -6661,10 +7179,10 @@
           "塑料": 3
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 299,
+      "ID": 323,
       "Factory": {
         "name": "食品加工机",
         "consumption": {
@@ -6686,10 +7204,10 @@
           "塑料": 3
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 300,
+      "ID": 324,
       "Factory": {
         "name": "食品加工机",
         "consumption": {
@@ -6709,10 +7227,10 @@
           "水": 3
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 301,
+      "ID": 325,
       "Factory": {
         "name": "烘焙单元",
         "consumption": {
@@ -6731,10 +7249,10 @@
           "水": 8
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 302,
+      "ID": 326,
       "Factory": {
         "name": "烘焙单元",
         "consumption": {
@@ -6756,10 +7274,10 @@
           "水果": 2
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 303,
+      "ID": 327,
       "Factory": {
         "name": "发酵罐",
         "consumption": {
@@ -6779,10 +7297,10 @@
           "氧": 16
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 304,
+      "ID": 328,
       "Factory": {
         "name": "发酵罐",
         "consumption": {
@@ -6802,10 +7320,10 @@
           "氧": 16
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 305,
+      "ID": 329,
       "Factory": {
         "name": "发酵罐",
         "consumption": {
@@ -6826,660 +7344,123 @@
           "氧": 8
         }
       },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 306,
-      "Factory": {
-        "name": "搅拌机 I",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 2.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "肥料（有机）": 48
-        },
-        "material": {
-          "堆肥": 36,
-          "水": 12
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 307,
-      "Factory": {
-        "name": "搅拌机 I",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 2.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "肥料（有机）": 48
-        },
-        "material": {
-          "堆肥": 12,
-          "土": 24,
-          "水": 12
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 308,
-      "Factory": {
-        "name": "搅拌机 I",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 2.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "肥料 II": 36
-        },
-        "material": {
-          "肥料 I": 30,
-          "石灰石": 6,
-          "硫": 6
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 309,
-      "Factory": {
-        "name": "搅拌机 I",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 2.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "动物饲料": 48
-        },
-        "material": {
-          "土豆": 60
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 310,
-      "Factory": {
-        "name": "搅拌机 I",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 2.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "动物饲料": 96
-        },
-        "material": {
-          "小麦": 60
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 311,
-      "Factory": {
-        "name": "搅拌机 I",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 2.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "动物饲料": 72
-        },
-        "material": {
-          "玉米": 60
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 312,
-      "Factory": {
-        "name": "搅拌机 I",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 2.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "动物饲料": 108
-        },
-        "material": {
-          "大豆": 60
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 313,
-      "Factory": {
-        "name": "搅拌机 I",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 2.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "堆肥": 6
-        },
-        "material": {
-          "动物饲料": 12
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 314,
-      "Factory": {
-        "name": "搅拌机 I",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 2.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "堆肥": 8
-        },
-        "material": {
-          "生物质": 12
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 315,
-      "Factory": {
-        "name": "搅拌机 I",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 2.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "堆肥": 4
-        },
-        "material": {
-          "碎肉": 12
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 316,
-      "Factory": {
-        "name": "搅拌机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 4.0,
-          "电": 200.0
-        }
-      },
-      "Items": {
-        "product": {
-          "肥料（有机）": 96
-        },
-        "material": {
-          "堆肥": 72,
-          "水": 24
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 317,
-      "Factory": {
-        "name": "搅拌机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 4.0,
-          "电": 200.0
-        }
-      },
-      "Items": {
-        "product": {
-          "肥料（有机）": 96
-        },
-        "material": {
-          "堆肥": 24,
-          "土": 48,
-          "水": 24
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 318,
-      "Factory": {
-        "name": "搅拌机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 4.0,
-          "电": 200.0
-        }
-      },
-      "Items": {
-        "product": {
-          "肥料 II": 72
-        },
-        "material": {
-          "肥料 I": 60,
-          "石灰石": 12,
-          "硫": 12
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 319,
-      "Factory": {
-        "name": "搅拌机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 4.0,
-          "电": 200.0
-        }
-      },
-      "Items": {
-        "product": {
-          "动物饲料": 96
-        },
-        "material": {
-          "土豆": 120
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 320,
-      "Factory": {
-        "name": "搅拌机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 4.0,
-          "电": 200.0
-        }
-      },
-      "Items": {
-        "product": {
-          "动物饲料": 192
-        },
-        "material": {
-          "小麦": 120
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 321,
-      "Factory": {
-        "name": "搅拌机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 4.0,
-          "电": 200.0
-        }
-      },
-      "Items": {
-        "product": {
-          "动物饲料": 144
-        },
-        "material": {
-          "玉米": 120
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 322,
-      "Factory": {
-        "name": "搅拌机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 4.0,
-          "电": 200.0
-        }
-      },
-      "Items": {
-        "product": {
-          "动物饲料": 216
-        },
-        "material": {
-          "大豆": 120
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 323,
-      "Factory": {
-        "name": "搅拌机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 4.0,
-          "电": 200.0
-        }
-      },
-      "Items": {
-        "product": {
-          "堆肥": 12
-        },
-        "material": {
-          "动物饲料": 24
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 324,
-      "Factory": {
-        "name": "搅拌机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 4.0,
-          "电": 200.0
-        }
-      },
-      "Items": {
-        "product": {
-          "堆肥": 16
-        },
-        "material": {
-          "生物质": 24
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 325,
-      "Factory": {
-        "name": "搅拌机 II",
-        "consumption": {
-          "占地": 42,
-          "工人": 4.0,
-          "维护 I": 4.0,
-          "电": 200.0
-        }
-      },
-      "Items": {
-        "product": {
-          "堆肥": 8
-        },
-        "material": {
-          "碎肉": 24
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 326,
-      "Factory": {
-        "name": "厌氧消化池",
-        "consumption": {
-          "占地": 48,
-          "工人": 4.0,
-          "维护 I": 1.0,
-          "电": 50.0
-        }
-      },
-      "Items": {
-        "product": {
-          "燃气": 8,
-          "堆肥": 1
-        },
-        "material": {
-          "土豆": 14
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 327,
-      "Factory": {
-        "name": "厌氧消化池",
-        "consumption": {
-          "占地": 48,
-          "工人": 4.0,
-          "维护 I": 1.0,
-          "电": 50.0
-        }
-      },
-      "Items": {
-        "product": {
-          "燃气": 8,
-          "堆肥": 1
-        },
-        "material": {
-          "蔬菜": 14
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 328,
-      "Factory": {
-        "name": "厌氧消化池",
-        "consumption": {
-          "占地": 48,
-          "工人": 4.0,
-          "维护 I": 1.0,
-          "电": 50.0
-        }
-      },
-      "Items": {
-        "product": {
-          "燃气": 12,
-          "堆肥": 1
-        },
-        "material": {
-          "水果": 12
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 329,
-      "Factory": {
-        "name": "厌氧消化池",
-        "consumption": {
-          "占地": 48,
-          "工人": 4.0,
-          "维护 I": 1.0,
-          "电": 50.0
-        }
-      },
-      "Items": {
-        "product": {
-          "燃气": 8,
-          "堆肥": 1
-        },
-        "material": {
-          "罂粟": 14
-        }
-      },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
       "ID": 330,
       "Factory": {
-        "name": "厌氧消化池",
+        "name": "化工厂 I",
         "consumption": {
-          "占地": 48,
-          "工人": 4.0,
-          "维护 I": 1.0,
-          "电": 50.0
+          "占地": 49,
+          "工人": 8.0,
+          "维护 I": 4.0,
+          "电": 250.0
         }
       },
       "Items": {
         "product": {
-          "燃气": 12,
-          "堆肥": 1
+          "消毒剂": 12
         },
         "material": {
-          "小麦": 12
+          "乙醇": 4.5,
+          "塑料": 3
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
       "ID": 331,
       "Factory": {
-        "name": "厌氧消化池",
+        "name": "化工厂 II",
         "consumption": {
-          "占地": 48,
-          "工人": 4.0,
-          "维护 I": 1.0,
-          "电": 50.0
+          "占地": 49,
+          "工人": 14.0,
+          "维护 II": 4.0,
+          "电": 400.0
         }
       },
       "Items": {
         "product": {
-          "燃气": 14,
-          "堆肥": 1
+          "乙醇": 18,
+          "水": 9
         },
         "material": {
-          "玉米": 14
+          "氢": 36,
+          "二氧化碳": 27
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
       "ID": 332,
       "Factory": {
-        "name": "厌氧消化池",
+        "name": "化工厂 II",
         "consumption": {
-          "占地": 48,
-          "工人": 4.0,
-          "维护 I": 1.0,
-          "电": 50.0
+          "占地": 49,
+          "工人": 14.0,
+          "维护 II": 4.0,
+          "电": 400.0
         }
       },
       "Items": {
         "product": {
-          "燃气": 12,
-          "堆肥": 1
+          "消毒剂": 24
         },
         "material": {
-          "大豆": 14
+          "乙醇": 9,
+          "塑料": 6
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
       "ID": 333,
       "Factory": {
-        "name": "厌氧消化池",
+        "name": "化工厂 II",
         "consumption": {
-          "占地": 48,
-          "工人": 4.0,
-          "维护 I": 1.0,
-          "电": 50.0
+          "占地": 49,
+          "工人": 14.0,
+          "维护 II": 4.0,
+          "电": 400.0
         }
       },
       "Items": {
         "product": {
-          "燃气": 8,
-          "堆肥": 1
+          "麻醉剂": 24
         },
         "material": {
-          "甘蔗": 12
+          "氨": 6,
+          "氟化氢": 12,
+          "钢": 3
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
       "ID": 334,
       "Factory": {
-        "name": "厌氧消化池",
+        "name": "化工厂 II",
         "consumption": {
-          "占地": 48,
-          "工人": 4.0,
-          "维护 I": 1.0,
-          "电": 50.0
+          "占地": 49,
+          "工人": 14.0,
+          "维护 II": 4.0,
+          "电": 400.0
         }
       },
       "Items": {
         "product": {
-          "燃气": 4,
-          "堆肥": 2
+          "吗啡": 24
         },
         "material": {
-          "碎肉": 8
+          "罂粟": 12,
+          "酸": 6,
+          "玻璃": 6
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
       "ID": 335,
-      "Factory": {
-        "name": "厌氧消化池",
-        "consumption": {
-          "占地": 48,
-          "工人": 4.0,
-          "维护 I": 1.0,
-          "电": 50.0
-        }
-      },
-      "Items": {
-        "product": {
-          "燃气": 12,
-          "堆肥": 1
-        },
-        "material": {
-          "鸡蛋": 12
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 336,
       "Factory": {
         "name": "装配机 III",
         "consumption": {
@@ -7498,10 +7479,10 @@
           "塑料": 6
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 337,
+      "ID": 336,
       "Factory": {
         "name": "装配机 III",
         "consumption": {
@@ -7520,10 +7501,10 @@
           "消毒剂": 12
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 338,
+      "ID": 337,
       "Factory": {
         "name": "装配机 III",
         "consumption": {
@@ -7542,10 +7523,10 @@
           "抗生素": 12
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 339,
+      "ID": 338,
       "Factory": {
         "name": "装配机 III",
         "consumption": {
@@ -7565,10 +7546,10 @@
           "吗啡": 12
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 340,
+      "ID": 339,
       "Factory": {
         "name": "装配机 III",
         "consumption": {
@@ -7587,10 +7568,10 @@
           "面包": 12
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 341,
+      "ID": 340,
       "Factory": {
         "name": "装配机 III",
         "consumption": {
@@ -7609,10 +7590,10 @@
           "面包": 12
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 342,
+      "ID": 341,
       "Factory": {
         "name": "装配机 III",
         "consumption": {
@@ -7631,10 +7612,10 @@
           "蔬菜": 16
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 343,
+      "ID": 342,
       "Factory": {
         "name": "装配机 III",
         "consumption": {
@@ -7654,10 +7635,10 @@
           "塑料": 1
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 344,
+      "ID": 343,
       "Factory": {
         "name": "装配机 IV",
         "consumption": {
@@ -7677,10 +7658,10 @@
           "塑料": 12
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 345,
+      "ID": 344,
       "Factory": {
         "name": "装配机 IV",
         "consumption": {
@@ -7700,10 +7681,10 @@
           "消毒剂": 24
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 346,
+      "ID": 345,
       "Factory": {
         "name": "装配机 IV",
         "consumption": {
@@ -7723,10 +7704,10 @@
           "抗生素": 24
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 347,
+      "ID": 346,
       "Factory": {
         "name": "装配机 IV",
         "consumption": {
@@ -7747,10 +7728,10 @@
           "吗啡": 24
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 348,
+      "ID": 347,
       "Factory": {
         "name": "装配机 IV",
         "consumption": {
@@ -7770,10 +7751,10 @@
           "面包": 24
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 349,
+      "ID": 348,
       "Factory": {
         "name": "装配机 IV",
         "consumption": {
@@ -7793,10 +7774,10 @@
           "面包": 24
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 350,
+      "ID": 349,
       "Factory": {
         "name": "装配机 IV",
         "consumption": {
@@ -7816,10 +7797,10 @@
           "蔬菜": 32
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 351,
+      "ID": 350,
       "Factory": {
         "name": "装配机 IV",
         "consumption": {
@@ -7840,10 +7821,10 @@
           "塑料": 2
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 352,
+      "ID": 351,
       "Factory": {
         "name": "装配机 V",
         "consumption": {
@@ -7862,10 +7843,10 @@
           "塑料": 24
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 353,
+      "ID": 352,
       "Factory": {
         "name": "装配机 V",
         "consumption": {
@@ -7884,10 +7865,10 @@
           "消毒剂": 48
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 354,
+      "ID": 353,
       "Factory": {
         "name": "装配机 V",
         "consumption": {
@@ -7906,10 +7887,10 @@
           "抗生素": 48
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 355,
+      "ID": 354,
       "Factory": {
         "name": "装配机 V",
         "consumption": {
@@ -7929,10 +7910,10 @@
           "吗啡": 48
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 356,
+      "ID": 355,
       "Factory": {
         "name": "装配机 V",
         "consumption": {
@@ -7951,10 +7932,10 @@
           "面包": 48
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 357,
+      "ID": 356,
       "Factory": {
         "name": "装配机 V",
         "consumption": {
@@ -7973,10 +7954,10 @@
           "面包": 48
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 358,
+      "ID": 357,
       "Factory": {
         "name": "装配机 V",
         "consumption": {
@@ -7995,10 +7976,10 @@
           "蔬菜": 64
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 359,
+      "ID": 358,
       "Factory": {
         "name": "装配机 V",
         "consumption": {
@@ -8018,33 +7999,10 @@
           "塑料": 4
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 360,
-      "Factory": {
-        "name": "化工厂 I",
-        "consumption": {
-          "占地": 49,
-          "工人": 8.0,
-          "维护 I": 4.0,
-          "电": 250.0
-        }
-      },
-      "Items": {
-        "product": {
-          "肥料 I": 45
-        },
-        "material": {
-          "肥料（有机）": 30,
-          "氨": 12,
-          "氧": 18
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 361,
+      "ID": 359,
       "Factory": {
         "name": "化工厂 I",
         "consumption": {
@@ -8063,99 +8021,10 @@
           "食用油": 15
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
-      "ID": 362,
-      "Factory": {
-        "name": "化工厂 I",
-        "consumption": {
-          "占地": 49,
-          "工人": 8.0,
-          "维护 I": 4.0,
-          "电": 250.0
-        }
-      },
-      "Items": {
-        "product": {
-          "消毒剂": 12
-        },
-        "material": {
-          "乙醇": 4.5,
-          "塑料": 3
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 363,
-      "Factory": {
-        "name": "化工厂 II",
-        "consumption": {
-          "占地": 49,
-          "工人": 14.0,
-          "维护 II": 4.0,
-          "电": 400.0
-        }
-      },
-      "Items": {
-        "product": {
-          "肥料 I": 60
-        },
-        "material": {
-          "氨": 24,
-          "氧": 36
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 364,
-      "Factory": {
-        "name": "化工厂 II",
-        "consumption": {
-          "占地": 49,
-          "工人": 14.0,
-          "维护 II": 4.0,
-          "电": 400.0
-        }
-      },
-      "Items": {
-        "product": {
-          "肥料 I": 90
-        },
-        "material": {
-          "肥料（有机）": 60,
-          "氨": 24,
-          "氧": 36
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 365,
-      "Factory": {
-        "name": "化工厂 II",
-        "consumption": {
-          "占地": 49,
-          "工人": 14.0,
-          "维护 II": 4.0,
-          "电": 800.0
-        }
-      },
-      "Items": {
-        "product": {
-          "氨": 12
-        },
-        "material": {
-          "氢": 12,
-          "氮": 24
-        }
-      },
-      "Category": "食品制造"
-    },
-    {
-      "ID": 366,
+      "ID": 360,
       "Factory": {
         "name": "化工厂 II",
         "consumption": {
@@ -8174,78 +8043,346 @@
           "食用油": 30
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
+    },
+    {
+      "ID": 361,
+      "Factory": {
+        "name": "厌氧消化池",
+        "consumption": {
+          "占地": 48,
+          "工人": 4.0,
+          "维护 I": 1.0,
+          "电": 50.0
+        }
+      },
+      "Items": {
+        "product": {
+          "燃气": 8,
+          "堆肥": 1
+        },
+        "material": {
+          "土豆": 14
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 362,
+      "Factory": {
+        "name": "厌氧消化池",
+        "consumption": {
+          "占地": 48,
+          "工人": 4.0,
+          "维护 I": 1.0,
+          "电": 50.0
+        }
+      },
+      "Items": {
+        "product": {
+          "燃气": 8,
+          "堆肥": 1
+        },
+        "material": {
+          "蔬菜": 14
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 363,
+      "Factory": {
+        "name": "厌氧消化池",
+        "consumption": {
+          "占地": 48,
+          "工人": 4.0,
+          "维护 I": 1.0,
+          "电": 50.0
+        }
+      },
+      "Items": {
+        "product": {
+          "燃气": 12,
+          "堆肥": 1
+        },
+        "material": {
+          "水果": 12
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 364,
+      "Factory": {
+        "name": "厌氧消化池",
+        "consumption": {
+          "占地": 48,
+          "工人": 4.0,
+          "维护 I": 1.0,
+          "电": 50.0
+        }
+      },
+      "Items": {
+        "product": {
+          "燃气": 8,
+          "堆肥": 1
+        },
+        "material": {
+          "罂粟": 14
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 365,
+      "Factory": {
+        "name": "厌氧消化池",
+        "consumption": {
+          "占地": 48,
+          "工人": 4.0,
+          "维护 I": 1.0,
+          "电": 50.0
+        }
+      },
+      "Items": {
+        "product": {
+          "燃气": 12,
+          "堆肥": 1
+        },
+        "material": {
+          "小麦": 12
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 366,
+      "Factory": {
+        "name": "厌氧消化池",
+        "consumption": {
+          "占地": 48,
+          "工人": 4.0,
+          "维护 I": 1.0,
+          "电": 50.0
+        }
+      },
+      "Items": {
+        "product": {
+          "燃气": 14,
+          "堆肥": 1
+        },
+        "material": {
+          "玉米": 14
+        }
+      },
+      "Category": "食品"
     },
     {
       "ID": 367,
       "Factory": {
-        "name": "化工厂 II",
+        "name": "厌氧消化池",
         "consumption": {
-          "占地": 49,
-          "工人": 14.0,
-          "维护 II": 4.0,
-          "电": 400.0
+          "占地": 48,
+          "工人": 4.0,
+          "维护 I": 1.0,
+          "电": 50.0
         }
       },
       "Items": {
         "product": {
-          "消毒剂": 24
+          "燃气": 12,
+          "堆肥": 1
         },
         "material": {
-          "乙醇": 9,
-          "塑料": 6
+          "大豆": 14
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
       "ID": 368,
       "Factory": {
-        "name": "化工厂 II",
+        "name": "厌氧消化池",
         "consumption": {
-          "占地": 49,
-          "工人": 14.0,
-          "维护 II": 4.0,
-          "电": 400.0
+          "占地": 48,
+          "工人": 4.0,
+          "维护 I": 1.0,
+          "电": 50.0
         }
       },
       "Items": {
         "product": {
-          "麻醉剂": 24
+          "燃气": 8,
+          "堆肥": 1
         },
         "material": {
-          "氨": 6,
-          "氟化氢": 12,
-          "钢": 3
+          "甘蔗": 12
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
       "ID": 369,
       "Factory": {
-        "name": "化工厂 II",
+        "name": "厌氧消化池",
         "consumption": {
-          "占地": 49,
-          "工人": 14.0,
-          "维护 II": 4.0,
-          "电": 400.0
+          "占地": 48,
+          "工人": 4.0,
+          "维护 I": 1.0,
+          "电": 50.0
         }
       },
       "Items": {
         "product": {
-          "吗啡": 24
+          "燃气": 4,
+          "堆肥": 2
         },
         "material": {
-          "罂粟": 12,
-          "酸": 6,
-          "玻璃": 6
+          "碎肉": 8
         }
       },
-      "Category": "食品制造"
+      "Category": "食品"
     },
     {
       "ID": 370,
+      "Factory": {
+        "name": "厌氧消化池",
+        "consumption": {
+          "占地": 48,
+          "工人": 4.0,
+          "维护 I": 1.0,
+          "电": 50.0
+        }
+      },
+      "Items": {
+        "product": {
+          "燃气": 12,
+          "堆肥": 1
+        },
+        "material": {
+          "鸡蛋": 12
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 371,
+      "Factory": {
+        "name": "焚化炉（固体）",
+        "consumption": {
+          "占地": 6,
+          "工人": 1.0
+        }
+      },
+      "Items": {
+        "product": {
+          "空气污染": 12
+        },
+        "material": {
+          "生物质": 36
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 372,
+      "Factory": {
+        "name": "焚化炉（固体）",
+        "consumption": {
+          "占地": 6,
+          "工人": 1.0
+        }
+      },
+      "Items": {
+        "product": {
+          "空气污染": 12
+        },
+        "material": {
+          "动物饲料": 36
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 373,
+      "Factory": {
+        "name": "焚化炉（固体）",
+        "consumption": {
+          "占地": 6,
+          "工人": 1.0
+        }
+      },
+      "Items": {
+        "product": {
+          "空气污染": 12
+        },
+        "material": {
+          "油菜": 36
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 374,
+      "Factory": {
+        "name": "焚化炉（固体）",
+        "consumption": {
+          "占地": 6,
+          "工人": 1.0
+        }
+      },
+      "Items": {
+        "product": {
+          "空气污染": 9
+        },
+        "material": {
+          "碎肉": 12
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 375,
+      "Factory": {
+        "name": "焚化炉（固体）",
+        "consumption": {
+          "占地": 6,
+          "工人": 1.0
+        }
+      },
+      "Items": {
+        "product": {
+          "空气污染": 9
+        },
+        "material": {
+          "鸡骨架": 12
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 376,
+      "Factory": {
+        "name": "破碎机",
+        "consumption": {
+          "占地": 15,
+          "工人": 1.0,
+          "维护 I": 1.0,
+          "电": 100.0
+        }
+      },
+      "Items": {
+        "product": {
+          "生物质": 24
+        },
+        "material": {
+          "树苗": 24
+        }
+      },
+      "Category": "食品"
+    },
+    {
+      "ID": 377,
       "Factory": {
         "name": "柴油发电机 I",
         "consumption": {
@@ -8266,7 +8403,7 @@
       "Category": "发电"
     },
     {
-      "ID": 371,
+      "ID": 378,
       "Factory": {
         "name": "柴油发电机 II",
         "consumption": {
@@ -8287,7 +8424,7 @@
       "Category": "发电"
     },
     {
-      "ID": 372,
+      "ID": 379,
       "Factory": {
         "name": "发电机",
         "consumption": {
@@ -8306,7 +8443,7 @@
       "Category": "发电"
     },
     {
-      "ID": 373,
+      "ID": 380,
       "Factory": {
         "name": "发电机（大）",
         "consumption": {
@@ -8325,7 +8462,7 @@
       "Category": "发电"
     },
     {
-      "ID": 374,
+      "ID": 381,
       "Factory": {
         "name": "低压涡轮 I",
         "consumption": {
@@ -8346,7 +8483,7 @@
       "Category": "发电"
     },
     {
-      "ID": 375,
+      "ID": 382,
       "Factory": {
         "name": "低压涡轮 II",
         "consumption": {
@@ -8367,7 +8504,7 @@
       "Category": "发电"
     },
     {
-      "ID": 376,
+      "ID": 383,
       "Factory": {
         "name": "高压涡轮 I",
         "consumption": {
@@ -8388,7 +8525,7 @@
       "Category": "发电"
     },
     {
-      "ID": 377,
+      "ID": 384,
       "Factory": {
         "name": "高压涡轮 II",
         "consumption": {
@@ -8409,7 +8546,7 @@
       "Category": "发电"
     },
     {
-      "ID": 378,
+      "ID": 385,
       "Factory": {
         "name": "超高压涡轮",
         "consumption": {
@@ -8430,7 +8567,7 @@
       "Category": "发电"
     },
     {
-      "ID": 379,
+      "ID": 386,
       "Factory": {
         "name": "沉淀池",
         "consumption": {
@@ -8453,7 +8590,7 @@
       "Category": "发电"
     },
     {
-      "ID": 380,
+      "ID": 387,
       "Factory": {
         "name": "铀浓缩工厂",
         "consumption": {
@@ -8476,7 +8613,7 @@
       "Category": "发电"
     },
     {
-      "ID": 381,
+      "ID": 388,
       "Factory": {
         "name": "铀浓缩工厂",
         "consumption": {
@@ -8499,7 +8636,7 @@
       "Category": "发电"
     },
     {
-      "ID": 382,
+      "ID": 389,
       "Factory": {
         "name": "铀浓缩工厂",
         "consumption": {
@@ -8522,7 +8659,7 @@
       "Category": "发电"
     },
     {
-      "ID": 383,
+      "ID": 390,
       "Factory": {
         "name": "铀浓缩工厂",
         "consumption": {
@@ -8544,7 +8681,7 @@
       "Category": "发电"
     },
     {
-      "ID": 384,
+      "ID": 391,
       "Factory": {
         "name": "铀浓缩工厂",
         "consumption": {
@@ -8566,7 +8703,7 @@
       "Category": "发电"
     },
     {
-      "ID": 385,
+      "ID": 392,
       "Factory": {
         "name": "铀浓缩工厂",
         "consumption": {
@@ -8588,7 +8725,7 @@
       "Category": "发电"
     },
     {
-      "ID": 386,
+      "ID": 393,
       "Factory": {
         "name": "核后处理厂",
         "consumption": {
@@ -8614,7 +8751,7 @@
       "Category": "发电"
     },
     {
-      "ID": 387,
+      "ID": 394,
       "Factory": {
         "name": "核后处理厂",
         "consumption": {
@@ -8640,7 +8777,7 @@
       "Category": "发电"
     },
     {
-      "ID": 388,
+      "ID": 395,
       "Factory": {
         "name": "核后处理厂",
         "consumption": {
@@ -8666,7 +8803,7 @@
       "Category": "发电"
     },
     {
-      "ID": 389,
+      "ID": 396,
       "Factory": {
         "name": "核后处理厂",
         "consumption": {
@@ -8692,7 +8829,7 @@
       "Category": "发电"
     },
     {
-      "ID": 390,
+      "ID": 397,
       "Factory": {
         "name": "化工厂 II",
         "consumption": {
@@ -8714,7 +8851,7 @@
       "Category": "发电"
     },
     {
-      "ID": 391,
+      "ID": 398,
       "Factory": {
         "name": "化工厂 II",
         "consumption": {
@@ -8737,7 +8874,7 @@
       "Category": "发电"
     },
     {
-      "ID": 392,
+      "ID": 399,
       "Factory": {
         "name": "化工厂 II",
         "consumption": {
@@ -8759,7 +8896,7 @@
       "Category": "发电"
     },
     {
-      "ID": 393,
+      "ID": 400,
       "Factory": {
         "name": "化工厂 II",
         "consumption": {
@@ -8781,7 +8918,7 @@
       "Category": "发电"
     },
     {
-      "ID": 394,
+      "ID": 401,
       "Factory": {
         "name": "化工厂 II",
         "consumption": {
@@ -8803,7 +8940,7 @@
       "Category": "发电"
     },
     {
-      "ID": 395,
+      "ID": 402,
       "Factory": {
         "name": "装配机 III",
         "consumption": {
@@ -8825,7 +8962,7 @@
       "Category": "发电"
     },
     {
-      "ID": 396,
+      "ID": 403,
       "Factory": {
         "name": "装配机 IV",
         "consumption": {
@@ -8848,7 +8985,7 @@
       "Category": "发电"
     },
     {
-      "ID": 397,
+      "ID": 404,
       "Factory": {
         "name": "装配机 V",
         "consumption": {
@@ -8870,7 +9007,7 @@
       "Category": "发电"
     },
     {
-      "ID": 398,
+      "ID": 405,
       "Factory": {
         "name": "太阳能板",
         "consumption": {
@@ -8887,7 +9024,7 @@
       "Category": "发电"
     },
     {
-      "ID": 399,
+      "ID": 406,
       "Factory": {
         "name": "太阳能电池板（单晶）",
         "consumption": {
@@ -8904,7 +9041,7 @@
       "Category": "发电"
     },
     {
-      "ID": 400,
+      "ID": 407,
       "Factory": {
         "name": "锅炉",
         "consumption": {
@@ -8925,7 +9062,7 @@
       "Category": "发电"
     },
     {
-      "ID": 401,
+      "ID": 408,
       "Factory": {
         "name": "锅炉",
         "consumption": {
@@ -8946,7 +9083,7 @@
       "Category": "发电"
     },
     {
-      "ID": 402,
+      "ID": 409,
       "Factory": {
         "name": "锅炉",
         "consumption": {
@@ -8967,7 +9104,7 @@
       "Category": "发电"
     },
     {
-      "ID": 403,
+      "ID": 410,
       "Factory": {
         "name": "锅炉",
         "consumption": {
@@ -8988,7 +9125,7 @@
       "Category": "发电"
     },
     {
-      "ID": 404,
+      "ID": 411,
       "Factory": {
         "name": "锅炉（气）",
         "consumption": {
@@ -9009,7 +9146,7 @@
       "Category": "发电"
     },
     {
-      "ID": 405,
+      "ID": 412,
       "Factory": {
         "name": "锅炉（气）",
         "consumption": {
@@ -9030,7 +9167,7 @@
       "Category": "发电"
     },
     {
-      "ID": 406,
+      "ID": 413,
       "Factory": {
         "name": "锅炉（气）",
         "consumption": {
@@ -9051,7 +9188,7 @@
       "Category": "发电"
     },
     {
-      "ID": 407,
+      "ID": 414,
       "Factory": {
         "name": "锅炉（气）",
         "consumption": {
@@ -9072,7 +9209,7 @@
       "Category": "发电"
     },
     {
-      "ID": 408,
+      "ID": 415,
       "Factory": {
         "name": "锅炉（气）",
         "consumption": {
@@ -9093,7 +9230,7 @@
       "Category": "发电"
     },
     {
-      "ID": 409,
+      "ID": 416,
       "Factory": {
         "name": "锅炉（气）",
         "consumption": {
@@ -9114,7 +9251,7 @@
       "Category": "发电"
     },
     {
-      "ID": 410,
+      "ID": 417,
       "Factory": {
         "name": "锅炉（气）",
         "consumption": {
@@ -9135,7 +9272,7 @@
       "Category": "发电"
     },
     {
-      "ID": 411,
+      "ID": 418,
       "Factory": {
         "name": "锅炉（电）",
         "consumption": {
@@ -9156,7 +9293,7 @@
       "Category": "发电"
     },
     {
-      "ID": 412,
+      "ID": 419,
       "Factory": {
         "name": "锅炉（电）",
         "consumption": {
@@ -9177,7 +9314,7 @@
       "Category": "发电"
     },
     {
-      "ID": 413,
+      "ID": 420,
       "Factory": {
         "name": "锅炉（电）",
         "consumption": {
@@ -9198,7 +9335,7 @@
       "Category": "发电"
     },
     {
-      "ID": 414,
+      "ID": 421,
       "Factory": {
         "name": "核反应堆 I",
         "consumption": {
@@ -9220,7 +9357,7 @@
       "Category": "发电"
     },
     {
-      "ID": 415,
+      "ID": 422,
       "Factory": {
         "name": "核反应堆 II",
         "consumption": {
@@ -9242,7 +9379,7 @@
       "Category": "发电"
     },
     {
-      "ID": 416,
+      "ID": 423,
       "Factory": {
         "name": "核反应堆 II",
         "consumption": {
@@ -9264,7 +9401,7 @@
       "Category": "发电"
     },
     {
-      "ID": 417,
+      "ID": 424,
       "Factory": {
         "name": "快中子增殖反应堆",
         "consumption": {
@@ -9286,7 +9423,7 @@
       "Category": "发电"
     },
     {
-      "ID": 418,
+      "ID": 425,
       "Factory": {
         "name": "快中子增殖反应堆",
         "consumption": {
@@ -9310,7 +9447,7 @@
       "Category": "发电"
     },
     {
-      "ID": 419,
+      "ID": 426,
       "Factory": {
         "name": "快中子增殖反应堆",
         "consumption": {
@@ -9334,7 +9471,7 @@
       "Category": "发电"
     },
     {
-      "ID": 420,
+      "ID": 427,
       "Factory": {
         "name": "核废料存储",
         "consumption": {
@@ -9352,7 +9489,7 @@
       "Category": "发电"
     },
     {
-      "ID": 421,
+      "ID": 428,
       "Factory": {
         "name": "核废料存储",
         "consumption": {
@@ -9372,7 +9509,7 @@
       "Category": "发电"
     },
     {
-      "ID": 422,
+      "ID": 429,
       "Factory": {
         "name": "倾倒",
         "consumption": {}
@@ -9386,7 +9523,7 @@
       "Category": "发电"
     },
     {
-      "ID": 423,
+      "ID": 430,
       "Factory": {
         "name": "气体喷射泵",
         "consumption": {
@@ -9406,7 +9543,7 @@
       "Category": "废弃物处理"
     },
     {
-      "ID": 424,
+      "ID": 431,
       "Factory": {
         "name": "尾气洗涤器",
         "consumption": {
@@ -9431,7 +9568,7 @@
       "Category": "废弃物处理"
     },
     {
-      "ID": 425,
+      "ID": 432,
       "Factory": {
         "name": "尾气洗涤器",
         "consumption": {
@@ -9457,7 +9594,7 @@
       "Category": "废弃物处理"
     },
     {
-      "ID": 426,
+      "ID": 433,
       "Factory": {
         "name": "垃圾焚烧厂",
         "consumption": {
@@ -9481,7 +9618,7 @@
       "Category": "废弃物处理"
     },
     {
-      "ID": 427,
+      "ID": 434,
       "Factory": {
         "name": "垃圾焚烧厂",
         "consumption": {
@@ -9505,7 +9642,7 @@
       "Category": "废弃物处理"
     },
     {
-      "ID": 428,
+      "ID": 435,
       "Factory": {
         "name": "垃圾焚烧厂",
         "consumption": {
@@ -9529,7 +9666,7 @@
       "Category": "废弃物处理"
     },
     {
-      "ID": 429,
+      "ID": 436,
       "Factory": {
         "name": "垃圾焚烧厂",
         "consumption": {
@@ -9553,7 +9690,7 @@
       "Category": "废弃物处理"
     },
     {
-      "ID": 430,
+      "ID": 437,
       "Factory": {
         "name": "垃圾分类工厂",
         "consumption": {
@@ -9572,7 +9709,7 @@
       "Category": "废弃物处理"
     },
     {
-      "ID": 431,
+      "ID": 438,
       "Factory": {
         "name": "垃圾分类工厂",
         "consumption": {
@@ -9591,55 +9728,7 @@
       "Category": "废弃物处理"
     },
     {
-      "ID": 432,
-      "Factory": {
-        "name": "废水处理",
-        "consumption": {
-          "占地": 204.0,
-          "工人": 26.0,
-          "维护 I": 10.0,
-          "电": 600.0
-        }
-      },
-      "Items": {
-        "product": {
-          "水": 80,
-          "污泥": 24
-        },
-        "material": {
-          "废水": 160,
-          "沙": 8,
-          "氯": 8
-        }
-      },
-      "Category": "废弃物处理"
-    },
-    {
-      "ID": 433,
-      "Factory": {
-        "name": "废水处理",
-        "consumption": {
-          "占地": 204.0,
-          "工人": 26.0,
-          "维护 I": 10.0,
-          "电": 600.0
-        }
-      },
-      "Items": {
-        "product": {
-          "水": 120,
-          "污泥": 36
-        },
-        "material": {
-          "废水": 160,
-          "过滤介质": 8,
-          "氯": 16
-        }
-      },
-      "Category": "废弃物处理"
-    },
-    {
-      "ID": 434,
+      "ID": 439,
       "Factory": {
         "name": "废水处理",
         "consumption": {
@@ -9663,7 +9752,55 @@
       "Category": "废弃物处理"
     },
     {
-      "ID": 435,
+      "ID": 440,
+      "Factory": {
+        "name": "废水处理",
+        "consumption": {
+          "占地": 204.0,
+          "工人": 26.0,
+          "维护 I": 10.0,
+          "电": 600.0
+        }
+      },
+      "Items": {
+        "product": {
+          "水": 80,
+          "污泥": 24
+        },
+        "material": {
+          "废水": 160,
+          "沙": 8,
+          "氯": 8
+        }
+      },
+      "Category": "废弃物处理"
+    },
+    {
+      "ID": 441,
+      "Factory": {
+        "name": "废水处理",
+        "consumption": {
+          "占地": 204.0,
+          "工人": 26.0,
+          "维护 I": 10.0,
+          "电": 600.0
+        }
+      },
+      "Items": {
+        "product": {
+          "水": 120,
+          "污泥": 36
+        },
+        "material": {
+          "废水": 160,
+          "过滤介质": 8,
+          "氯": 16
+        }
+      },
+      "Category": "废弃物处理"
+    },
+    {
+      "ID": 442,
       "Factory": {
         "name": "厌氧消化池",
         "consumption": {
@@ -9685,7 +9822,7 @@
       "Category": "废弃物处理"
     },
     {
-      "ID": 436,
+      "ID": 443,
       "Factory": {
         "name": "焚化炉（固体）",
         "consumption": {
@@ -9704,102 +9841,7 @@
       "Category": "废弃物处理"
     },
     {
-      "ID": 437,
-      "Factory": {
-        "name": "焚化炉（固体）",
-        "consumption": {
-          "占地": 6.0,
-          "工人": 1.0
-        }
-      },
-      "Items": {
-        "product": {
-          "空气污染": 12
-        },
-        "material": {
-          "生物质": 36
-        }
-      },
-      "Category": "废弃物处理"
-    },
-    {
-      "ID": 438,
-      "Factory": {
-        "name": "焚化炉（固体）",
-        "consumption": {
-          "占地": 6.0,
-          "工人": 1.0
-        }
-      },
-      "Items": {
-        "product": {
-          "空气污染": 12
-        },
-        "material": {
-          "动物饲料": 36
-        }
-      },
-      "Category": "废弃物处理"
-    },
-    {
-      "ID": 439,
-      "Factory": {
-        "name": "焚化炉（固体）",
-        "consumption": {
-          "占地": 6.0,
-          "工人": 1.0
-        }
-      },
-      "Items": {
-        "product": {
-          "空气污染": 12
-        },
-        "material": {
-          "油菜": 36
-        }
-      },
-      "Category": "废弃物处理"
-    },
-    {
-      "ID": 440,
-      "Factory": {
-        "name": "焚化炉（固体）",
-        "consumption": {
-          "占地": 6.0,
-          "工人": 1.0
-        }
-      },
-      "Items": {
-        "product": {
-          "空气污染": 9
-        },
-        "material": {
-          "碎肉": 12
-        }
-      },
-      "Category": "废弃物处理"
-    },
-    {
-      "ID": 441,
-      "Factory": {
-        "name": "焚化炉（固体）",
-        "consumption": {
-          "占地": 6.0,
-          "工人": 1.0
-        }
-      },
-      "Items": {
-        "product": {
-          "空气污染": 9
-        },
-        "material": {
-          "鸡骨架": 12
-        }
-      },
-      "Category": "废弃物处理"
-    },
-    {
-      "ID": 442,
+      "ID": 444,
       "Factory": {
         "name": "焚化炉（固体）",
         "consumption": {
@@ -9818,7 +9860,7 @@
       "Category": "废弃物处理"
     },
     {
-      "ID": 443,
+      "ID": 445,
       "Factory": {
         "name": "焚化炉（固体）",
         "consumption": {
@@ -9832,48 +9874,6 @@
         },
         "material": {
           "污泥": 18
-        }
-      },
-      "Category": "废弃物处理"
-    },
-    {
-      "ID": 444,
-      "Factory": {
-        "name": "破碎机",
-        "consumption": {
-          "占地": 15.0,
-          "工人": 1.0,
-          "维护 I": 1.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "木屑": 24
-        },
-        "material": {
-          "木材": 24
-        }
-      },
-      "Category": "废弃物处理"
-    },
-    {
-      "ID": 445,
-      "Factory": {
-        "name": "破碎机",
-        "consumption": {
-          "占地": 15.0,
-          "工人": 1.0,
-          "维护 I": 1.0,
-          "电": 100.0
-        }
-      },
-      "Items": {
-        "product": {
-          "生物质": 24
-        },
-        "material": {
-          "树苗": 24
         }
       },
       "Category": "废弃物处理"
@@ -12695,96 +12695,106 @@
         "柴油": {
           "小型挖掘机": {
             "consumption": {
-              "工人": 3.0,
-              "维护 I": 8.0
+              "工人": 1.0,
+              "维护 I": 4.0
             },
             "Items": {
               "material": {
-                "柴油": 1.88
+                "柴油": 1.0
               },
               "product": {
-                "开采速率": 31.7
+                "空气污染": 1.0,
+                "开采速率": 20.0
               }
             },
             "车库等级": 1.0
           },
           "挖掘机": {
             "consumption": {
-              "工人": 3.0,
-              "维护 I": 14.0
+              "工人": 1.0,
+              "维护 I": 6.0
             },
             "Items": {
               "material": {
-                "柴油": 4.5
+                "柴油": 2.3
               },
               "product": {
-                "开采速率": 96.2
+                "空气污染": 2.3,
+                "开采速率": 70.0
               }
             },
             "车库等级": 2.0
           },
           "超大型挖掘机": {
             "consumption": {
-              "工人": 3.0,
-              "维护 II": 16.0
+              "工人": 1.0,
+              "维护 II": 8.0
             },
             "Items": {
               "material": {
-                "柴油": 9.6
+                "柴油": 5.0
               },
               "product": {
-                "开采速率": 259.0
+                "空气污染": 5.0,
+                "开采速率": 200.0
               }
             },
             "车库等级": 3.0
           },
           "伐木机": {
-            "consumption": {},
-            "Items": {
-              "material": {},
-              "product": {}
-            },
-            "车库等级": 1.0
-          },
-          "大型伐木机": {
-            "consumption": {},
-            "Items": {
-              "material": {},
-              "product": {}
-            },
-            "车库等级": 2.0
-          },
-          "伐木场(小)": {
             "consumption": {
-              "占地": 30720.0,
-              "工人": 13.0,
-              "维护 I": 36.0
+              "工人": 1.0,
+              "维护 I": 4.0
             },
             "Items": {
               "material": {
-                "柴油": 7.52
+                "柴油": 0.8
               },
               "product": {
-                "空气污染": 7.52,
-                "树苗": 4.5,
-                "木材": 90.0
+                "空气污染": 0.8
               }
             },
             "车库等级": 1.0
           },
-          "伐木场(大)": {
+          "大型伐木机": {
             "consumption": {
-              "占地": 30720.0,
-              "工人": 9.0,
-              "维护 I": 40.0
+              "工人": 1.0,
+              "维护 I": 6.0
             },
             "Items": {
               "material": {
-                "柴油": 10.7
+                "柴油": 1.8
               },
               "product": {
-                "空气污染": 10.7,
-                "树苗": 4.5,
+                "空气污染": 1.8
+              }
+            },
+            "车库等级": 2.0
+          },
+          "植树机": {
+            "consumption": {
+              "工人": 1.0,
+              "维护 I": 4.0
+            },
+            "Items": {
+              "material": {
+                "柴油": 0.8
+              },
+              "product": {
+                "空气污染": 0.8
+              }
+            },
+            "车库等级": 1.0
+          },
+          "伐木场": {
+            "consumption": {
+              "占地": 30720.0
+            },
+            "Items": {
+              "material": {
+                "树苗": 4.5
+              },
+              "product": {
                 "木材": 90.0
               }
             },
@@ -12794,58 +12804,72 @@
         "氢": {
           "挖掘机【氢】": {
             "consumption": {
-              "工人": 3.0,
-              "维护 I": 12.600000000000001
+              "工人": 1.0,
+              "维护 I": 5.4
             },
             "Items": {
               "material": {
-                "氢": 8.2
+                "氢": 5.4
               },
               "product": {
-                "开采速率": 96.2
+                "开采速率": 70.0
               }
             },
             "车库等级": 2.0
           },
           "超大型挖掘机【氢】": {
             "consumption": {
-              "工人": 3.0,
-              "维护 II": 14.4
+              "工人": 1.0,
+              "维护 II": 7.2
             },
             "Items": {
               "material": {
-                "氢": 11.899999999999999
+                "氢": 6.3
               },
               "product": {
-                "开采速率": 259.0
+                "开采速率": 200.0
               }
             },
             "车库等级": 3.0
           },
           "大型伐木机【氢】": {
-            "consumption": {},
+            "consumption": {
+              "工人": 1.0,
+              "维护 I": 5.4
+            },
             "Items": {
-              "material": {},
+              "material": {
+                "氢": 2.2
+              },
               "product": {}
             },
             "车库等级": 2.0
           },
-          "伐木场(大)": {
+          "植树机【氢】": {
             "consumption": {
-              "占地": 30720.0,
-              "工人": 9.0,
-              "维护 I": 36.0
+              "工人": 1.0,
+              "维护 I": 3.6
             },
             "Items": {
               "material": {
-                "氢": 13.4
+                "氢": 1.0
               },
-              "product": {
-                "树苗": 4.5,
-                "木材": 90.0
-              }
+              "product": {}
             },
             "车库等级": 2.0
+          },
+          "伐木场": {
+            "consumption": {
+              "占地": 30720.0
+            },
+            "Items": {
+              "material": {
+                "树苗": 4.5
+              },
+              "product": {
+                "木材": 90.0
+              }
+            }
           }
         }
       },
