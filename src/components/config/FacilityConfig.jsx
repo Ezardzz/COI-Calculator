@@ -11,7 +11,6 @@ import {
 } from '@/data/facilityData'
 import './FacilityConfig.css'
 import GameIcon from '../GameIcon';
-// ── Demand ────────────────────────────────────────────────────────────────────
 // 当 spaceResearch=true 时，同步更新 factory.空间站 的等级
 // spaceResearchPointNeed = amount * 48
 // 若空间站已选：spaceGrade 至少要满足 spaceResearchPointNeed/48 + 2
@@ -35,6 +34,7 @@ function syncSpaceStation(factory, amount, spaceResearch) {
   }
   return next
 }
+// ── Demand ────────────────────────────────────────────────────────────────────
 function DemandSection() {
   const { configuration, updateConfig } = useConfig()
   const demand = configuration.facility.demand
@@ -633,92 +633,4 @@ export default function FacilityConfig() {
   )
 }
 
-
-// 合同转化
-function optimizeContract(contract, maxModule, capacity, rUnity, rProfit) {
-    const exportItem = contract["出口"];
-    const exportQty = contract["出口量"];
-    const importItem = contract["进口"];
-    const importQty = contract["进口量"];
-    let unityPerInput = contract["凝聚力/进口"];
-
-    // ===== 增益修正 =====
-    unityPerInput *= rUnity;
-
-    let Kio = importQty / exportQty;
-    Kio *= rProfit;
-
-    // ===== 搜索最优模块 =====
-    let best = null;
-
-    const xTheory = Math.floor(maxModule / (1 + Kio));
-
-    const start = Math.max(0, xTheory - 10);
-    const end = Math.min(maxModule, xTheory + 10);
-
-    for (let x = start; x <= end; x++) {
-        const y = maxModule - x;
-
-        const exportTotal = x * capacity;
-        const importTrade = exportTotal * Kio;
-        const importCapacity = y * capacity;
-
-        const importReal = Math.min(importTrade, importCapacity);
-
-        // 反推实际消耗出口
-        const exportUsed = Kio !== 0 ? importReal / Kio : 0;
-
-        if (best === null || importReal > best.import_qty) {
-            best = {
-                export_modules: x,
-                import_modules: y,
-                export_qty: exportUsed,
-                import_qty: importReal,
-                unity_per_input: unityPerInput
-            };
-        }
-    }
-
-    // ===== 凝聚力计算 =====
-    const unityPerShip = best.import_qty * unityPerInput;
-
-    return {
-        "出口": {
-            "物品": exportItem,
-            "数量": Math.floor(best.export_qty),
-            "模块数": best.export_modules
-        },
-        "进口": {
-            "物品": importItem,
-            "数量": Math.floor(best.import_qty),
-            "模块数": best.import_modules
-        },
-        "凝聚力/月": contract["凝聚力/月"],
-        "凝聚力/船": Number(unityPerShip.toFixed(3))
-    };
-}
-function processAll(data, cargoDepot, rUnity, rProfit) {
-    const depot = data["货运港"][cargoDepot];
-    const maxModule = depot["模块数"];
-    const capacity = depot["模块容量"];
-
-    const result = {};
-
-    for (const importType in data["合同"]) {
-        result[importType] = [];
-        const contracts = data["合同"][importType];
-
-        for (const c of contracts) {
-            const optimized = optimizeContract(
-                c,
-                maxModule,
-                capacity,
-                rUnity,
-                rProfit
-            );
-            result[importType].push(optimized);
-        }
-    }
-    return result;
-}
 

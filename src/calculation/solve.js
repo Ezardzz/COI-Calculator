@@ -8,9 +8,8 @@ export  async function solve({
   MAX_ITER = 20,
 }) {
   let bestFallback = null;
-  // 构建配方
+  // 构建可更改权重配方
   let RecipesW = JSON.parse(JSON.stringify(Recipes));
-  // console.log(Recipes);
   
   for (let iter = 0; iter < MAX_ITER; iter++) {
     console.log("次数",iter+1);
@@ -192,9 +191,9 @@ export  async function solve({
   return { feasible: false };
 }
 
-/**
- * 统计 LP 解对应的真实产出、消耗 
- */
+
+// 统计 LP 解对应的真实产出、消耗 
+
 function RealCsm(item,amount,recipeAmount){
   if (item === "工人") 
     return amount * Math.ceil(recipeAmount)
@@ -220,7 +219,7 @@ function calcRealPC(recipes, solution, redundancy) {
     const x = solution[r.ID] ?? 0;
     if (x < 0) continue;
 
-    /* ========= 消耗：Factory.consumption & Items.material ========= */
+    // 消耗：Factory.consumption & Items.material 
     for (const [item, amount] of Object.entries(r.Factory?.consumption || {})) {
       if (!pc[item]) continue;
       pc[item].consumption += RealCsm(item, amount, x);
@@ -230,7 +229,7 @@ function calcRealPC(recipes, solution, redundancy) {
       if (!pc[item]) continue;
       pc[item].consumption += RealCsm(item, amount, x);
     }
-    /* ========= 产出：Items.product ========= */
+    // 产出：Items.product 
     for (const [item, amount] of Object.entries(r.Items?.product || {})) {
       if (!pc[item]) continue;
       pc[item].produced += amount * x;
@@ -241,9 +240,7 @@ function calcRealPC(recipes, solution, redundancy) {
 }
 
 
-/**
- * 权重调整
- */
+// 对RecipesW进行权重调整
 
 function adjustRecipeWeights(
   recipes,
@@ -251,7 +248,6 @@ function adjustRecipeWeights(
   redundancy
 ) {
   const clamp = (x, min, max) => Math.max(min, Math.min(max, x));
-
   for (const item in redundancy) {
     const rate = useRates[item];
     if (!rate) continue;
@@ -264,6 +260,7 @@ function adjustRecipeWeights(
     // const weight = clamp(rate / avg, 0.95, 1.05);
     // const weight = rate / avg
 
+    // 调整产出各个“维护”的配方的产出数量
     for (const r of recipes) {
       if (!r.Items?.product) continue;
       if (r.Items.product[item] !== undefined) {

@@ -1,7 +1,6 @@
 import {calFarmRecipe } from "./farmRecipe"
 export function cfg2recipe(configuration,GameData,recipeData,contractData){
     const buffResult = calBuffResult(configuration)
-    // console.log(buffResult);
     // 特殊配方
     let specialRecipe = {}
     for (let recipe of recipeData){
@@ -49,7 +48,6 @@ export function cfg2recipe(configuration,GameData,recipeData,contractData){
     // 3：固定数量设施
     const fixedRecipe = calFixedRecipe(configuration,specialRecipe,buffResult)
     // 4：基础配方增益影响
-    
     const Recipe = [...recipeData,...settlementRecipe,...vehicleRecipe,...fixedRecipe]
     const resultRecipe = []
     let index = 0
@@ -245,9 +243,7 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
     const farmTier = settlement.farm
 
 
-    // -----------------------------
     // 农作物配方
-    // -----------------------------
     const kWater = buffResult.影响.农业.耗水量
     const kYield = buffResult.影响.农业.产量
     // 根据农场等级计算水肥消耗的产量的增益
@@ -273,7 +269,6 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
         !sapling
         && food.length == 11
         && medicine == "医疗用品 III"
-        && farmTier == "温室 II"
     ){
         const rotationList = {
             '["玉米","罂粟"]': 1,        
@@ -332,9 +327,7 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
         }
         settlementRecipe.push(recipeCrop)  
     }
-    // -----------------------------
     // 食物类别统计
-    // -----------------------------
     let categoryCount = 0
     const categoryFoodCount = {}
 
@@ -350,23 +343,17 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
         }
     }
 
-    // -----------------------------
     // 服务清单
-    // -----------------------------
     const serviceList = [
         ...food,
         medicine,
         ...commodity
     ].filter(Boolean)
 
-    // -----------------------------
-    // HousingConsumptionGrowth
-    // -----------------------------
+    // 住房对商品消耗的增加数据
     const consumptionGrowth = housingData[housingTier]?.ConsumptionGrowth || {}
 
-    // -----------------------------
     // buff
-    // -----------------------------
     const buffFood = buffResult?.影响?.居民服务?.食品消耗 ?? 1
     const buffCommodity = buffResult?.影响?.居民服务?.商品?.消耗 ?? 1
     const buffWater = buffResult?.影响?.居民服务?.水消耗 ?? 1
@@ -384,151 +371,104 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
         "消费类电子产品": buffResult?.影响?.居民服务?.商品?.消费类电子产品?.凝聚力 ?? 1
     }
 
-    // -----------------------------
-    // Housing UnityGain查找
-    // -----------------------------
+    // 满足条件时住房对凝聚力的增益
     function getHousingUnityGain(){
-
         const order = ["住房 II","住房 III","住房 IV"]
-
         let tierIndex = order.indexOf(housingTier)
-
         while(tierIndex >= 0){
-
             const tierName = order[tierIndex]
             const housing = housingData[tierName]
-
             if(housing?.UnityGainNeed){
-
                 const needs = housing.UnityGainNeed
                     .map((need,i)=>({
                         need,
                         gain:housing.UnityGain[i]
                     }))
                     .sort((a,b)=>b.need.length-a.need.length)
-
                 for(const n of needs){
-
                     const ok = n.need.every(s=>serviceList.includes(s))
-
                     if(ok){
                         return n.gain
                     }
                 }
             }
-
             tierIndex--
         }
-
         return 1
     }
 
     const gain = getHousingUnityGain()
-
-    // -----------------------------
     // 计算服务消耗与Unity
-    // -----------------------------
     const service = {}
     const serviceDetail = {}
-
     for(const item of serviceList){
-
         const data = serviceData[item]
         if(!data) continue
-
         // 对应服务项的配方使能
         specialRecipe[item].Enable = true
-
         let demand = data.demand
-
-        // ---------- 食物 ----------
+        // 食物
         if(food.includes(item)){
-
             const m = categoryFoodCount[item] || 1
             const n = categoryCount || 1
-
             demand = demand/(n*m)
-
             demand *= buffFood
         }
-
-        // ---------- 商品 ----------
+        // 商品
         else{
-
             demand *= buffCommodity
 
             if(buffCommoditySpecific[item]){
                 demand *= buffCommoditySpecific[item]
             }
-
             if(item === "水"){
                 demand *= buffWater
             }
         }
-
-        // ---------- HousingConsumptionGrowth ----------
+        // 住房对商品消耗的增加
         if(consumptionGrowth[item]){
             demand *= consumptionGrowth[item]
         }
-
         if (item == "电" || item == "算力")
             service[item] = demand
         else
             service[item+"#"] = demand
-
-        // ---------- Unity ----------
+        // 凝聚力
         let unity = data.unity
-
         unity *= buffUnityGlobal
-
         if(buffUnitySpecific[item]){
             unity *= buffUnitySpecific[item]
         }
-
         if(data.unityBuff){
             unity *= gain
         }
-
         serviceDetail[item] = {
             consumption: demand,
             unity: unity
         }
     }
-
-    // -----------------------------
     // 食物（基础）Unity
-    // -----------------------------
     const baseFood = "食物（基础）"
-
     if(serviceData[baseFood]){
-
         let unity = serviceData[baseFood].unity
-
         unity *= buffUnityGlobal
-
         if(serviceData[baseFood].unityBuff){
             unity *= gain
         }
-
         serviceDetail[baseFood] = {
             consumption:0,
             unity:unity
         }
     }
 
-    // -----------------------------
     // 总Unity
-    // -----------------------------
     let Unity = 0
-
     for(const item in serviceDetail){
         Unity += serviceDetail[item].unity
     }
     buffResult.额外消耗.凝聚力 -= Unity
 
-    // -----------------------------
     // 计算populationRecipe
-    // -----------------------------
     const populationRecipe = {
         ID:0,
         Factory:{
@@ -549,7 +489,6 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
     if (population) populationRecipe.FixedValue = population/1000
 
     settlementRecipe.push(populationRecipe)
-    // console.log(settlementRecipe);
     
     return settlementRecipe
 }
@@ -695,7 +634,6 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
         const carportTier = loggerInfo.车库等级
         maxCarportTier = maxCarportTier > carportTier ? maxCarportTier : carportTier;
     }
-    console.log(vehicleRecipe)
 
     // 海外矿
     const cargoDepot = configuration.facility.mineral.ocean.ship.cargoDepot
@@ -724,6 +662,7 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
     for (const [mine,contractIndexList] of Object.entries(contractCfg)){
         for (const contractIndex of contractIndexList){
             const contract = contractData[mine][contractIndex]
+            // 合同凝聚力消耗直接并入额外凝聚力消耗计算
             buffResult.额外消耗.凝聚力 += contract["凝聚力/月"]
 
             // 计算单个配方凝聚力消耗
@@ -739,8 +678,8 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
                     consumption:{
                         ...consumption,
                         ...{
-                            "进口模块":contract.出口.模块数,
-                            "出口模块":contract.进口.模块数,
+                            "进口模块":contract.进口.模块数,
+                            "出口模块":contract.出口.模块数,
                         }
                     }
                 },

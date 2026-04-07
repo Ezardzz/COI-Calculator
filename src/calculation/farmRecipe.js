@@ -18,7 +18,7 @@ export function calFarmRecipe(farmCfg) {
         Enable:true
     }
     let {material,product} = farmRecipe.Items
-    let totalAmount = 0
+    let totalAmount = 0 //总农场数
     for (const [rotation,rotationAmount] of Object.entries(rotationList)){
         farmRecipe.Farm[rotation] = rotationAmount
         totalAmount += rotationAmount

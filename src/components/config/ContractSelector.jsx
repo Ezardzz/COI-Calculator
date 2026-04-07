@@ -87,7 +87,6 @@ export default function ContractSelector() {
         </div>
 
         <div className="panel-body" >
-          {/* Item filter chips */}
           <div className="sub-label">选择进口物品</div>
           <div className="chip-group" style={{ marginBottom: 14 }}>
             {itemKeys.map(item => {
@@ -105,7 +104,7 @@ export default function ContractSelector() {
             })}
           </div>
 
-          {/* Contract entries for active item */}
+          {/* 当前选择物品的合同数据*/}
           {activeItem && contractData[activeItem] && (
             <>
               <div className="sep" />
@@ -144,7 +143,7 @@ export default function ContractSelector() {
             </>
           )}
 
-          {/* Selected summary — 按 contractData 顺序展示 */}
+          {/* 已选配方显示，按 contractData 顺序展示 */}
           {totalSelected > 0 && (
             <>
               <div className="sep" style={{ marginTop: 14 }} />

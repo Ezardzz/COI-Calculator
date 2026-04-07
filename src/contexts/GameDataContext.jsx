@@ -43,7 +43,7 @@ function optimizeContract(contract, maxModule, capacity, rUnity, rProfit) {
   const start   = Math.max(0, xTheory - 10)
   const end     = Math.min(maxModule, xTheory + 10)
 
-  // 在理论最优附近暴力搜索最佳的进出口模块数
+  // 在理论最优附近搜索最佳的进出口模块数
   for (let x = start; x <= end; x++) {
     const y = maxModule - x
 

@@ -1,6 +1,7 @@
 /* ConfigPanel.css */
 .configuration-content {
   display: flex;
+  border: 2px solid #00d9ff;
 }
 .configuration-header{
   font-family: 'Orbitron', sans-serif; 

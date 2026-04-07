@@ -1,4 +1,3 @@
-// components/ItemSelector.jsx
 import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
 import { X, Check, Search, Layers, Package, Zap, RotateCcw } from 'lucide-react';
 import GameIcon from '../GameIcon';
@@ -6,11 +5,7 @@ import { useConfig } from '@/contexts/ConfigContext';
 import { useGameData } from '@/contexts/GameDataContext';
 import './ItemSelector.css';
 
-/* ─────────────────────────────────────────────
-   Helper: recipe arrow notation
-   e.g.  18铁 + 18木材 → 24结构件
-───────────────────────────────────────────── */
-function RecipeFormula({ items }) {
+function RecipeCell({ items }) {
   const mats  = items.material || {};
   const prods = items.product  || {};
   return (
@@ -35,9 +30,6 @@ function RecipeFormula({ items }) {
   );
 }
 
-/* ─────────────────────────────────────────────
-   Main component
-───────────────────────────────────────────── */
 export default function ItemSelector() {
   const { gameData, recipeDataFactory, updateRecipesEnable } = useGameData();
   const { configuration, updateConfig } = useConfig();
@@ -55,22 +47,23 @@ export default function ItemSelector() {
     );
     return map;
   }, [itemCategories]);
-  // draft: { itemName: quantity }
+  // draft: { 物品: 数量 }
   const [draft, setDraft] = useState(
     () => ({ ...(configuration.facility?.demand?.items || {}) })
   );
 
-  // active view tab
+  // 当前页面
   const [view, setView] = useState('recipe');
 
-  // category / building selection
+  // 当前类别
   const categories = useMemo(() => Object.keys(recipeDataFactory || {}), [recipeDataFactory]);
   const [activeCategory, setActiveCategory] = useState('');
+  // 当前建筑
   const [activeBuilding, setActiveBuilding] = useState('');
 
-  // item search text
+  // 物品搜索框内容
   const [searchText, setSearchText] = useState('');
-  // item category filter: null = 全部
+  // 物品按类别划分
   const [activeItemCat, setActiveItemCat] = useState(null);
   // local enable overrides: { recipeId: bool }
   const [enableOverrides, setEnableOverrides] = useState(() => {
@@ -83,7 +76,7 @@ export default function ItemSelector() {
     return map;
   });
 
-  /* ── initialise category when data first loads ── */
+  // 第一次加载时初始化类别为第一个
   useEffect(() => {
     if (categories.length && !activeCategory) {
       setActiveCategory(categories[0]);
@@ -101,7 +94,7 @@ export default function ItemSelector() {
     }
   }, [activeCategory]);
 
-  /* ── sync overrides when recipeDataFactory changes externally ── */
+  // 当 recipeDataFactory 外部发生变化时，同步覆盖生效
   useEffect(() => {
     setEnableOverrides(prev => {
       const map = { ...prev };
@@ -114,7 +107,7 @@ export default function ItemSelector() {
     });
   }, [recipeDataFactory]);
 
-  /* ── toggle single recipe enable ── */
+  // 切换单个配方启用状态
   const toggleRecipe = useCallback((id) => {
     setEnableOverrides(prev => {
       const next = { ...prev, [id]: !prev[id] };
@@ -123,7 +116,7 @@ export default function ItemSelector() {
     });
   }, [updateRecipesEnable]);
 
-  /* ── batch enable/disable all recipes for a building ── */
+  // 批量启用/禁用一座建筑的所有配方
   const setBuildingEnable = useCallback((category, buildingName, enabled) => {
     const recipes = recipeDataFactory[category]?.[buildingName] || [];
     const ids = recipes.map(r => r.ID);
@@ -135,7 +128,7 @@ export default function ItemSelector() {
     updateRecipesEnable(ids, enabled);
   }, [recipeDataFactory, updateRecipesEnable]);
 
-  /* ── sidebar click: normal = switch building, ctrl = batch toggle ── */
+  // 侧边栏点击：左键 = 切换建筑，Ctrl+左键 = 批量enable切换
   const handleBuildingClick = useCallback((e, cat, bld) => {
     if (e.ctrlKey || e.metaKey) {
       e.preventDefault();
@@ -147,7 +140,7 @@ export default function ItemSelector() {
     }
   }, [recipeDataFactory, enableOverrides, setBuildingEnable]);
 
-  /* ── available items: from recipeDataFactory, only enabled recipes ── */
+  // 可用物品：来自recipeDataFactory，仅包含已启用的配方
   const availableItems = useMemo(() => {
     const set = new Set();
     Object.values(recipeDataFactory).forEach(buildings => {
@@ -179,7 +172,7 @@ export default function ItemSelector() {
     });
   }, [availableItems, searchText, activeItemCat, itemCategoryMap]);
 
-  /* ── item select / deselect ── */
+  // 物品选择
   const handleItemClick = (item) => {
     setDraft(prev => {
       const next = { ...prev };
@@ -193,7 +186,7 @@ export default function ItemSelector() {
     setDraft(prev => ({ ...prev, [item]: parseInt(val) || 0 }));
   };
 
-  /* ── confirm / close ── */
+  // 确认按钮
   const handleClose   = () => updateConfig('interface.itemSelector', false);
   const handleConfirm = () => {
     const final = Object.fromEntries(
@@ -205,7 +198,7 @@ export default function ItemSelector() {
 
   if (!isOpen) return null;
 
-  /* ── building enable state: 'all' | 'partial' | 'none' ── */
+  // 当前建筑配方使能情况: 全部使用：'all' | 部分使用：'partial' | 全未使用：'none'
   const getBuildingState = (cat, bld) => {
     const recipes = recipeDataFactory[cat]?.[bld] || [];
     if (!recipes.length) return 'none';
@@ -214,8 +207,6 @@ export default function ItemSelector() {
     if (enabledCount === recipes.length) return 'all';
     return 'partial';
   };
-
-  // 'bld-all' = 全部启用, 'bld-partial' = 部分启用, '' = 全禁用
   const bldStateClass = (cat, bld) => {
     const state = getBuildingState(cat, bld);
     if (state === 'all')     return 'bld-all';
@@ -228,7 +219,6 @@ export default function ItemSelector() {
     ? recipeDataFactory[activeCategory]?.[activeBuilding] || []
     : [];
 
-  /* ──────────────── RENDER ──────────────── */
   return (
     <div className="is-overlay" onClick={handleClose}>
       <div className="is-shell" onClick={e => e.stopPropagation()}>
@@ -358,7 +348,7 @@ export default function ItemSelector() {
                                   <Check size={10} color="#071018" strokeWidth={3.5} />
                                 </div>
                               )} */}
-                              <RecipeFormula items={recipe.Items} />
+                              <RecipeCell items={recipe.Items} />
                             </div>
                           );
                         })}

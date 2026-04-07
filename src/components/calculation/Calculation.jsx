@@ -53,14 +53,16 @@ function Calculation({setResults}) {
         }
     };
     return (
+      <>
+        <div className='calculation-header'>计算</div>
         <div className="calculation-container">
-            <button className="calc-btn" onClick={handleSolve}>
-                <span className="calc-btn__icon">⬡</span>
-                <span className="calc-btn__text">计 算</span>
-                <span className="calc-btn__scan" />
+            <button className="calc-btn" onClick={handleSolve}  disabled={solving}>
+                {solving ? "求解中..." : "求解"}
             </button>
             <ResourceDashboard data={statistic}></ResourceDashboard>
         </div>
+      </>
+
     );
 }
 export default Calculation;
