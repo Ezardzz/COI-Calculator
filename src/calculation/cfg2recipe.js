@@ -323,7 +323,7 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
             },
             Category:"食品",
             Enable:true,
-            ErrorFlag:true 
+            Deficiency:true 
         }
         settlementRecipe.push(recipeCrop)  
     }
@@ -717,7 +717,7 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
             },
             Category:"原矿",
             Enable:true,
-            ErrorFlag:true        
+            Deficiency:true        
         }
         recipeMine.Items.product[mine] = 1
         vehicleRecipe.push(recipeMine)
@@ -735,7 +735,7 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
         },
         Category:"原矿",
         Enable:true,
-        ErrorFlag:true 
+        Deficiency:true 
     }
     vehicleRecipe.push(recipeUnity)
     // console.log(vehicleRecipe);

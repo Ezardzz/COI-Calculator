@@ -1,0 +1,145 @@
+.item-stats-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; 
+  width: 85%;
+  overflow-x: auto;   /* 如果内容过多，允许横向滚动 */
+}
+
+.pd-container {
+  background: rgba(30, 41, 59, 0.6);
+  border-left: 2px solid #00d9ff;
+  overflow: auto;
+  min-width: fit-content;
+
+}
+
+.deficiency-container {
+  background: rgba(30, 41, 59, 0.6);
+  border-left: 2px solid #00d9ff;
+  flex: 1; 
+
+}
+
+.pd-header,
+.deficiency-header{
+  font-family: 'Orbitron', sans-serif; 
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  
+  padding : 0.5rem 0rem 0.5rem 1rem;
+  border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+  
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pd-header{
+  color: #00d9ff;
+}
+.deficiency-header{
+  color: #f87171;
+}
+
+.pd-table {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.pd-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.pd-col-header {
+  border-right: 1px solid  rgba(0, 217, 255, 0.15);
+}
+
+.pd-col-data {
+  border-right: 1px solid  rgba(0, 217, 255, 0.15);
+}
+
+.pd-col-data:last-child {
+  border-right: none;
+}
+
+.pd-col-data:hover .pd-cell {
+  background: rgba(0, 217, 255, 0.04);
+}
+
+/* 通用 cell — 无横向边框 */
+.pd-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* 左侧标签 cell */
+.pd-label-cell {
+  justify-content: flex-end;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(0, 217, 255, 0.55);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-right: 18px;
+  min-width: 68px;
+}
+
+.pd-name-cell {
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  color: #e2e8f0;
+  letter-spacing: 0.05em;
+}
+
+.pd-produced {
+  color: #4ade80;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.pd-consumed {
+  color: #f87171;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.pd-rate {
+  color: #ffba26;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
+}
+
+.deficiency-grid {
+  /* display: grid; */
+  /* grid-template-columns: repeat(4, 1fr);  */
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+  padding: 0.3rem;
+}
+
+
+.deficiency-item-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+  padding: 0.3rem;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+}
+
