@@ -59,7 +59,6 @@ function ResultsDisplay({ Results }) {
               className={`nav-button ${activeCategory === category ? 'active' : ''}`}
               onClick={() => setActiveCategory(category)}
             >
-              {/* <span className="nav-icon"><GameIcon ></GameIcon></span> */}
               <span className="nav-text">{category}</span>
             </button>
           ))}
