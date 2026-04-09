@@ -39,7 +39,6 @@ export  async function solve({
     // 二：核电配方整数解
     // -----------------------------
     let RecipesWInt = JSON.parse(JSON.stringify(RecipesW))
-    let NumFBR = 0 
     for(const recipe of [...RecipesWInt].reverse()){
       if (String(recipe?.ID) in solution){
         if (recipe.Factory.name === "办公室 III"){
@@ -55,11 +54,7 @@ export  async function solve({
           recipe.FixedValue = Math.ceil(solution[recipe.ID] * 4) / 4 
         }
         if (JSON.stringify(recipe.Items.product) === JSON.stringify( {"蒸汽（超高压）": 96,"核心燃料（用过）": 16,"毯式燃料（浓缩）": 48})){
-          NumFBR = Math.ceil(solution[recipe.ID] * 4) / 4 //向上取值到0.25的整数倍
-          recipe.FixedValue = NumFBR
-        }
-        if (JSON.stringify(recipe.Items.product) === JSON.stringify( {"蒸汽（超高压）": 384,"核心燃料（用过）": 8})){
-          recipe.FixedValue = NumFBR * 4
+          recipe.FixedValue = Math.ceil(solution[recipe.ID] * 4) / 4 
         }
       }
       else{

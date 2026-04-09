@@ -3,21 +3,20 @@
   flex-direction: row;
   flex-wrap: nowrap; 
   width: 85%;
-  overflow-x: auto;   /* 如果内容过多，允许横向滚动 */
+  /* overflow-x: auto;    */
 }
 
 .pd-container {
   background: rgba(30, 41, 59, 0.6);
   border-left: 2px solid #00d9ff;
   overflow: auto;
+  flex: 1; 
   min-width: fit-content;
-
 }
 
 .deficiency-container {
   background: rgba(30, 41, 59, 0.6);
   border-left: 2px solid #00d9ff;
-  flex: 1; 
 
 }
 
@@ -28,7 +27,7 @@
   font-weight: 500;
   letter-spacing: 0.05em;
   
-  padding : 0.5rem 0rem 0.5rem 1rem;
+  padding : 0.5rem 1rem 0.5rem 1rem;
   border-bottom: 2px solid rgba(0, 217, 255, 0.3);
   
   display: flex;
@@ -52,6 +51,8 @@
 .pd-col {
   display: flex;
   flex-direction: column;
+  flex: 1;  
+  min-width: 0;  
 }
 
 .pd-col-header {
@@ -82,14 +83,15 @@
 
 /* 左侧标签 cell */
 .pd-label-cell {
-  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 11px;
   font-weight: 500;
   color: rgba(0, 217, 255, 0.55);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding-right: 18px;
-  min-width: 68px;
+  max-width: 150px;
 }
 
 .pd-name-cell {
@@ -123,10 +125,10 @@
 }
 
 .deficiency-grid {
-  /* display: grid; */
-  /* grid-template-columns: repeat(4, 1fr);  */
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  /* display: flex; */
+  /* flex-direction: row; */
   gap: 0.2rem;
   padding: 0.3rem;
 }

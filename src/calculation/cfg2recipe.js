@@ -704,7 +704,7 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
     if (maxCarportTier == 3) specialRecipe["车库 III"].Enable = true
 
     // 兜底配方，若计算结果中出现了以下配方就代表配置不可行
-    for(const mine of ['原油','煤', '铁矿石', '铜矿石', '沙', '石英', '石灰石', '金矿石', '铀矿石', '钛矿石', '铝土矿', '岩石', '木材']){
+    for(const mine of ['原油','煤', '铁矿石', '铜矿石', '沙', '石英', '石灰石', '金矿石', '铀矿石', '钛矿石', '铝土矿', '岩石', '木材','进口商品']){
         const recipeMine = {
             ID:0,
             Factory:{
