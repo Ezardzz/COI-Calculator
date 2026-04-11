@@ -22,7 +22,6 @@ export function ResultsAnalysis(result,Recipes,pc){
   for (const recipe of Recipes) {
     const category = recipe.Category;
     if (category in categoryResults) continue;
-    
     categoryResults[category] = {
         recipes: [],
         totalOutput: {},
@@ -63,6 +62,8 @@ export function ResultsAnalysis(result,Recipes,pc){
       T[itemName] = (T[itemName] || 0) + Amount;
       if (itemName == "凝聚力") specialItems["凝聚力"].produced += Amount
       else if (itemName == "研究点数") {
+        let k = 1
+
         recipe.Items.product[itemName] = toSignificantDigits(itemAmount * (1 + 0.05 * pc["工人"].produced / 1000))
         specialItems["研究点数"].produced += recipe.Items.product[itemName] * recipeAmount
       }

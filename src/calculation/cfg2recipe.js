@@ -191,8 +191,8 @@ function calBuffResult(configuration){
                 }
             },
             "专注点":1 + (buff?.research?.专注点?.effect[0] ?? 0),
-            "研究效率":1 + (buff?.edicts?.研究效率?.effect ?? 0)
-                        + (buff?.office?.研究效率?.effect ?? 0),
+            "研究效率":(1 + (buff?.edicts?.研究效率?.effect ?? 0))
+                       *(1  + (buff?.office?.研究效率?.effect ?? 0)),
             "太阳能":0.8 * (1 + (buff?.edicts?.清洁面板?.effect ?? 0))
                     * (1 + (buff?.research?.太阳能发电?.effect[0] ?? 0)),
             "合同凝聚力":1 + (buff?.office?.合同凝聚力消耗?.effect ?? 0)
@@ -798,6 +798,7 @@ function calFixedRecipe(configuration, specialRecipe, buffResult){
                 recipe.Items.material["电子产品 IV#"] = spaceResearchPoint / 24
             }
             recipeList.push(recipe)
+            buffResult.影响.研究效率 *= 1 + 0.05 + amount * 0.05
         }
         else{
             specialRecipe[name].Enable = true

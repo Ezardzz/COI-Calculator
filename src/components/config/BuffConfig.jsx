@@ -442,22 +442,25 @@ function BuffConfig() {
               </button>
             </div>
             <div className="research-node1">
-              <div className="section-header">分支1</div>
+              {/* <div className="section-header">分支1</div> */}
               <div className="research-grid">
                 {Object.entries(buffData.research['分支1']).map(([name, data]) => 
+                  renderResearchCard(name, data)
+                )}
+                {Object.entries(buffData.research['分支2']).map(([name, data]) => 
                   renderResearchCard(name, data)
                 )}
               </div>
             </div>
             
-            <div className="research-node2">
+            {/* <div className="research-node2">
               <div className="section-header">分支2</div>
               <div className="research-grid">
                 {Object.entries(buffData.research['分支2']).map(([name, data]) => 
                   renderResearchCard(name, data)
                 )}
               </div>
-            </div>
+            </div> */}
           </div>
         )}
       </div>
