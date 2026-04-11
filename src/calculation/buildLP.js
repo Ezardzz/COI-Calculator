@@ -1,6 +1,7 @@
 export function buildLP(recipes) {
   const varX = (id) => `x_${id}`;
   const varN = (id) => `n_${id}`;
+  // console.log(recipes);
   
   let lp = "";
 

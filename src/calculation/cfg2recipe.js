@@ -548,9 +548,10 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
     specialRecipe["火箭组装站"][rocket].Enable = true
     for (const [item,recipe] of Object.entries(specialRecipe["火箭发射台"][rocket])){
         recipe.Enable = true
-        recipe.Items.product[item] = Math.floor(recipe.Items.product[item] * buffResult.影响.载具.载荷.火箭)
+        recipe.Items.product[item] = recipe.Items.product[item] * buffResult.影响.载具.载荷.火箭
         if (item === "宇航员") continue
-        recipe.Items.material[item.replace(/#/g, '')] = Math.floor(recipe.Items.material[item.replace(/#/g, '')] * buffResult.影响.载具.载荷.火箭)
+        recipe.Items.material[item.replace(/#/g, '')] = recipe.Items.material[item.replace(/#/g, '')] * buffResult.影响.载具.载荷.火箭
+        
     }    
     
     // 开采
