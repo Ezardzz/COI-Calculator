@@ -192,10 +192,8 @@ export  async function solve({
 function RealCsm(item,amount,recipeAmount){
   if (item === "工人") 
     return amount * Math.ceil(recipeAmount)
-  else if (item.startsWith("维护")){
-    const floorN = Math.floor(recipeAmount);
-    return amount * (0.8 * recipeAmount + 0.2 * floorN);
-  }
+  else if (item.startsWith("维护"))
+    return amount * (0.8 * recipeAmount + 0.2 * Math.ceil(recipeAmount));
   else
     return amount * recipeAmount
 }
