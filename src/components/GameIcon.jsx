@@ -9,7 +9,7 @@ async function loadIconData() {
   if (iconDataCache) return iconDataCache;
   if (iconDataPromise) return iconDataPromise;
 
-  iconDataPromise = fetch('/data/icon.json')
+  iconDataPromise = fetch('/data/icon-v2.json')
     .then(res => res.json())
     .then(data => {
       iconDataCache = data;
