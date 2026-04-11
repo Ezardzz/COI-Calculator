@@ -7,8 +7,14 @@ function ResultsDisplay({ Results }) {
   if (!Results) return (<></>)
   // 类别显示状态
   const categories = Object.keys(Results);
-  
+
   const [activeCategory, setActiveCategory] = useState(categories[0]);
+
+  useEffect(() => {
+    setActiveCategory(categories[0]);
+  }, [Results]);
+
+  const currentCategory = categories.includes(activeCategory) ? activeCategory : categories[0];
   // 跳转配方高光显示
   const [highlightedRecipe, setHighlightedRecipe] = useState(null);
   // 为每个配方创建ref
@@ -56,7 +62,7 @@ function ResultsDisplay({ Results }) {
           {categories.map((category) => (
             <button
               key={category}
-              className={`nav-button ${activeCategory === category ? 'active' : ''}`}
+              className={`nav-button ${currentCategory === category ? 'active' : ''}`}
               onClick={() => setActiveCategory(category)}
             >
               <span className="nav-text">{category}</span>
@@ -66,7 +72,7 @@ function ResultsDisplay({ Results }) {
         {/* 按类显示内容 */}
         <div className="category-container">
           {
-            !!activeCategory &&
+            !!currentCategory &&
               <>
                 <div className="category-content">                 
                   <div className="stats-container">
@@ -75,7 +81,7 @@ function ResultsDisplay({ Results }) {
                       <div className="stats-section">
                         <div className="stats-section-header">总配方使用</div>
                         <div className="recipe-stats-grid">
-                          {Results[activeCategory].recipes.map((recipe) => (
+                          {Results[currentCategory].recipes.map((recipe) => (
                             <button
                               key={recipe.ID}
                               className="recipe-stat-item"
@@ -95,7 +101,7 @@ function ResultsDisplay({ Results }) {
                       <div className="stats-section">
                         <div className="stats-section-header">总输入</div>
                         <div className="items-stats-grid">
-                          {Object.entries(Results[activeCategory].totalInput).map(([itemName, itemAmount]) => (
+                          {Object.entries(Results[currentCategory].totalInput).map(([itemName, itemAmount]) => (
                             <div key={itemName} className="stat-item material-stat" title={itemName}>
                               <GameIcon name={itemName} size={20} tooltip={'top'}/>
                               <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
@@ -106,7 +112,7 @@ function ResultsDisplay({ Results }) {
                       <div className="stats-section">
                         <div className="stats-section-header">总输出</div>
                         <div className="items-stats-grid">
-                          {Object.entries(Results[activeCategory].totalOutput).map(([itemName, itemAmount]) => (
+                          {Object.entries(Results[currentCategory].totalOutput).map(([itemName, itemAmount]) => (
                           <div key={itemName} className="stat-item product-stat" title={itemName}>
                             <GameIcon name={itemName} size={20} tooltip={'top'} />
                             <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
@@ -117,7 +123,7 @@ function ResultsDisplay({ Results }) {
                       <div className="stats-section">
                         <div className="stats-section-header">总消耗</div>
                         <div className="items-stats-grid">
-                          {Object.entries(Results[activeCategory].totalConsumption).map(([itemName, itemAmount]) => (
+                          {Object.entries(Results[currentCategory].totalConsumption).map(([itemName, itemAmount]) => (
                           <div key={itemName} className="stat-item consumption-stat" title={itemName}>
                             <GameIcon name={itemName} size={20} tooltip={'top'} />
                             <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
@@ -131,7 +137,7 @@ function ResultsDisplay({ Results }) {
                   <div className="recipe-container">
                     <div className="recipe-header">配方详情</div>
                     <div className="recipe-content"  ref={recipeContentRef}>
-                      {Results[activeCategory].recipes.map((recipe) => (
+                      {Results[currentCategory].recipes.map((recipe) => (
                         <div 
                           key={recipe.ID}
                           ref={(el) => (recipeRefs.current[recipe.ID] = el)}
