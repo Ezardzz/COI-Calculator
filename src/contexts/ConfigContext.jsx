@@ -70,6 +70,7 @@ const initialConfig = {
     recipeSelector: false,
     itemSelector: false,
     contractSelector: false,
+    recipeViewer: false,
   }
 }
 

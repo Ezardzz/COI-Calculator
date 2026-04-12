@@ -3,11 +3,10 @@ import GameIcon from '../GameIcon';
 import './ResultsDisplay.css';
 import FarmRotation from './FarmRotation';
 
-function ResultsDisplay({ Results }) {
+function ResultsDisplay({ Results, onItemClick  }) {
   if (!Results) return (<></>)
   // 类别显示状态
   const categories = Object.keys(Results);
-  
   const [activeCategory, setActiveCategory] = useState(categories[0]);
   // 跳转配方高光显示
   const [highlightedRecipe, setHighlightedRecipe] = useState(null);
@@ -46,6 +45,10 @@ function ResultsDisplay({ Results }) {
 
   const handleRecipeLeave = () => {
     // 鼠标离开时不做任何操作
+  };
+  // 图标点击函数
+  const handleIconClick = () => {
+    console.log('Icon');
   };
   return (
     <div className="result-container">
@@ -97,7 +100,7 @@ function ResultsDisplay({ Results }) {
                         <div className="items-stats-grid">
                           {Object.entries(Results[activeCategory].totalInput).map(([itemName, itemAmount]) => (
                             <div key={itemName} className="stat-item material-stat" title={itemName}>
-                              <GameIcon name={itemName} size={20} tooltip={'top'}/>
+                              <GameIcon name={itemName} size={20} tooltip={'top'} onClick={() => onItemClick(itemName)} style={{ cursor: 'pointer' }}/>
                               <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
                             </div>
                           ))}
@@ -107,11 +110,11 @@ function ResultsDisplay({ Results }) {
                         <div className="stats-section-header">总输出</div>
                         <div className="items-stats-grid">
                           {Object.entries(Results[activeCategory].totalOutput).map(([itemName, itemAmount]) => (
-                          <div key={itemName} className="stat-item product-stat" title={itemName}>
-                            <GameIcon name={itemName} size={20} tooltip={'top'} />
-                            <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
-                          </div>
-                        ))}
+                            <div key={itemName} className="stat-item product-stat" title={itemName}>
+                              <GameIcon name={itemName} size={20} tooltip={'top'} onClick={() => onItemClick(itemName)} style={{ cursor: 'pointer' }} />
+                              <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
+                            </div>
+                          ))}
                         </div>
                       </div>
                       <div className="stats-section">

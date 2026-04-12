@@ -13,11 +13,13 @@ import ContractSelector from '@/components/config/ContractSelector'
 import ConfigPanel from '@/components/config/ConfigPanel';
 import Calculation from '@/components/calculation/Calculation';
 import ResultsDisplay from '@/components/result/ResultsDisplay';
+import RecipeViewer from '@/components/result/RecipeViewer';
 import '@/App.css';
 
 function AppContent() {
   const [results, setResults] = useState(null);
-  const { configuration } = useConfig();
+  const [itemRecord, setItemRecord] = useState([]);
+  const { configuration, updateConfig } = useConfig();
   const iface = configuration.interface
   const { 
     loading, 
@@ -47,7 +49,10 @@ function AppContent() {
     );
   }
 
-
+  const handleItemClick = (itemName) => {
+    setItemRecord([itemName]);
+    updateConfig('interface.recipeViewer', true);
+  };
 
   return (
     <div className="app">
@@ -60,9 +65,16 @@ function AppContent() {
         </h1>
         {iface.itemSelector     && <ItemSelector />}
         {iface.contractSelector && <ContractSelector />}
+        {iface.recipeViewer && (
+          <RecipeViewer
+            Results={results}
+            itemRecord={itemRecord}
+            setItemRecord={setItemRecord}
+          />
+        )}
         <ConfigPanel />
         <Calculation setResults={setResults}/>
-        <ResultsDisplay Results={results} />
+        <ResultsDisplay Results={results} onItemClick={handleItemClick}  />
       </div>
     </div>
   );
