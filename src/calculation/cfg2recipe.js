@@ -545,13 +545,32 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
     addFixedVehicleRecipe(trains,"火车","火车",trainTier)
     // 火箭
     const rocket = configuration.facility.logistics.rocket
+    let rocketPeriod = 4//单个火箭的制造所需月数
+    if (rocket == "火箭 II") rocketPeriod = 6
     specialRecipe["火箭组装站"][rocket].Enable = true
+    const {material,product} = specialRecipe["火箭组装站"][rocket].Items
+    Object.keys(material).forEach(item => {
+        material[item] /= rocketPeriod
+    })
+    Object.keys(product).forEach(item => {
+        product[item] /= rocketPeriod
+    })
     for (const [item,recipe] of Object.entries(specialRecipe["火箭发射台"][rocket])){
         recipe.Enable = true
-        recipe.Items.product[item] = recipe.Items.product[item] * buffResult.影响.载具.载荷.火箭
-        if (item === "宇航员") continue
-        recipe.Items.material[item.replace(/#/g, '')] = recipe.Items.material[item.replace(/#/g, '')] * buffResult.影响.载具.载荷.火箭
-        
+        // 由于关系到火箭消耗，实际运载量要进行四舍五入取整操作
+        recipe.Items.product[item] = Math.round(recipe.Items.product[item] * buffResult.影响.载具.载荷.火箭)
+        if (item != "宇航员"){
+            recipe.Items.material[item.replace(/#/g, '')] = Math.round(recipe.Items.material[item.replace(/#/g, '')] * buffResult.影响.载具.载荷.火箭)
+        }
+        const {material,product} = recipe.Items
+        Object.keys(material).forEach(item => {
+            material[item] *= 2//每2个组装站使用1个发射台
+            material[item] /= rocketPeriod
+        })
+        Object.keys(product).forEach(item => {
+            product[item] *= 2
+            product[item] /= rocketPeriod
+        })
     }    
     
     // 开采
