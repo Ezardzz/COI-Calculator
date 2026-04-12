@@ -171,7 +171,7 @@ function ResultsDisplay({ Results, onItemClick  }) {
                                   <div className="material-items">
                                     {Object.entries(recipe.Items.material).map(([itemName, itemAmount], i) => (
                                       <div key={i} className="base-item material-item">
-                                        <GameIcon name={itemName} size={25}  tooltip={'top'}/>
+                                        <GameIcon name={itemName} size={25}  tooltip={'top'} onClick={() => onItemClick(itemName)} style={{ cursor: 'pointer' }} />
                                         <span className="item-amount">{itemAmount}</span>
                                       </div>
                                     ))}
@@ -185,7 +185,7 @@ function ResultsDisplay({ Results, onItemClick  }) {
                                   <div className="product-items">
                                     {Object.entries(recipe.Items.product).map(([itemName, itemAmount], i) => (
                                       <div key={i} className="base-item product-item">
-                                        <GameIcon name={itemName} size={25}  tooltip={'top'} />
+                                        <GameIcon name={itemName} size={25}  tooltip={'top'} onClick={() => onItemClick(itemName)} style={{ cursor: 'pointer' }}  />
                                         <span className="item-amount">{itemAmount}</span>
                                       </div>
                                     ))}
