@@ -42,14 +42,6 @@ function ResultsDisplay({ Results, onItemClick  }) {
       setHighlightedRecipe(null);
     }
   };
-
-  const handleRecipeLeave = () => {
-    // 鼠标离开时不做任何操作
-  };
-  // 图标点击函数
-  const handleIconClick = () => {
-    console.log('Icon');
-  };
   return (
     <div className="result-container">
       <div className="result-header">生产方案</div>
@@ -140,7 +132,6 @@ function ResultsDisplay({ Results, onItemClick  }) {
                           ref={(el) => (recipeRefs.current[recipe.ID] = el)}
                           className={`recipe-card ${highlightedRecipe === recipe.ID ? 'highlighted' : ''}`}
                           onMouseEnter={() => handleRecipeHover(recipe.ID)}
-                          onMouseLeave={handleRecipeLeave}
                           data-recipe-id={recipe.ID}
                         >
                           <div className="recipe-detail">

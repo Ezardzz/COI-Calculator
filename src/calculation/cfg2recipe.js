@@ -5,10 +5,12 @@ export function cfg2recipe(configuration,GameData,recipeData,contractData){
     let specialRecipe = {}
     for (let recipe of recipeData){
         if(recipe.Category == "特殊"){
-            recipe.Enable = false
             const FactoryName = recipe.Factory.name
+            if (FactoryName == "办公室 III") continue
             const {material,product} = recipe.Items
-            if (["维修站 I","维修站 II","维修站 III","破碎机","船长办公室 II","办公室 III","太空物流","垃圾收集站","生物质收集站","可回收物收集站"].includes(FactoryName))
+            recipe.Enable = false
+
+            if (["维修站 I","维修站 II","维修站 III","破碎机","船长办公室 II","办公室 III","垃圾收集站","生物质收集站","可回收物收集站"].includes(FactoryName))
                 recipe.Enable = true
             else{
                 if (!specialRecipe[FactoryName]) specialRecipe[FactoryName] = {}
