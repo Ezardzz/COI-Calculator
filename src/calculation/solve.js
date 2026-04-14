@@ -5,9 +5,11 @@ export  async function solve({
   lpSolve,
   Recipes,
   redundancy,
+  noMaintenanceMode,
   MAX_ITER = 20,
 }) {
   let bestFallback = null;
+  const noBlanceItems = noMaintenanceMode.isOpen ? noMaintenanceMode.itemList : []
   // 构建可更改权重配方
   let RecipesW = JSON.parse(JSON.stringify(Recipes));
   
@@ -16,7 +18,7 @@ export  async function solve({
     // -----------------------------
     // 一：全部配方连续解
     // -----------------------------
-    const lpData1 = buildLP(RecipesW);
+    const lpData1 = buildLP(RecipesW,noBlanceItems);
     const lpRes1 = await lpSolve(lpData1);
     console.log(lpRes1.Status);
     if (lpRes1.Status !== "Optimal"){
@@ -63,7 +65,7 @@ export  async function solve({
         }
       }
     }
-    const lpData2 = buildLP(RecipesWInt);
+    const lpData2 = buildLP(RecipesWInt,noBlanceItems);
     const lpRes2 = await lpSolve(lpData2);
     solution = {};
     for (const [name, col] of Object.entries(lpRes2.Columns)) {
@@ -94,7 +96,7 @@ export  async function solve({
         farmRecipe.FixedValue = 1
         farmRecipe.ID = index
 
-        const lpData3 = buildLP([...RecipesWInt,farmRecipe]);
+        const lpData3 = buildLP([...RecipesWInt,farmRecipe],noBlanceItems);
         const lpRes3 = await lpSolve(lpData3);
         solution = {};
         for (const [name, col] of Object.entries(lpRes3.Columns)) {
@@ -123,13 +125,16 @@ export  async function solve({
     for (const item in redundancy) {
       const { produced, consumption } = pc[item];
 
-      const useRate = produced / consumption 
+      
+      const useRate = produced / (consumption ? consumption : 1e-6) 
       pc[item]["useRate"] = useRate
 
       useRates[item] = useRate
       const [low, high] = redundancy[item];
-      if (useRate < low || useRate > high) {
-        allOK = false;
+      if ((useRate < low || useRate > high)) {
+        if (!noMaintenanceMode.isOpen || !noMaintenanceMode.itemList.includes(item)){
+          allOK = false;
+        }        
       }
     }
     console.log(pc);
@@ -143,7 +148,7 @@ export  async function solve({
         redundancy["工人"][1] -= (9999-0.05)
       }
     }
-    /* ---------- 3. 满足条件直接返回 ---------- */
+    /* ---------- 3. 满足条件或当前为无维护模式则直接返回 ---------- */
     if (allOK) {
       console.log("满足");
       console.log(solution);

@@ -47,11 +47,10 @@ export function ResultsAnalysis(result,Recipes,pc){
     // 建筑消耗
     Object.entries(recipe.Factory.consumption || {}).forEach(([itemName, itemAmount]) => {
       recipe.Factory.consumption[itemName] = toSignificantDigits(itemAmount)
-      const Amount = itemAmount * recipeAmount;
+      const Amount = RealCsm(itemName,itemAmount,recipeAmount);
       C.totalConsumption[itemName] =
           (C.totalConsumption[itemName] || 0) + Amount;
-      if (itemName == "占地") specialItems[itemName].consumption += itemAmount * Math.ceil(recipeAmount)
-      else if (itemName == "凝聚力") specialItems[itemName].consumption += Amount
+      if (itemName in specialItems) specialItems[itemName].consumption += Amount
       else if (!noStatsItems.has(itemName)) totalItems[itemName] = (totalItems[itemName] || 0) - Amount
     });
     
@@ -101,6 +100,17 @@ export function ResultsAnalysis(result,Recipes,pc){
   return {categoryResults,specialItems,deficientItems};
 };
 
+
+
+// 工具函数
+function RealCsm(item,amount,recipeAmount){
+  if (item === "工人" || item === "占地") 
+    return amount * Math.ceil(recipeAmount)
+  else if (item.startsWith("维护"))
+    return amount * (0.8 * recipeAmount + 0.2 * Math.ceil(recipeAmount));
+  else
+    return amount * recipeAmount
+}
 function toSignificantDigits(num, digits = 4) {
   if (num === 0) return 0;
   

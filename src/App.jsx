@@ -5,6 +5,7 @@ import { Calculator } from 'lucide-react';
 import { ConfigProvider } from '@/contexts/ConfigContext';
 import { GameDataProvider } from '@/contexts/GameDataContext';
 import { HighsProvider } from "./contexts/HighsContext";
+import { CalculationProvider } from '@/contexts/CalculationContext';
 import { useConfig } from '@/contexts/ConfigContext';
 import { useGameData } from '@/contexts/GameDataContext';
 
@@ -17,8 +18,6 @@ import RecipeViewer from '@/components/result/RecipeViewer';
 import '@/App.css';
 
 function AppContent() {
-  const [results, setResults] = useState(null);
-  const [itemRecord, setItemRecord] = useState([]);
   const { configuration, updateConfig } = useConfig();
   const iface = configuration.interface
   const { 
@@ -48,12 +47,6 @@ function AppContent() {
       </div>
     );
   }
-
-  const handleItemClick = (itemName) => {
-    setItemRecord([itemName]);
-    updateConfig('interface.recipeViewer', true);
-  };
-
   return (
     <div className="app">
       <div className="grid-bg"></div>
@@ -65,16 +58,10 @@ function AppContent() {
         </h1>
         {iface.itemSelector     && <ItemSelector />}
         {iface.contractSelector && <ContractSelector />}
-        {iface.recipeViewer && (
-          <RecipeViewer
-            Results={results}
-            itemRecord={itemRecord}
-            setItemRecord={setItemRecord}
-          />
-        )}
+        {iface.recipeViewer && <RecipeViewer/> }
         <ConfigPanel />
-        <Calculation setResults={setResults}/>
-        <ResultsDisplay Results={results} onItemClick={handleItemClick}  />
+        <Calculation />
+        <ResultsDisplay />
       </div>
     </div>
   );
@@ -85,7 +72,9 @@ function App() {
     <HighsProvider>
       <ConfigProvider>
         <GameDataProvider>
-          <AppContent />
+          <CalculationProvider>
+            <AppContent />
+          </CalculationProvider>       
         </GameDataProvider>
       </ConfigProvider>
     </HighsProvider>

@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useCalculation } from '@/contexts/CalculationContext';
 import { useConfig } from '@/contexts/ConfigContext';
 import GameIcon from '../GameIcon';
 import './RecipeViewer.css';
 
-function RecipeViewer({ Results, itemRecord, setItemRecord }) {
+function RecipeViewer() {
+  const { results, itemRecord, setItemRecord } = useCalculation();
   const { updateConfig } = useConfig();
   const [sortMode, setSortMode] = useState('type'); // 'type' | 'usage'
 
@@ -24,9 +26,9 @@ function RecipeViewer({ Results, itemRecord, setItemRecord }) {
 
   // 获取所有配方（展开所有category）
   const getAllRecipes = () => {
-    if (!Results) return [];
+    if (!results) return [];
     const all = [];
-    Object.entries(Results).forEach(([category, data]) => {
+    Object.entries(results).forEach(([category, data]) => {
       data.recipes.forEach(recipe => {
         all.push({ ...recipe, Category: category });
       });
@@ -191,7 +193,7 @@ function RecipeViewer({ Results, itemRecord, setItemRecord }) {
             </div>
           ) : sortMode === 'type' ? (
             Object.entries(groupedByType).map(([category, recipes]) => {
-              const catData = Results[category];
+              const catData = results[category];
               const produced = catData?.totalOutput?.[currentItem];
               const consumed = catData?.totalInput?.[currentItem];
               return (

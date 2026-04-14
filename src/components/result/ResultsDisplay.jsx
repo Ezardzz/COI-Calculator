@@ -1,17 +1,49 @@
 import { useState, useEffect, useRef } from 'react';
+import { useCalculation } from '@/contexts/CalculationContext';
+import { useConfig } from '@/contexts/ConfigContext'
 import GameIcon from '../GameIcon';
 import './ResultsDisplay.css';
 import FarmRotation from './FarmRotation';
+import { useSolve } from '@/calculation/useSolve';
 
-function ResultsDisplay({ Results, onItemClick  }) {
-  if (!Results) return (<></>)
+function ResultsDisplay() {
+  
+  const { results, setItemRecord } = useCalculation();
+  if (!results) return null
+  const { configuration, updateConfig } = useConfig()
+  // 点击图标打开配方查看界面
+  const handleItemClick = (itemName) => {
+    setItemRecord([itemName]);
+    updateConfig('interface.recipeViewer', true);
+  };
+
+  const noMaintenanceMode = configuration.facility.demand.noMaintenanceMode
+  // Ctrl+点击 添加物品到无视物品列表（noMaintenanceMode.itemList）
+  const addToNoMaintenance = (e, itemName) => {
+    if (!e.ctrlKey) return
+    if (!noMaintenanceMode?.isOpen) return
+    const current = noMaintenanceMode.itemList || []
+    if (current.includes(itemName)) return
+    updateConfig('facility.demand.noMaintenanceMode', {
+      ...noMaintenanceMode,
+      itemList: [...current, itemName],
+    })
+  }
+  // 无视物品列表更新后自动重新求解
+  const { handleSolve } = useSolve()
+  useEffect(() => {
+    if (!noMaintenanceMode?.isOpen) return
+    if (!results) return
+    handleSolve()
+  }, [JSON.stringify(noMaintenanceMode?.itemList)])
+
   // 类别显示状态
-  const categories = Object.keys(Results);
+  const categories = Object.keys(results);
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   useEffect(() => {
     setActiveCategory(categories[0]);
-  }, [Results]);
+  }, [results]);
 
   const currentCategory = categories.includes(activeCategory) ? activeCategory : categories[0];
   // 跳转配方高光显示
@@ -76,7 +108,7 @@ function ResultsDisplay({ Results, onItemClick  }) {
                       <div className="stats-section">
                         <div className="stats-section-header">总配方使用</div>
                         <div className="recipe-stats-grid">
-                          {Results[currentCategory].recipes.map((recipe) => (
+                          {results[currentCategory].recipes.map((recipe) => (
                             <button
                               key={recipe.ID}
                               className="recipe-stat-item"
@@ -96,9 +128,9 @@ function ResultsDisplay({ Results, onItemClick  }) {
                       <div className="stats-section">
                         <div className="stats-section-header">总输入</div>
                         <div className="items-stats-grid">
-                          {Object.entries(Results[currentCategory].totalInput).map(([itemName, itemAmount]) => (
+                          {Object.entries(results[currentCategory].totalInput).map(([itemName, itemAmount]) => (
                             <div key={itemName} className="stat-item material-stat" title={itemName}>
-                              <GameIcon name={itemName} size={20} tooltip={'top'} onClick={() => onItemClick(itemName)} style={{ cursor: 'pointer' }}/>
+                              <GameIcon name={itemName} size={20} tooltip={'top'} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }}/>
                               <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
                             </div>
                           ))}
@@ -107,9 +139,9 @@ function ResultsDisplay({ Results, onItemClick  }) {
                       <div className="stats-section">
                         <div className="stats-section-header">总输出</div>
                         <div className="items-stats-grid">
-                          {Object.entries(Results[activeCategory].totalOutput).map(([itemName, itemAmount]) => (
+                          {Object.entries(results[currentCategory].totalOutput).map(([itemName, itemAmount]) => (
                             <div key={itemName} className="stat-item product-stat" title={itemName}>
-                              <GameIcon name={itemName} size={20} tooltip={'top'} onClick={() => onItemClick(itemName)} style={{ cursor: 'pointer' }} />
+                              <GameIcon name={itemName} size={20} tooltip={'top'} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }} />
                               <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
                             </div>
                           ))}
@@ -118,9 +150,9 @@ function ResultsDisplay({ Results, onItemClick  }) {
                       <div className="stats-section">
                         <div className="stats-section-header">总消耗</div>
                         <div className="items-stats-grid">
-                          {Object.entries(Results[currentCategory].totalConsumption).map(([itemName, itemAmount]) => (
+                          {Object.entries(results[currentCategory].totalConsumption).map(([itemName, itemAmount]) => (
                           <div key={itemName} className="stat-item consumption-stat" title={itemName}>
-                            <GameIcon name={itemName} size={20} tooltip={'top'} />
+                            <GameIcon name={itemName} size={20} tooltip={'top'} onClick={(e) => addToNoMaintenance(e, itemName)} style={{ cursor: noMaintenanceMode?.isOpen ? 'pointer' : 'default' }} />
                             <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
                           </div>
                         ))}
@@ -132,7 +164,7 @@ function ResultsDisplay({ Results, onItemClick  }) {
                   <div className="recipe-container">
                     <div className="recipe-header">配方详情</div>
                     <div className="recipe-content"  ref={recipeContentRef}>
-                      {Results[currentCategory].recipes.map((recipe) => (
+                      {results[currentCategory].recipes.map((recipe) => (
                         <div 
                           key={recipe.ID}
                           ref={(el) => (recipeRefs.current[recipe.ID] = el)}
@@ -168,7 +200,7 @@ function ResultsDisplay({ Results, onItemClick  }) {
                                   <div className="material-items">
                                     {Object.entries(recipe.Items.material).map(([itemName, itemAmount], i) => (
                                       <div key={i} className="base-item material-item">
-                                        <GameIcon name={itemName} size={25}  tooltip={'top'} onClick={() => onItemClick(itemName)} style={{ cursor: 'pointer' }} />
+                                        <GameIcon name={itemName} size={25}  tooltip={'top'} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }} />
                                         <span className="item-amount">{itemAmount}</span>
                                       </div>
                                     ))}
@@ -182,7 +214,7 @@ function ResultsDisplay({ Results, onItemClick  }) {
                                   <div className="product-items">
                                     {Object.entries(recipe.Items.product).map(([itemName, itemAmount], i) => (
                                       <div key={i} className="base-item product-item">
-                                        <GameIcon name={itemName} size={25}  tooltip={'top'} onClick={() => onItemClick(itemName)} style={{ cursor: 'pointer' }}  />
+                                        <GameIcon name={itemName} size={25}  tooltip={'top'} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }}  />
                                         <span className="item-amount">{itemAmount}</span>
                                       </div>
                                     ))}

@@ -158,38 +158,88 @@ function DemandSection() {
         </div>
       </div>
       <div className="sub-section">
-        <div className="facility-section-header">维护冗余</div>
-        <div className="redundancy-grid">
-          {Object.entries(demand.redundancy || {}).map(([key, val]) => (
-            <div key={key} className="redundancy-item">
-              <span className="redundancy-label">
-                <GameIcon name={key} size={30} tooltip="top" />
+        <div className="facility-section-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          {(demand.noMaintenanceMode?.isOpen) ? '无视物品' : '维护冗余'}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            {demand.noMaintenanceMode?.isOpen && (
+              <button
+                className="action-btn no-maintenance-default-btn"
+                onClick={() => updateConfig('facility.demand.noMaintenanceMode', {
+                  ...(demand.noMaintenanceMode || {}),
+                  itemList: ["维护 I","维护 II","维护 III","工人","电","算力",
+                    "原油","煤","铁矿石","铜矿石","沙","石英","石灰石","金矿石","金","铀矿石","钛矿石","铝土矿","岩石","木材",
+                    "矿渣","废气"],
+                })}
+              >
+                默认物品
+              </button>
+            )}
+            <button
+              className="no-maintenance-toggle"
+              onClick={() => updateConfig('facility.demand.noMaintenanceMode', {
+                ...(demand.noMaintenanceMode || {}),
+                isOpen: !(demand.noMaintenanceMode?.isOpen),
+              })}
+              title="切换无维护模式"
+            >
+              <span className={`toggle-track ${demand.noMaintenanceMode?.isOpen ? 'on' : ''}`}>
+                <span className="toggle-thumb" />
               </span>
-              <input
-                className="qty-input redundancy-input"
-                type="number"
-                step="0.01"
-                value={val}
-                onChange={e => {
-                  const v = parseFloat(e.target.value)
-                  updateConfig('facility.demand.redundancy', {
-                    ...(demand.redundancy || {}),
-                    [key]: isNaN(v) ? 1 : Math.max(1, v),
-                  })
-                }}
-                onBlur={e => {
-                  const v = parseFloat(e.target.value)
-                  if (isNaN(v) || v < 1) {
+            </button>
+          </div>
+        </div>
+
+        {!(demand.noMaintenanceMode?.isOpen) ? (
+          <div className="redundancy-grid">
+            {Object.entries(demand.redundancy || {}).map(([key, val]) => (
+              <div key={key} className="redundancy-item">
+                <span className="redundancy-label">
+                  <GameIcon name={key} size={30} tooltip="top" />
+                </span>
+                <input
+                  className="qty-input redundancy-input"
+                  type="number"
+                  step="0.01"
+                  value={val}
+                  onChange={e => {
+                    const v = parseFloat(e.target.value)
                     updateConfig('facility.demand.redundancy', {
                       ...(demand.redundancy || {}),
-                      [key]: 1,
+                      [key]: isNaN(v) ? 1 : Math.max(1, v),
                     })
-                  }
-                }}
-              />
-            </div>
-          ))}
-        </div>
+                  }}
+                  onBlur={e => {
+                    const v = parseFloat(e.target.value)
+                    if (isNaN(v) || v < 1) {
+                      updateConfig('facility.demand.redundancy', {
+                        ...(demand.redundancy || {}),
+                        [key]: 1,
+                      })
+                    }
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="chip-group" style={{ paddingTop: '0.4rem' }}>
+            {(demand.noMaintenanceMode?.itemList || []).map(itemName => (
+              <span key={itemName} className="chip chip-removable no-maintenance-chip">
+                <GameIcon name={itemName} size={20} tooltip="top" />
+                <span className="chip-x" onClick={() => {
+                  const next = (demand.noMaintenanceMode?.itemList || []).filter(i => i !== itemName)
+                  updateConfig('facility.demand.noMaintenanceMode', {
+                    ...(demand.noMaintenanceMode || {}),
+                    itemList: next,
+                  })
+                }}>✕</span>
+              </span>
+            ))}
+            {(demand.noMaintenanceMode?.itemList || []).length === 0 && (
+              <span className="hint-text">暂无物品</span>
+            )}
+          </div>
+        )}
       </div>
     </div>
   )
@@ -508,6 +558,22 @@ function ConfigPreview() {
     }
     return null
   })[0]
+function deepMerge(target, source) {
+  if (typeof target !== 'object' || target === null) return source
+  if (typeof source !== 'object' || source === null) return target
+
+  const result = Array.isArray(target) ? [...target] : { ...target }
+
+  Object.keys(source).forEach(key => {
+    if (key in target) {
+      result[key] = deepMerge(target[key], source[key])
+    } else {
+      result[key] = source[key]
+    }
+  })
+
+  return result
+}
 const handleExport = () => {
   const payload = {
     version: gameData?.Version ?? 'unknown',
@@ -544,9 +610,9 @@ const handleImport = () => {
 
         // 还原 configuration
         if (payload.configuration) {
-          Object.keys(payload.configuration).forEach(key => {
-            updateConfig(key, payload.configuration[key])
-          })
+          const merged = deepMerge(configuration, payload.configuration)
+          // 一次性整体替换
+          updateConfig('', merged)
         }
 
         // 还原 recipeData：先全部启用，再把存储的禁用配方按完整对象匹配禁用

@@ -22,6 +22,12 @@ const initialConfig = {
         "工人":1.1,
         "电":1.1,
         "算力":1.1,
+      },
+      noMaintenanceMode:{
+        "isOpen":false,
+        "itemList":["维护 I","维护 II","维护 III","工人","电","算力",
+                    "原油","煤","铁矿石","铜矿石","沙","石英","石灰石","金矿石","金","铀矿石","钛矿石","铝土矿","岩石","木材",
+                    "矿渣","废气"],
       }
     },
     settlement: {
@@ -84,13 +90,22 @@ export const ConfigProvider = ({ children }) => {
 
   const updateConfig = useCallback((path, value) => {
     setConfiguration(prev => {
+      // ✅ 空路径：直接整体替换
+      if (!path) {
+        return value
+      }
+
       const next = JSON.parse(JSON.stringify(prev))
       const keys = path.split('.')
       let cur = next
+
       for (let i = 0; i < keys.length - 1; i++) {
-        if (!cur[keys[i]]) cur[keys[i]] = {}
+        if (typeof cur[keys[i]] !== 'object' || cur[keys[i]] === null) {
+          cur[keys[i]] = {}
+        }
         cur = cur[keys[i]]
       }
+
       cur[keys[keys.length - 1]] = value
       return next
     })

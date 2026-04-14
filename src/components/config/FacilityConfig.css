@@ -398,6 +398,82 @@
   gap: 8px;
   flex-shrink: 0;
 }
+/* ── 无维护模式开关 ──────────────────────────────────────────────────────── */
+.no-maintenance-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-track {
+  display: inline-flex;
+  align-items: center;
+  width: 34px;
+  height: 18px;
+  border-radius: 9px;
+  background: #334155;
+  border: 1.5px solid #475569;
+  transition: background 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  padding: 2px;
+}
+
+.toggle-track.on {
+  background: rgba(255, 60, 60, 0.25);
+  border-color: rgba(255, 80, 80, 0.7);
+}
+
+.toggle-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #64748b;
+  transition: transform 0.25s ease, background 0.25s ease;
+  transform: translateX(0);
+}
+
+.toggle-track.on .toggle-thumb {
+  transform: translateX(16px);
+  background: #ff5050;
+  box-shadow: 0 0 6px rgba(255, 80, 80, 0.6);
+}
+
+/* ── 无视物品 chip（红色小尺寸）────────────────────────────────────────── */
+.no-maintenance-default-btn {
+  padding: 0.25rem 0.6rem !important;
+  font-size: 0.6rem !important;
+  border-color: rgba(255, 80, 80, 0.4) !important;
+  color: #ff8080 !important;
+  background: rgba(255, 50, 50, 0.08) !important;
+}
+
+.no-maintenance-default-btn:hover {
+  background: rgba(255, 50, 50, 0.18) !important;
+  border-color: rgba(255, 80, 80, 0.8) !important;
+  box-shadow: 0 0 12px rgba(255, 80, 80, 0.3) !important;
+}
+
+
+.no-maintenance-chip {
+  background: rgba(255, 50, 50, 0.12) !important;
+  border: 1.5px solid rgba(255, 80, 80, 0.5) !important;
+  color: #ff8080 !important;
+  padding: 2px 6px !important;
+  font-size: 0.7rem !important;
+  gap: 3px !important;
+}
+
+.no-maintenance-chip .chip-x {
+  color: rgba(255, 80, 80, 0.5);
+}
+
+.no-maintenance-chip .chip-x:hover {
+  color: #ff5050;
+}
+
 @keyframes pulse {
   0%, 100% {
     opacity: 0.5;
