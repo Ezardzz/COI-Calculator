@@ -34,7 +34,6 @@ export default function ItemSelector() {
   const { gameData, recipeDataFactory, updateRecipesEnable } = useGameData();
   const { configuration, updateConfig } = useConfig();
 
-  delete recipeDataFactory["其他"];
   delete recipeDataFactory["其他建筑"];
 
   const isOpen = configuration.interface?.itemSelector || false;

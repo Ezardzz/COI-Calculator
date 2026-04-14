@@ -18,6 +18,7 @@ export const useGameData = () => {
 // rUnity：凝聚力系数，rProfit：利润率系数
 function optimizeContract(contract, maxModule, capacity, rUnity, rProfit) {
   const exportItem = contract['出口']
+  if (["铁矿石","铜矿石","机制砂"].includes(exportItem)) rProfit = 1 //0.8.2版本，出口这3种产品时不吃办公室的利润增益
   const exportQty  = contract['出口量']
   const importItem = contract['进口']
   const importQty  = contract['进口量']

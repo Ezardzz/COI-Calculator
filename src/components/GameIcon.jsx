@@ -9,7 +9,7 @@ async function loadIconData() {
   if (iconDataCache) return iconDataCache;
   if (iconDataPromise) return iconDataPromise;
 
-  iconDataPromise = fetch('/data/icon.json')
+  iconDataPromise = fetch('/data/icon-v2.json')
     .then(res => res.json())
     .then(data => {
       iconDataCache = data;
@@ -23,7 +23,7 @@ async function loadIconData() {
   return iconDataPromise;
 }
 
-function GameIcon({ name, size = 40, tooltip = '', tooltipData = '' }) {
+function GameIcon({ name, size = 40, tooltip = '', tooltipData = '' , onClick }) {
   const [iconData, setIconData] = useState(null);
 
   useEffect(() => {
@@ -62,15 +62,17 @@ function GameIcon({ name, size = 40, tooltip = '', tooltipData = '' }) {
       height: `${iconH}px`,
       backgroundPosition: `${bgx}px ${bgy}px`,
       backgroundSize: `${tw}px ${th}px`,
+      ...(onClick && { cursor: 'pointer' }),
     };
-  }, [iconInfo, size]);
+  }, [iconInfo, size, onClick]);
 
 
   if (!iconData || !name) {
     return (
       <div
         className="game-icon-placeholder"
-        style={{ width: size, height: size }}
+        style={{ width: size, height: size, ...(onClick && { cursor: 'pointer' }) }}
+        onClick={onClick}
       />
     );
   }
@@ -79,8 +81,9 @@ function GameIcon({ name, size = 40, tooltip = '', tooltipData = '' }) {
     return (
       <div
         className="game-icon-placeholder"
-        style={{ width: size, height: size }}
+        style={{ width: size, height: size, ...(onClick && { cursor: 'pointer' }) }}
         title={processedName}
+        onClick={onClick}
       />
     );
   }
@@ -89,6 +92,7 @@ function GameIcon({ name, size = 40, tooltip = '', tooltipData = '' }) {
     <div
       className={`game-icon ${tooltip ? `tooltip-${tooltip}` : ''}`}
       style={iconStyle}
+      onClick={onClick}
     >
       {tooltip && (
         <span className="game-icon-tooltip">

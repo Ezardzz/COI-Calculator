@@ -5,8 +5,8 @@
 
   /* 浏览器自动选择图片格式 */
   background-image: image-set(
-    url('/data/icon.webp') type('image/webp'),
-    url('/data/icon.png') type('image/png')
+    url('/data/icon-v2.webp') type('image/webp'),
+    url('/data/icon-v2.png') type('image/png')
   );
 
   background-repeat: no-repeat;

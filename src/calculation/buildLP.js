@@ -1,6 +1,7 @@
 export function buildLP(recipes) {
   const varX = (id) => `x_${id}`;
   const varN = (id) => `n_${id}`;
+  // console.log(recipes);
   
   let lp = "";
 
@@ -88,6 +89,8 @@ export function buildLP(recipes) {
 
   itemStats.forEach((stat, item) => {
     if (["占地","水污染","空气污染","模块等级","进口模块","出口模块"].includes(item) || item.includes('!')) return;
+    if (["维护 I","维护 II","维护 III","工人","电","算力"].includes(item)) return;
+    if (['原油','煤', '铁矿石', '铜矿石', '沙', '石英', '石灰石', '金矿石','金', '铀矿石', '钛矿石', '铝土矿', '岩石', '木材'].includes(item)) return;
     // if (!(stat.hasProduct && stat.hasConsumption)) return;
     let terms = [];
 

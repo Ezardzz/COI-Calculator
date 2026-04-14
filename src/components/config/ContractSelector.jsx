@@ -31,7 +31,8 @@ export default function ContractSelector() {
 
   const isSelected = (item, idx) =>
     (draft[item] || []).includes(idx)
-
+  // 选择/取消合同
+  // 选择结果以合同序号存储
   const toggleContract = (item, idx) => {
     setDraft(d => {
       const list = d[item] || []
@@ -46,7 +47,7 @@ export default function ContractSelector() {
       return next
     })
   }
-
+  // 删除合同
   const removeIdx = (item, idx) => {
     setDraft(d => {
       const next  = { ...d }
@@ -56,7 +57,7 @@ export default function ContractSelector() {
       return next
     })
   }
-
+  
   const handleConfirm = () => {
     updateConfig('facility.mineral.ocean.trade', sortByPortOrder(draft, contractData))
     handleClose()

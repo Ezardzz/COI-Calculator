@@ -3,11 +3,10 @@ import GameIcon from '../GameIcon';
 import './ResultsDisplay.css';
 import FarmRotation from './FarmRotation';
 
-function ResultsDisplay({ Results }) {
+function ResultsDisplay({ Results, onItemClick  }) {
   if (!Results) return (<></>)
   // 类别显示状态
   const categories = Object.keys(Results);
-
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   useEffect(() => {
@@ -48,10 +47,6 @@ function ResultsDisplay({ Results }) {
     if (highlightedRecipe !== null) {
       setHighlightedRecipe(null);
     }
-  };
-
-  const handleRecipeLeave = () => {
-    // 鼠标离开时不做任何操作
   };
   return (
     <div className="result-container">
@@ -103,7 +98,7 @@ function ResultsDisplay({ Results }) {
                         <div className="items-stats-grid">
                           {Object.entries(Results[currentCategory].totalInput).map(([itemName, itemAmount]) => (
                             <div key={itemName} className="stat-item material-stat" title={itemName}>
-                              <GameIcon name={itemName} size={20} tooltip={'top'}/>
+                              <GameIcon name={itemName} size={20} tooltip={'top'} onClick={() => onItemClick(itemName)} style={{ cursor: 'pointer' }}/>
                               <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
                             </div>
                           ))}
@@ -112,12 +107,12 @@ function ResultsDisplay({ Results }) {
                       <div className="stats-section">
                         <div className="stats-section-header">总输出</div>
                         <div className="items-stats-grid">
-                          {Object.entries(Results[currentCategory].totalOutput).map(([itemName, itemAmount]) => (
-                          <div key={itemName} className="stat-item product-stat" title={itemName}>
-                            <GameIcon name={itemName} size={20} tooltip={'top'} />
-                            <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
-                          </div>
-                        ))}
+                          {Object.entries(Results[activeCategory].totalOutput).map(([itemName, itemAmount]) => (
+                            <div key={itemName} className="stat-item product-stat" title={itemName}>
+                              <GameIcon name={itemName} size={20} tooltip={'top'} onClick={() => onItemClick(itemName)} style={{ cursor: 'pointer' }} />
+                              <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
+                            </div>
+                          ))}
                         </div>
                       </div>
                       <div className="stats-section">
@@ -143,7 +138,6 @@ function ResultsDisplay({ Results }) {
                           ref={(el) => (recipeRefs.current[recipe.ID] = el)}
                           className={`recipe-card ${highlightedRecipe === recipe.ID ? 'highlighted' : ''}`}
                           onMouseEnter={() => handleRecipeHover(recipe.ID)}
-                          onMouseLeave={handleRecipeLeave}
                           data-recipe-id={recipe.ID}
                         >
                           <div className="recipe-detail">
@@ -174,7 +168,7 @@ function ResultsDisplay({ Results }) {
                                   <div className="material-items">
                                     {Object.entries(recipe.Items.material).map(([itemName, itemAmount], i) => (
                                       <div key={i} className="base-item material-item">
-                                        <GameIcon name={itemName} size={25}  tooltip={'top'}/>
+                                        <GameIcon name={itemName} size={25}  tooltip={'top'} onClick={() => onItemClick(itemName)} style={{ cursor: 'pointer' }} />
                                         <span className="item-amount">{itemAmount}</span>
                                       </div>
                                     ))}
@@ -188,7 +182,7 @@ function ResultsDisplay({ Results }) {
                                   <div className="product-items">
                                     {Object.entries(recipe.Items.product).map(([itemName, itemAmount], i) => (
                                       <div key={i} className="base-item product-item">
-                                        <GameIcon name={itemName} size={25}  tooltip={'top'} />
+                                        <GameIcon name={itemName} size={25}  tooltip={'top'} onClick={() => onItemClick(itemName)} style={{ cursor: 'pointer' }}  />
                                         <span className="item-amount">{itemAmount}</span>
                                       </div>
                                     ))}

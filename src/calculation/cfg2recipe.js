@@ -5,10 +5,12 @@ export function cfg2recipe(configuration,GameData,recipeData,contractData){
     let specialRecipe = {}
     for (let recipe of recipeData){
         if(recipe.Category == "特殊"){
-            recipe.Enable = false
             const FactoryName = recipe.Factory.name
+            if (FactoryName == "办公室 III") continue
             const {material,product} = recipe.Items
-            if (["维修站 I","维修站 II","维修站 III","破碎机","船长办公室 II","办公室 III","太空物流","垃圾收集站","生物质收集站","可回收物收集站"].includes(FactoryName))
+            recipe.Enable = false
+
+            if (["维修站 I","维修站 II","维修站 III","破碎机","船长办公室 II","办公室 III","垃圾收集站","生物质收集站","可回收物收集站"].includes(FactoryName))
                 recipe.Enable = true
             else{
                 if (!specialRecipe[FactoryName]) specialRecipe[FactoryName] = {}
@@ -191,8 +193,8 @@ function calBuffResult(configuration){
                 }
             },
             "专注点":1 + (buff?.research?.专注点?.effect[0] ?? 0),
-            "研究效率":1 + (buff?.edicts?.研究效率?.effect ?? 0)
-                        + (buff?.office?.研究效率?.effect ?? 0),
+            "研究效率":(1 + (buff?.edicts?.研究效率?.effect ?? 0))
+                       *(1  + (buff?.office?.研究效率?.effect ?? 0)),
             "太阳能":0.8 * (1 + (buff?.edicts?.清洁面板?.effect ?? 0))
                     * (1 + (buff?.research?.太阳能发电?.effect[0] ?? 0)),
             "合同凝聚力":1 + (buff?.office?.合同凝聚力消耗?.effect ?? 0)
@@ -545,12 +547,32 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
     addFixedVehicleRecipe(trains,"火车","火车",trainTier)
     // 火箭
     const rocket = configuration.facility.logistics.rocket
+    let rocketPeriod = 4//单个火箭的制造所需月数
+    if (rocket == "火箭 II") rocketPeriod = 6
     specialRecipe["火箭组装站"][rocket].Enable = true
+    const {material,product} = specialRecipe["火箭组装站"][rocket].Items
+    Object.keys(material).forEach(item => {
+        material[item] /= rocketPeriod
+    })
+    Object.keys(product).forEach(item => {
+        product[item] /= rocketPeriod
+    })
     for (const [item,recipe] of Object.entries(specialRecipe["火箭发射台"][rocket])){
         recipe.Enable = true
-        recipe.Items.product[item] = Math.floor(recipe.Items.product[item] * buffResult.影响.载具.载荷.火箭)
-        if (item === "宇航员") continue
-        recipe.Items.material[item.replace(/#/g, '')] = Math.floor(recipe.Items.material[item.replace(/#/g, '')] * buffResult.影响.载具.载荷.火箭)
+        // 由于关系到火箭消耗，实际运载量要进行四舍五入取整操作
+        recipe.Items.product[item] = Math.round(recipe.Items.product[item] * buffResult.影响.载具.载荷.火箭)
+        if (item != "宇航员"){
+            recipe.Items.material[item.replace(/#/g, '')] = Math.round(recipe.Items.material[item.replace(/#/g, '')] * buffResult.影响.载具.载荷.火箭)
+        }
+        const {material,product} = recipe.Items
+        Object.keys(material).forEach(item => {
+            material[item] *= 2//每2个组装站使用1个发射台
+            material[item] /= rocketPeriod
+        })
+        Object.keys(product).forEach(item => {
+            product[item] *= 2
+            product[item] /= rocketPeriod
+        })
     }    
     
     // 开采
@@ -798,6 +820,7 @@ function calFixedRecipe(configuration, specialRecipe, buffResult){
                 recipe.Items.material["电子产品 IV#"] = spaceResearchPoint / 24
             }
             recipeList.push(recipe)
+            buffResult.影响.研究效率 *= 1 + 0.05 + amount * 0.05
         }
         else{
             specialRecipe[name].Enable = true
