@@ -9,7 +9,8 @@ import { CalculationProvider } from '@/contexts/CalculationContext';
 import { useConfig } from '@/contexts/ConfigContext';
 import { useGameData } from '@/contexts/GameDataContext';
 
-import ItemSelector     from '@/components/config/ItemSelector'
+import RecipeCfg from '@/components/config/RecipeCfg';
+import ItemCfg   from '@/components/config/ItemCfg';
 import ContractSelector from '@/components/config/ContractSelector'
 import ConfigPanel from '@/components/config/ConfigPanel';
 import Calculation from '@/components/calculation/Calculation';
@@ -56,7 +57,8 @@ function AppContent() {
           <Calculator className="title-icon" size={48} />
           COI-量化计算器
         </h1>
-        {iface.itemSelector     && <ItemSelector />}
+        {iface.recipeCfg && <RecipeCfg />}
+        {iface.itemCfg   && <ItemCfg />}
         {iface.contractSelector && <ContractSelector />}
         {iface.recipeViewer && <RecipeViewer/> }
         <ConfigPanel />

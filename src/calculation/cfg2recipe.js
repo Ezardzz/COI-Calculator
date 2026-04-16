@@ -3,12 +3,12 @@ export function cfg2recipe(configuration,GameData,recipeData,contractData){
     const buffResult = calBuffResult(configuration)
     // 特殊配方
     let specialRecipe = {}
-    for (let recipe of recipeData){
-        if(recipe.Category == "特殊"){
-            const FactoryName = recipe.Factory.name
-            if (FactoryName == "办公室 III") continue
-            const {material,product} = recipe.Items
+    for (let recipe of recipeData){  
+        if(recipe.Factory.name.includes("#")){ //特殊标识筛选
+            recipe.Factory.name = recipe.Factory.name.replace(/#/g, '')//删除特殊标识
             recipe.Enable = false
+            const {material,product} = recipe.Items
+            const FactoryName = recipe.Factory.name
 
             if (["维修站 I","维修站 II","维修站 III","破碎机","船长办公室 II","办公室 III","垃圾收集站","生物质收集站","可回收物收集站"].includes(FactoryName))
                 recipe.Enable = true

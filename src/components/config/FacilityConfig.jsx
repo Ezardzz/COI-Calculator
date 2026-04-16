@@ -142,7 +142,10 @@ function DemandSection() {
       <div className="facility-section-header">物品需求</div>
       <div className="sub-section">
         <div className="trigger-row">
-          <button className="action-btn" onClick={() => updateConfig('interface.itemSelector', true)}>
+          <button className="action-btn" onClick={() => updateConfig('interface.recipeCfg', true)}>
+            ＋ 配置配方
+          </button>
+          <button className="action-btn" onClick={() => updateConfig('interface.itemCfg', true)}>
             ＋ 配置物品
           </button>
           {Object.keys(demand.items || {}).length > 0 && (
