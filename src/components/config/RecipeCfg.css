@@ -121,8 +121,19 @@
 .rc-sort-btn:hover    { border-color: rgba(0,217,255,.5); color: #7dd3fc; }
 .rc-sort-btn.active   { border-color: #00d9ff; color: #00d9ff; background: rgba(0,217,255,.1); }
 
+.rc-search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.rc-search-icon {
+  position: absolute;
+  left: .4rem;
+  color: #2a4a5a;
+  pointer-events: none;
+}
 .rc-search-input {
-  padding: .25rem .6rem;
+  padding: .25rem .6rem .25rem 1.6rem;
   background: rgba(0,0,0,.35);
   border: 1px solid #1e3a4a;
   border-radius: 3px;
@@ -208,7 +219,6 @@
   padding: .5rem;
   display: flex;
   flex-direction: column;
-  gap: .35rem;
   min-height: 0;
 }
 .rc-recipe-list::-webkit-scrollbar { width: 4px; }
@@ -248,11 +258,8 @@
 
 .rc-cat-btn {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: .2rem;
-  padding: .45rem .2rem;
+  flex-direction: row;
+  align-items: stretch;
   background: rgba(0,0,0,.25);
   border: 1px solid #1a3a4a;
   border-radius: 4px;
@@ -260,10 +267,40 @@
   transition: all .18s;
   min-height: 52px;
   position: relative;
+  overflow: hidden;
 }
 .rc-cat-btn:hover    { border-color: rgba(0,217,255,.5); background: rgba(0,217,255,.06); }
 .rc-cat-btn.active   { border-color: #facc15 !important; background: rgba(250,204,21,.08) !important; box-shadow: 0 0 8px rgba(250,204,21,.2); }
 .rc-cat-btn.drag-target { border-color: #00d9ff; background: rgba(0,217,255,.15); box-shadow: 0 0 12px rgba(0,217,255,.4); }
+.rc-cat-btn.cat-reorder-target { border-color: #facc15; background: rgba(250,204,21,.12); box-shadow: 0 0 10px rgba(250,204,21,.3); }
+
+/* drag handle strip on left */
+.rc-cat-drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  flex-shrink: 0;
+  align-self: stretch;
+  color: #1e3a4a;
+  cursor: grab;
+  background: rgba(0,0,0,.2);
+  border-right: 1px solid rgba(0,217,255,.08);
+  transition: color .15s, background .15s;
+}
+.rc-cat-drag-handle:hover  { color: #00d9ff; background: rgba(0,217,255,.1); }
+.rc-cat-drag-handle:active { cursor: grabbing; }
+
+/* content area */
+.rc-cat-btn-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .2rem;
+  padding: .45rem .2rem;
+}
 
 .rc-cat-btn-text {
   font-family: 'JetBrains Mono', monospace;
@@ -272,7 +309,7 @@
   text-align: center;
   line-height: 1.2;
   word-break: break-all;
-  max-width: 46px;
+  max-width: 40px;
 }
 .rc-cat-btn.active .rc-cat-btn-text { color: #facc15; }
 
@@ -345,10 +382,25 @@
 }
 .rc-cat-toolbar-btn:hover { background: rgba(239,68,68,.1); border-color: #ef4444; }
 
-/* cycle items panel */
+.rc-sortbar-inner {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+/* ── jump highlight: persistent until mouse enters ── */
+.rc-recipe-card.jump-highlight {
+  border-left-color: #facc15 !important;
+  box-shadow: 0 0 0 2px #facc15, 0 0 16px rgba(250,204,21,.35);
+  background: linear-gradient(135deg, rgba(30,28,15,.95) 0%, rgba(35,32,18,.95) 100%);
+}
+
 .rc-cycle-panel {
-  width: 80px;
   flex-shrink: 0;
+  width: fit-content;
+  min-width: 140px;
+  max-width: 220px;
   border-left: 1px solid rgba(0,217,255,.15);
   display: flex;
   flex-direction: column;
@@ -369,9 +421,11 @@
   flex: 1;
   overflow-y: auto;
   padding: .4rem;
-  display: flex;
-  flex-direction: column;
-  gap: .4rem;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: .35rem;
+  align-content: start;
+  width: fit-content;
 }
 .rc-cycle-list::-webkit-scrollbar { width: 3px; }
 .rc-cycle-list::-webkit-scrollbar-thumb { background: rgba(0,217,255,.15); }
@@ -380,18 +434,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .25rem;
-  cursor: pointer;
-  padding: .3rem .2rem;
+  gap: .2rem;
+  padding: .3rem .15rem;
   border-radius: 4px;
   border: 1px solid transparent;
-  transition: all .18s;
+  transition: border-color .18s;
 }
-.rc-cycle-item:hover { border-color: rgba(0,217,255,.3); background: rgba(0,217,255,.05); }
-.rc-cycle-item.checked { border-color: rgba(74,222,128,.5); background: rgba(74,222,128,.07); }
+.rc-cycle-item.checked { border-color: rgba(74,222,128,.4); background: rgba(74,222,128,.06); }
+
+.rc-cycle-icon {
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 2px;
+  transition: background .15s;
+}
+.rc-cycle-icon:hover { background: rgba(0,217,255,.12); }
 
 .rc-cycle-check {
-  width: 14px; height: 14px;
+  width: 16px; height: 16px;
   border-radius: 3px;
   border: 1.5px solid #1a4a3a;
   display: flex;
@@ -399,6 +459,7 @@
   justify-content: center;
   flex-shrink: 0;
   transition: all .18s;
+  cursor: pointer;
 }
 .rc-cycle-item.checked .rc-cycle-check {
   background: #4ade80;
@@ -407,7 +468,7 @@
 
 .rc-cycle-name {
   font-family: 'JetBrains Mono', monospace;
-  font-size: .58rem;
+  font-size: .55rem;
   color: #4a8a7a;
   text-align: center;
   word-break: break-all;
@@ -425,14 +486,27 @@
   border-right: 1px solid rgba(0,217,255,.15);
   border-bottom: 1px solid rgba(0,217,255,.15);
   border-radius: 3px;
-  padding: .4rem .5rem;
-  cursor: grab;
+  cursor: default;
   transition: all .18s ease;
   position: relative;
   user-select: none;
+  overflow: hidden;
+  margin-bottom: .35rem;
 }
-.rc-recipe-card:active { cursor: grabbing; }
 .rc-recipe-card:hover  { box-shadow: 0 4px 16px rgba(0,0,0,.5), -3px 0 12px rgba(0,217,255,.2); }
+
+/* card inner layout: handle | content */
+.rc-card-layout {
+  display: flex;
+  align-items: stretch;
+  min-height: 0;
+}
+
+.rc-card-content {
+  flex: 1;
+  min-width: 0;
+  padding: .4rem .5rem;
+}
 
 /* selection */
 .rc-recipe-card.selected {
@@ -471,12 +545,29 @@
   flex-shrink: 0;
 }
 
-/* card top row */
+/* drag handle - full height column */
+.rc-drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  flex-shrink: 0;
+  align-self: stretch;
+  color: #1e3a4a;
+  cursor: grab;
+  background: rgba(0,0,0,.2);
+  border-right: 1px solid rgba(0,217,255,.08);
+  transition: color .15s, background .15s;
+}
+.rc-drag-handle:hover  { color: #00d9ff; background: rgba(0,217,255,.1); }
+.rc-drag-handle:active { cursor: grabbing; }
+
 .rc-card-toprow {
   display: flex;
   align-items: center;
   gap: .4rem;
   margin-bottom: .3rem;
+  cursor: default;
 }
 
 .rc-card-checkbox {
@@ -598,6 +689,124 @@
   padding: 0 .15rem;
 }
 
+
+
+/* ── category drop indicator (horizontal line between cat buttons) ── */
+.rc-cat-drop-indicator {
+  height: 3px;
+  background: #facc15;
+  border-radius: 2px;
+  margin: 1px .2rem;
+  box-shadow: 0 0 8px rgba(250,204,21,.6);
+}
+
+/* ── cycle jump badge ── */
+.rc-cycle-icon-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.rc-cycle-jump-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #facc15;
+  color: #071018;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .5rem;
+  font-weight: 900;
+  line-height: 1;
+  padding: 1px 3px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 0 6px rgba(250,204,21,.5);
+}
+/* ═══════════════════════════════════════════════════
+   CLONE VIEWER
+═══════════════════════════════════════════════════ */
+.rc-clone-viewer {
+  border-top: 1px solid rgba(124,58,237,.3);
+  background: rgba(124,58,237,.04);
+  padding: .6rem 1rem;
+  flex-shrink: 0;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.rc-clone-viewer::-webkit-scrollbar { height: 3px; width: 3px; }
+.rc-clone-viewer::-webkit-scrollbar-thumb { background: rgba(124,58,237,.3); }
+
+.rc-clone-viewer-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  color: #a78bfa;
+  letter-spacing: .06em;
+  margin-bottom: .5rem;
+}
+
+.rc-clone-viewer-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.rc-clone-group {
+  background: rgba(0,0,0,.2);
+  border: 1px solid rgba(124,58,237,.25);
+  border-radius: 4px;
+  padding: .4rem .6rem;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  min-width: 220px;
+}
+
+.rc-clone-parent, .rc-clone-row {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .7rem;
+}
+
+.rc-clone-factory {
+  color: #94a3b8;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rc-clone-cat-badge {
+  font-size: .6rem;
+  padding: .1rem .4rem;
+  background: rgba(0,217,255,.08);
+  border: 1px solid rgba(0,217,255,.2);
+  border-radius: 3px;
+  color: #7dd3fc;
+  white-space: nowrap;
+}
+.rc-clone-cat-badge.clone-badge {
+  background: rgba(124,58,237,.08);
+  border-color: rgba(124,58,237,.3);
+  color: #a78bfa;
+}
+
+.rc-clone-label {
+  font-size: .6rem;
+  padding: .1rem .35rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.rc-clone-label.parent-label { background: rgba(124,58,237,.15); color: #7c3aed; border: 1px solid rgba(124,58,237,.4); }
+.rc-clone-label.clone-label  { background: rgba(167,139,250,.1);  color: #a78bfa; border: 1px solid rgba(167,139,250,.3); }
+
+.rc-clone-indent {
+  color: #334155;
+  padding-left: .5rem;
+}
 /* ═══════════════════════════════════════════════════
    CONFIRM BAR
 ═══════════════════════════════════════════════════ */
@@ -638,6 +847,3 @@
   transition: all .2s ease;
 }
 .rc-confirm-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,217,255,.6); }
-
-
-

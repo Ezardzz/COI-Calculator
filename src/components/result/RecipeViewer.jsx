@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useCalculation } from '@/contexts/CalculationContext';
 import { useConfig } from '@/contexts/ConfigContext';
+import { decodeItemName } from '@/calculation/itemName';
 import GameIcon from '../GameIcon';
 import './RecipeViewer.css';
 
@@ -130,7 +131,7 @@ function RecipeViewer() {
               <div className="material-items">
                 {Object.entries(recipe.Items.material).map(([name, amount], i) => (
                   <div key={i} className="base-item material-item rv-clickable-item" onClick={() => handleIconClick(name)} style={{ cursor: 'pointer' }}>
-                    <GameIcon name={name} size={25} tooltip={'top'} />
+                    <GameIcon name={name} size={25} tooltip={'top'} tooltipData={name}/>
                     <span className="item-amount">{amount}</span>
                   </div>
                 ))}
@@ -143,7 +144,7 @@ function RecipeViewer() {
               <div className="product-items">
                 {Object.entries(recipe.Items.product).map(([name, amount], i) => (
                   <div key={i} className="base-item product-item rv-clickable-item" onClick={() => handleIconClick(name)} style={{ cursor: 'pointer' }}>
-                    <GameIcon name={name} size={25} tooltip={'top'} />
+                    <GameIcon name={name} size={25} tooltip={'top'} tooltipData={name}/>
                     <span className="item-amount">{amount}</span>
                   </div>
                 ))}
@@ -168,7 +169,7 @@ function RecipeViewer() {
                 {itemRecord.map((item, idx) => (
                   <span key={idx} className="rv-breadcrumb-item" onClick={() => setItemRecord(prev => prev.slice(0, idx + 1))}>
                     <GameIcon name={item} size={16} style={{ cursor: 'pointer' }} />
-                    <span className="rv-breadcrumb-name">{item}</span>
+                    <span className="rv-breadcrumb-name">{decodeItemName(item)}</span>
                     {idx < itemRecord.length - 1 && <span className="rv-breadcrumb-sep">›</span>}
                   </span>
                 ))}

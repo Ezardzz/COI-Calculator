@@ -105,53 +105,12 @@ function processAll(data, cargoDepot, rUnity, rProfit) {
   return result
 }
 
-// recipeData重组数据为以工厂划分的数据格式recipeDataFactory
-function reorganizeToFactoryStructure(recipes,GameData){
-  const buildingCatDef = GameData?.Category?.建筑 || {};
 
-  // 预建反向索引: 建筑名 → 所属类别
-  const buildingToCat = {};
-  Object.entries(buildingCatDef).forEach(([catName, buildings]) => {
-    buildings.forEach(bld => { buildingToCat[bld] = catName; });
-  });
-
-  // 先把配方塞进无序的临时结构
-  const raw = {};
-  recipes.forEach(recipe => {
-    const factoryName    = recipe.Factory.name;
-    const buildingCategory = buildingToCat[factoryName];
-    if (!buildingCategory) return; // 未归类则跳过
-
-    if (!raw[buildingCategory])             raw[buildingCategory] = {};
-    if (!raw[buildingCategory][factoryName]) raw[buildingCategory][factoryName] = [];
-    raw[buildingCategory][factoryName].push({ ...recipe, buildingCategory });
-  });
-
-  // 按照 Category.建筑 的类别顺序重建对象
-  const factoryStructure = {};
-  Object.keys(buildingCatDef).forEach(catName => {
-    if (!raw[catName]) return; // 该类别下没有任何配方则跳过
-
-    // 按照该类别内建筑的定义顺序排列
-    const orderedBuildings = {};
-    buildingCatDef[catName].forEach(bld => {
-      if (raw[catName][bld]) {
-        orderedBuildings[bld] = raw[catName][bld];
-      }
-    });
-
-    if (Object.keys(orderedBuildings).length > 0) {
-      factoryStructure[catName] = orderedBuildings;
-    }
-  });
-
-  return factoryStructure;
-};
 
 export const GameDataProvider = ({ children }) => {
   const [gameData, setGameData] = useState(null);
   const [recipeData, setRecipeData] = useState([]);
-  const [recipeDataFactory, setRecipeDataFactory] = useState({}); 
+  const [categoryOrder, setCategoryOrder] = useState([])
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -167,13 +126,7 @@ export const GameDataProvider = ({ children }) => {
     return processAll(gameData.Facility.contract, cargoDepot, rUnity, rProfit)
   }, [gameData, cargoDepot, rUnity, rProfit])
 
-  //当 recipeData 变化时更新 recipeDataFactory
-  useEffect(() => {
-    if (recipeData.length > 0 && gameData) {
-      const newFactoryStructure = reorganizeToFactoryStructure(recipeData,gameData);
-      setRecipeDataFactory(newFactoryStructure);
-    }
-  }, [recipeData, gameData]);
+
   //读取原始数据
   useEffect(() => {
     const fetchGameData = async () => {
@@ -205,6 +158,25 @@ export const GameDataProvider = ({ children }) => {
     fetchGameData();
   }, []);
 
+  useEffect(() => {
+    const allCats = Array.from(
+      new Set(recipeData.map(r => r.Category || '未分类'))
+    )
+
+    setCategoryOrder(prev => {
+      const merged = [...prev]
+
+      allCats.forEach(cat => {
+        if (!merged.includes(cat)) merged.push(cat)
+      })
+
+      return merged
+    })
+  }, [recipeData])
+  // 更新整个配方
+  const updateRecipeData = (newRecipes) => {
+    setRecipeData(newRecipes)
+  }
   // 更新单个配方的 Enable 状态
   const updateRecipeEnable = (recipeId, enabled) => {
     setRecipeData(prev => {
@@ -245,20 +217,6 @@ export const GameDataProvider = ({ children }) => {
     return recipeData.filter(recipe => !recipe.Enable);
   };
 
-  // 获取所有建筑类别
-  const getBuildingCategories = () => {
-    return Object.keys(recipeDataFactory);
-  };
-
-  // 获取特定类别的所有建筑
-  const getBuildingsByCategory = (category) => {
-    return recipeDataFactory[category] || {};
-  };
-
-  // 获取特定建筑的所有配方
-  const getRecipesByBuilding = (category, buildingName) => {
-    return recipeDataFactory[category]?.[buildingName] || [];
-  };
 
   // 预处理数据（基于原始 gameData）
   // const processedData = gameData ? {
@@ -294,18 +252,17 @@ export const GameDataProvider = ({ children }) => {
   const value = {
     gameData: gameData,
     recipeData,
-    recipeDataFactory,
+    categoryOrder,
     contractData,
     loading,
     error,
+    updateRecipeData,
     updateRecipeEnable,
     updateRecipesEnable,
+    setCategoryOrder,
     resetAllRecipes,
     getEnabledRecipes,
     getDisabledRecipes,
-    getBuildingCategories, // 获取所有建筑类别
-    getBuildingsByCategory, // 获取特定类别的建筑
-    getRecipesByBuilding, // 获取特定建筑的配方
   };
 
   return (

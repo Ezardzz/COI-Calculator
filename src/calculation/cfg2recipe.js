@@ -2,11 +2,11 @@ import {calFarmRecipe } from "./farmRecipe"
 export function cfg2recipe(configuration,GameData,recipeData,contractData){
     const buffResult = calBuffResult(configuration)
     // 特殊配方
-    let specialRecipe = {}
+    const specialRecipe = {}
     for (let recipe of recipeData){  
         if(recipe.Factory.name.includes("#")){ //特殊标识筛选
             recipe.Factory.name = recipe.Factory.name.replace(/#/g, '')//删除特殊标识
-            recipe.Enable = false
+            recipe.Enable = false //先禁用，根据configuration内配置决定是否启用
             const {material,product} = recipe.Items
             const FactoryName = recipe.Factory.name
 
@@ -291,7 +291,9 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
             fertilityCfg:["肥料 II",2.5,1.4],
             farmTier:farmTier
         }
-        settlementRecipe.push(calFarmRecipe(farmCfg))
+        const recipe = calFarmRecipe(farmCfg)
+        recipe.Category = specialRecipe["农业系统"].Category
+        settlementRecipe.push(recipe)
     }
     else{
         for (const crop in cropData){
@@ -307,6 +309,7 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
             }
             const recipe = calFarmRecipe(farmCfg)
             recipe.Factory.name = crop
+            recipe.Category = specialRecipe[farmTier].Category
             settlementRecipe.push(recipe)
         }
     }
@@ -323,7 +326,7 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
                 material:{},
                 product:{[crop]:1}
             },
-            Category:"食品",
+            Category:"缺口",
             Enable:true,
             Deficiency:true 
         }
@@ -332,11 +335,8 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
     // 食物类别统计
     let categoryCount = 0
     const categoryFoodCount = {}
-
     for(const cat in foodCategory){
-
         const foods = foodCategory[cat].filter(f=>food.includes(f))
-
         if(foods.length>0){
             categoryCount++
             foods.forEach(f=>{
@@ -484,7 +484,7 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
             },
             material:service
         },
-        Category:"特殊",
+        Category:specialRecipe["人口"].Category,
         Enable:true
     }
     const population = configuration.facility.demand.population
@@ -605,7 +605,12 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
             const excavatorRecipeCopy = JSON.parse(JSON.stringify(excavatorRecipe))
             excavatorRecipeCopy.Items.product[mine] = excavatorRecipeCopy.Items.product["开采速率"]
             delete excavatorRecipeCopy.Items.product["开采速率"]
-            const combine_recipe = combineRecipe([[excavatorRecipeCopy,1],[trunkMineRecipe,2]],"开采",{Enable:true,Category:"原矿"})
+            const combine_recipe = combineRecipe([[excavatorRecipeCopy,1],[trunkMineRecipe,2]],"开采",
+                {
+                    Enable:true,
+                    Category:specialRecipe["开采"].Category === "特殊" ? "原矿" : specialRecipe["开采"].Category
+                }
+            )
             combine_recipe.Items.material[excavator + '!'] = 1
             combine_recipe.Items.material[trunkMine + '!'] = 2
             // 1辆挖掘机 + 2辆同级别卡车
@@ -647,7 +652,11 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
             [trunkRecipe,5],
             [forestryRecipe,1],
         ]
-        const combine_recipe = combineRecipe(recipeCalList,"伐木场",{Enable:true,Category:"原矿"})
+        const combine_recipe = combineRecipe(recipeCalList,"伐木场",{
+                Enable:true,
+                Category:specialRecipe["伐木场"].Category === "特殊" ? "原矿" : specialRecipe["伐木场"].Category
+            }
+        )
         combine_recipe.Items.material[logger + '!'] = 2
         combine_recipe.Items.material[planter + '!'] = 2
         combine_recipe.Items.material[trunkLogger + '!'] = 5
@@ -662,7 +671,7 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
     const shipFuel = configuration.facility.mineral.ocean.ship.fuel
     const oceanMines = configuration.facility.mineral.ocean.mine
     const vehicleInfo = vehicleData.船舶[shipFuel][cargoDepot]
-    const cargoDepotRecipe = extractVehicleRecipe(cargoDepot,vehicleInfo,"船舶","原矿")
+    const cargoDepotRecipe = extractVehicleRecipe(cargoDepot,vehicleInfo,"船舶",specialRecipe["货运港"].Category === "特殊" ? "原矿" : specialRecipe["货运港"].Category)
     for(const mine of oceanMines){
         // 海外矿：原矿 改为 原矿+"#"
         const mineRecipe = JSON.parse(JSON.stringify(mineData[mine]))
@@ -709,7 +718,7 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
                     material:fuel,
                     product:{}
                 },
-                Category:"原矿",
+                Category:specialRecipe["货运港"].Category === "特殊" ? "原矿" : specialRecipe["货运港"].Category,
                 Enable:true
 
             }
@@ -737,7 +746,7 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
                 material:{},
                 product:{}
             },
-            Category:"原矿",
+            Category:"缺口",
             Enable:true,
             Deficiency:true        
         }
@@ -755,7 +764,7 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
             material:{},
             product:{"凝聚力":1}
         },
-        Category:"原矿",
+        Category:"缺口",
         Enable:true,
         Deficiency:true 
     }
@@ -788,7 +797,9 @@ function calFixedRecipe(configuration, specialRecipe, buffResult){
         }
     }
     // 特殊建筑
-    for(const [name,amount] of Object.entries(factorys)){
+    for(let [name,amount] of Object.entries(factorys)){
+        if (researchCfg.spaceResearch) amount = researchAmount + 2 
+        
         if (name === "空间站"){
             const recipe = {
                 ID:0,
@@ -808,13 +819,12 @@ function calFixedRecipe(configuration, specialRecipe, buffResult){
                         "凝聚力":0.1 + amount * 0.05,
                     }
                 },
-                Category:"特殊",
+                Category:specialRecipe["空间站"].Category,
                 FixedValue:1,
                 Enable:true,
             }
             
             if (researchCfg.spaceResearch){
-                specialRecipe[researchTier]["太空"].Enable = true
                 const spaceResearchPoint = researchCfg.amount * 48
                 recipe.Items.product["太空研究点数"] = spaceResearchPoint
                 recipe.Items.material["电子产品 IV#"] = spaceResearchPoint / 24
@@ -824,7 +834,7 @@ function calFixedRecipe(configuration, specialRecipe, buffResult){
         }
         else{
             specialRecipe[name].Enable = true
-            specialRecipe[name].FixedValue = amount    
+            specialRecipe[name].FixedValue = amount 
         }
     }
     // 需求
@@ -839,7 +849,7 @@ function calFixedRecipe(configuration, specialRecipe, buffResult){
             material:demand,
             product:{}
         },
-        Category:"特殊",
+        Category:specialRecipe["需求"].Category,
         FixedValue:1,
         Enable:true,
     }
@@ -853,3 +863,4 @@ function calFixedRecipe(configuration, specialRecipe, buffResult){
 
     return recipeList
 }
+

@@ -1,4 +1,5 @@
 import { memo, useMemo, useState, useEffect } from 'react';
+import { decodeItemName, getBaseName } from '@/calculation/itemName';
 import './GameIcon.css';
 
 //图标数据缓存
@@ -30,15 +31,15 @@ function GameIcon({ name, size = 40, tooltip = '', tooltipData = '' , onClick })
     loadIconData().then(setIconData);
   }, []);
 
-  // 处理图标名称：去掉 # 和 ! ,将 - 替换为空格
+  // 处理图标名称：去掉 '#','!'  将 '-' 替换为空格
   // #：代表物品的中间态，仅用于转换物品状态的配方
   // !：代表仅作展示的物品，不参与配方配平
   const processedName = useMemo(() => {
     if (!name) return '';
-    return name
+    return getBaseName(name
       .replace(/#/g, '')
       .replace(/!/g, '')
-      .replace(/-/g, ' ');
+      .replace(/-/g, ' '));
   }, [name]);
 
   // 提前计算 iconInfo
@@ -96,7 +97,7 @@ function GameIcon({ name, size = 40, tooltip = '', tooltipData = '' , onClick })
     >
       {tooltip && (
         <span className="game-icon-tooltip">
-          {tooltipData || processedName}
+          {decodeItemName(tooltipData) || processedName}
         </span>
       )}
     </div>
