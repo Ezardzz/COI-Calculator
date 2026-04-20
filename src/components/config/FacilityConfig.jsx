@@ -142,7 +142,10 @@ function DemandSection() {
       <div className="facility-section-header">物品需求</div>
       <div className="sub-section">
         <div className="trigger-row">
-          <button className="action-btn" onClick={() => updateConfig('interface.itemSelector', true)}>
+          <button className="action-btn" onClick={() => updateConfig('interface.recipeCfg', true)}>
+            ＋ 配置配方
+          </button>
+          <button className="action-btn" onClick={() => updateConfig('interface.itemCfg', true)}>
             ＋ 配置物品
           </button>
           {Object.keys(demand.items || {}).length > 0 && (
@@ -547,7 +550,7 @@ function MineralSection() {
 // ── Config Preview ────────────────────────────────────────────────────────────
 function ConfigPreview() {
   const { configuration, updateConfig } = useConfig()
-  const { gameData, recipeData, updateRecipesEnable, resetAllRecipes } = useGameData()
+  const { gameData, recipeData, recipeCfg ,updateRecipeData ,updateRecipeCfg} = useGameData()
   const [open, setOpen] = useState(false)
   const importRef = useState(() => {
     if (typeof document !== 'undefined') {
@@ -558,82 +561,77 @@ function ConfigPreview() {
     }
     return null
   })[0]
-function deepMerge(target, source) {
-  if (typeof target !== 'object' || target === null) return source
-  if (typeof source !== 'object' || source === null) return target
 
-  const result = Array.isArray(target) ? [...target] : { ...target }
-
-  Object.keys(source).forEach(key => {
-    if (key in target) {
-      result[key] = deepMerge(target[key], source[key])
-    } else {
-      result[key] = source[key]
-    }
-  })
-
-  return result
-}
 const handleExport = () => {
   const payload = {
     version: gameData?.Version ?? 'unknown',
     configuration,
-    disabledRecipes: recipeData.filter(r => !r.Enable).map(r => ({ Items: r.Items })),
+    recipeData,
+    recipeCfg,
   }
-  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
-  const url  = URL.createObjectURL(blob)
-  const a    = document.createElement('a')
-  a.href     = url
-  a.download = `facility-config-${Date.now()}.json`
+
+  const blob = new Blob([JSON.stringify(payload, null, 2)], {
+    type: 'application/json',
+  })
+
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = 'config.json'
   a.click()
   URL.revokeObjectURL(url)
 }
 
 const handleImport = () => {
   if (!importRef) return
+
   importRef.onchange = e => {
     const file = e.target.files[0]
     if (!file) return
+
     const reader = new FileReader()
+
     reader.onload = evt => {
       try {
         const payload = JSON.parse(evt.target.result)
 
-        // 版本比对
+        // 版本校验
         const currentVersion = gameData?.Version ?? 'unknown'
         if (payload.version && payload.version !== currentVersion) {
           const ok = window.confirm(
             `版本不匹配：\n文件版本：${payload.version}\n当前版本：${currentVersion}\n\n仍要导入吗？`
           )
-          if (!ok) { importRef.value = ''; return }
+          if (!ok) {
+            importRef.value = ''
+            return
+          }
         }
 
-        // 还原 configuration
+        // ✅ 1. 整体覆盖 configuration
         if (payload.configuration) {
-          const merged = deepMerge(configuration, payload.configuration)
-          // 一次性整体替换
-          updateConfig('', merged)
+          updateConfig('', payload.configuration)
         }
 
-        // 还原 recipeData：先全部启用，再把存储的禁用配方按完整对象匹配禁用
-        if (Array.isArray(payload.disabledRecipes)) {
-          resetAllRecipes()
-          // 用 JSON.stringify(recipe.Items) 作为唯一指纹
-          const disabledKeys = new Set(
-            payload.disabledRecipes.map(r => JSON.stringify(r.Items))
-          )
-          const toDisable = recipeData
-            .filter(r => disabledKeys.has(JSON.stringify(r.Items)))
-            .map(r => r.ID)
-          if (toDisable.length > 0) updateRecipesEnable(toDisable, false)
+        // ✅ 2. 整体覆盖 recipeData
+        if (Array.isArray(payload.recipeData)) {
+          updateRecipeData(payload.recipeData)
         }
+
+        // ✅ 3. 整体覆盖 recipeCfg
+        if (payload.recipeCfg) {
+          updateRecipeCfg(payload.recipeCfg)
+        }
+
       } catch (err) {
         alert('配置文件解析失败：' + err.message)
       }
+
       importRef.value = ''
     }
+
     reader.readAsText(file)
   }
+
   importRef.click()
 }
 

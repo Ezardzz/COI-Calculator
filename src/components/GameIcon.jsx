@@ -1,4 +1,6 @@
-import { memo, useMemo, useState, useEffect } from 'react';
+import { memo, useMemo, useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom'
+import { decodeItemName, getBaseName } from '@/calculation/itemName';
 import './GameIcon.css';
 
 //图标数据缓存
@@ -9,7 +11,7 @@ async function loadIconData() {
   if (iconDataCache) return iconDataCache;
   if (iconDataPromise) return iconDataPromise;
 
-  iconDataPromise = fetch('/data/icon-v2.json')
+  iconDataPromise = fetch('/data/icon.json')
     .then(res => res.json())
     .then(data => {
       iconDataCache = data;
@@ -23,49 +25,88 @@ async function loadIconData() {
   return iconDataPromise;
 }
 
-function GameIcon({ name, size = 40, tooltip = '', tooltipData = '' , onClick }) {
+// Portal tooltip: rendered at document.body to escape any overflow:hidden ancestor
+function PortalTooltip({ anchorRef, tooltip, text }) {
+  const [pos, setPos] = useState(null);
+
+  useEffect(() => {
+    const el = anchorRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const GAP = 6;
+    if (tooltip === 'top') {
+      setPos({
+        left: rect.left + rect.width / 2,
+        top: rect.top - GAP,
+        transform: 'translate(-50%, -100%)',
+      });
+    } else if (tooltip === 'left') {
+      setPos({
+        left: rect.left - GAP,
+        top: rect.top + rect.height / 2,
+        transform: 'translate(-100%, -50%)',
+      });
+    }
+  }, [anchorRef, tooltip]);
+
+  if (!pos) return null;
+
+  return createPortal(
+    <span
+      className={`game-icon-tooltip game-icon-tooltip-portal tooltip-${tooltip}`}
+      style={{ position: 'fixed', left: pos.left, top: pos.top, transform: pos.transform, opacity: 1 }}
+    >
+      {text}
+    </span>,
+    document.body
+  );
+}
+
+function GameIcon({ name, size = 40, tooltip = '', tooltipData = '', onClick }) {
   const [iconData, setIconData] = useState(null);
+  const [hovered, setHovered]   = useState(false);
+  const iconRef = useRef(null);
 
   useEffect(() => {
     loadIconData().then(setIconData);
   }, []);
 
-  // 处理图标名称：去掉 # 和 ! ,将 - 替换为空格
+  // 处理图标名称：去掉 '#','!'  将 '-' 替换为空格
   // #：代表物品的中间态，仅用于转换物品状态的配方
   // !：代表仅作展示的物品，不参与配方配平
   const processedName = useMemo(() => {
     if (!name) return '';
-    return name
+    return getBaseName(name
       .replace(/#/g, '')
       .replace(/!/g, '')
-      .replace(/-/g, ' ');
+      .replace(/-/g, ' '));
   }, [name]);
 
-  // 提前计算 iconInfo
   const iconInfo = iconData ? iconData[processedName] : null;
 
   const iconStyle = useMemo(() => {
     if (!iconInfo) return null;
-
     const { x, y, width, height, total_width, total_height, padding } = iconInfo;
-
     const scale = size / (height - 2 * padding);
-    const tw = total_width * scale;
-    const th = total_height * scale;
+    const tw  = total_width  * scale;
+    const th  = total_height * scale;
     const bgx = -(x + padding) * scale;
     const bgy = -(y + padding) * scale;
-    const iconH = size;
-    const iconW = width * scale;
-
     return {
-      width: `${iconW}px`,
-      height: `${iconH}px`,
+      width:  `${width * scale}px`,
+      height: `${size}px`,
       backgroundPosition: `${bgx}px ${bgy}px`,
       backgroundSize: `${tw}px ${th}px`,
       ...(onClick && { cursor: 'pointer' }),
     };
   }, [iconInfo, size, onClick]);
 
+  const tooltipText = decodeItemName(tooltipData) || processedName;
+
+  const handlers = tooltip ? {
+    onMouseEnter: () => setHovered(true),
+    onMouseLeave: () => setHovered(false),
+  } : {};
 
   if (!iconData || !name) {
     return (
@@ -90,14 +131,14 @@ function GameIcon({ name, size = 40, tooltip = '', tooltipData = '' , onClick })
 
   return (
     <div
-      className={`game-icon ${tooltip ? `tooltip-${tooltip}` : ''}`}
+      ref={iconRef}
+      className="game-icon"
       style={iconStyle}
       onClick={onClick}
+      {...handlers}
     >
-      {tooltip && (
-        <span className="game-icon-tooltip">
-          {tooltipData || processedName}
-        </span>
+      {tooltip && hovered && (
+        <PortalTooltip anchorRef={iconRef} tooltip={tooltip} text={tooltipText} />
       )}
     </div>
   );

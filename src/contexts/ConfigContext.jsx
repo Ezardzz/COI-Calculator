@@ -73,8 +73,8 @@ const initialConfig = {
   },
   buff: {},
   interface: {
-    recipeSelector: false,
-    itemSelector: false,
+    recipeCfg: false,
+    itemCfg: false,
     contractSelector: false,
     recipeViewer: false,
   }

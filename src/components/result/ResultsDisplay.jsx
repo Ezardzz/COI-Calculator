@@ -130,7 +130,7 @@ function ResultsDisplay() {
                         <div className="items-stats-grid">
                           {Object.entries(results[currentCategory].totalInput).map(([itemName, itemAmount]) => (
                             <div key={itemName} className="stat-item material-stat" title={itemName}>
-                              <GameIcon name={itemName} size={20} tooltip={'top'} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }}/>
+                              <GameIcon name={itemName} size={20} tooltip={'top'} tooltipData={itemName} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }}/>
                               <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
                             </div>
                           ))}
@@ -141,7 +141,7 @@ function ResultsDisplay() {
                         <div className="items-stats-grid">
                           {Object.entries(results[currentCategory].totalOutput).map(([itemName, itemAmount]) => (
                             <div key={itemName} className="stat-item product-stat" title={itemName}>
-                              <GameIcon name={itemName} size={20} tooltip={'top'} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }} />
+                              <GameIcon name={itemName} size={20} tooltip={'top'} tooltipData={itemName} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }} />
                               <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
                             </div>
                           ))}
@@ -152,7 +152,7 @@ function ResultsDisplay() {
                         <div className="items-stats-grid">
                           {Object.entries(results[currentCategory].totalConsumption).map(([itemName, itemAmount]) => (
                           <div key={itemName} className="stat-item consumption-stat" title={itemName}>
-                            <GameIcon name={itemName} size={20} tooltip={'top'} onClick={(e) => addToNoMaintenance(e, itemName)} style={{ cursor: noMaintenanceMode?.isOpen ? 'pointer' : 'default' }} />
+                            <GameIcon name={itemName} size={20} tooltip={'top'} tooltipData={itemName} onClick={(e) => addToNoMaintenance(e, itemName)} style={{ cursor: noMaintenanceMode?.isOpen ? 'pointer' : 'default' }} />
                             <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
                           </div>
                         ))}
@@ -200,7 +200,7 @@ function ResultsDisplay() {
                                   <div className="material-items">
                                     {Object.entries(recipe.Items.material).map(([itemName, itemAmount], i) => (
                                       <div key={i} className="base-item material-item">
-                                        <GameIcon name={itemName} size={25}  tooltip={'top'} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }} />
+                                        <GameIcon name={itemName} size={25}  tooltip={'top'} tooltipData={itemName} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }} />
                                         <span className="item-amount">{itemAmount}</span>
                                       </div>
                                     ))}
@@ -214,7 +214,7 @@ function ResultsDisplay() {
                                   <div className="product-items">
                                     {Object.entries(recipe.Items.product).map(([itemName, itemAmount], i) => (
                                       <div key={i} className="base-item product-item">
-                                        <GameIcon name={itemName} size={25}  tooltip={'top'} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }}  />
+                                        <GameIcon name={itemName} size={25}  tooltip={'top'} tooltipData={itemName} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }}  />
                                         <span className="item-amount">{itemAmount}</span>
                                       </div>
                                     ))}

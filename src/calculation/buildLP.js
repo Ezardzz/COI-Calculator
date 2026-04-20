@@ -1,5 +1,4 @@
 export function buildLP(recipes,noBlanceItems) {
-  console.log(noBlanceItems);
   
   const varX = (id) => `x_${id}`;
   const varN = (id) => `n_${id}`;

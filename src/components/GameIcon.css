@@ -5,8 +5,8 @@
 
   /* 浏览器自动选择图片格式 */
   background-image: image-set(
-    url('/data/icon-v2.webp') type('image/webp'),
-    url('/data/icon-v2.png') type('image/png')
+    url('/data/icon.webp') type('image/webp'),
+    url('/data/icon.png') type('image/png')
   );
 
   background-repeat: no-repeat;
@@ -99,4 +99,34 @@
 
 .game-icon.tooltip-top:hover .game-icon-tooltip {
   animation: tooltipFadeIn 0.2s ease;
+}
+
+/* Portal tooltip: fixed positioning, escapes overflow:hidden */
+.game-icon-tooltip-portal {
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.game-icon-tooltip-portal.tooltip-top::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgba(0, 217, 255, 0.95);
+}
+
+.game-icon-tooltip-portal.tooltip-left::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0; height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid rgba(0, 217, 255, 0.95);
 }
