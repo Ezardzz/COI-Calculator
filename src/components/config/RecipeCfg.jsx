@@ -138,15 +138,10 @@ function SearchControl({ side, keyword, mode, onChange, onJump, matchCount, jump
    MAIN
 ═══════════════════════════════════════════════════ */
 export default function RecipeCfg() {
-  const { gameData, recipeData, updateRecipeData } = useGameData();
+  const { recipeData, recipeCfg, updateRecipeData, updateRecipeCfg } = useGameData();
   const { configuration, updateConfig } = useConfig();
   const isOpen = configuration.interface?.recipeCfg || false;
 
-  /* ── sort/search references ── */
-  const orderedBuildings = useMemo(() =>
-    buildOrderedList(gameData?.Category?.建筑 || gameData?.Category || {}), [gameData]);
-  const orderedItems = useMemo(() =>
-    buildOrderedList(gameData?.Category?.物品 || {}), [gameData]);
 
   /* ══════════════════════════════════════════════
      STATE
@@ -154,6 +149,8 @@ export default function RecipeCfg() {
   // localMap: { catId → recipe[] }  (recipes in display/drag order)
   // catOrder: string[]
   const initState = () => {
+    // If recipeCfg exists, restore from it
+    // Otherwise build from recipeData
     const map = {}, order = [], seen = new Set();
     recipeData.forEach(r => {
       const cat = (!r.Category || r.Category === '其他建筑') ? UNCLASSIFIED : r.Category;
@@ -172,23 +169,45 @@ export default function RecipeCfg() {
     if (uidx > -1 && uidx < order.length - 1) {
       order.splice(uidx, 1); order.push(UNCLASSIFIED);
     }
-    return { map, order };
+    if (recipeCfg){
+      return {
+        map:            map,
+        order:          order,
+        cycleSelInit:   Object.fromEntries(
+          Object.entries(recipeCfg.cycleSelections || {}).map(([k, v]) => [k, new Set(v)])
+        ),
+        parentIdsInit:  new Set(recipeCfg.parentIds  || []),
+        cloneIdsInit:   new Set(recipeCfg.cloneIds   || []),
+        parentToClonesInit: recipeCfg.parentToClones || {},
+      }
+    }
+    else{
+      return { map, order, cycleSelInit: {}, parentIdsInit: new Set(), cloneIdsInit: new Set(), parentToClonesInit: {} };
+    }
   };
 
-  const [localMap, setLocalMap]         = useState(() => initState().map);
-  const [catOrder, setCatOrder]         = useState(() => initState().order);
-  const [activeCategory, setActiveCategory] = useState(() => {
-    const { order } = initState();
-    return order.find(c => c !== UNCLASSIFIED) || order[0] || '';
-  });
+  const {
+    map:              _initMap,
+    order:            _initOrder,
+    cycleSelInit:     _initCycleSel,
+    parentIdsInit:    _initParentIds,
+    cloneIdsInit:     _initCloneIds,
+    parentToClonesInit: _initParentToClones,
+  } = useMemo(initState, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const [localMap, setLocalMap]             = useState(() => _initMap);
+  const [catOrder, setCatOrder]             = useState(() => _initOrder);
+  const [activeCategory, setActiveCategory] = useState(() =>
+    _initOrder.find(c => c !== UNCLASSIFIED) || _initOrder[0] || ''
+  );
 
   const flatRecipes = useMemo(() => catOrder.flatMap(c => localMap[c] || []), [localMap, catOrder]);
   const rightCats   = useMemo(() => catOrder.filter(c => c !== UNCLASSIFIED), [catOrder]);
 
   /* ── clone tracking ── */
-  const [parentIds,      setParentIds]      = useState(() => new Set());
-  const [cloneIds,       setCloneIds]       = useState(() => new Set());
-  const parentToClones   = useRef({});
+  const [parentIds,      setParentIds]      = useState(() => _initParentIds);
+  const [cloneIds,       setCloneIds]       = useState(() => _initCloneIds);
+  const parentToClones   = useRef(_initParentToClones);
   const [showCloneViewer, setShowCloneViewer] = useState(false);
   useEffect(() => { if (parentIds.size === 0) setShowCloneViewer(false); }, [parentIds]);
 
@@ -208,7 +227,7 @@ export default function RecipeCfg() {
   const [rightJumpState, setRightJumpState] = useState({ idx: -1, count: 0 });
 
   /* ── cycle items ── */
-  const [cycleSelections, setCycleSelections] = useState({});
+  const [cycleSelections, setCycleSelections] = useState(() => _initCycleSel);
   const [jumpStates,     setJumpStates]     = useState({});
   const [activeJumpItem, setActiveJumpItem] = useState(null);
 
@@ -681,10 +700,20 @@ export default function RecipeCfg() {
   ───────────────────────────────────────────── */
   const handleClose   = () => updateConfig('interface.recipeCfg', false);
   const handleConfirm = () => {
+    // Save cfg (cycles as arrays for JSON-safe storage)
+    updateRecipeCfg({
+      cycleSelections: Object.fromEntries(
+        Object.entries(cycleSelections).map(([k, v]) => [k, [...v]])
+      ),
+      parentIds:    [...parentIds],
+      cloneIds:     [...cloneIds],
+      parentToClones: parentToClones.current,
+    });
+    // Flatten and write recipeData
     const result = catOrder.flatMap(cat => {
       const list = localMap[cat] || [];
       if (cat === UNCLASSIFIED)
-        return list.map(r => ({ ...r, Enable: false, Category: '其他建筑' }));
+        return list.map(r => ({ ...r, Enable: false }));
       return list;
     });
     updateRecipeData(result);
@@ -955,7 +984,12 @@ export default function RecipeCfg() {
 
             {/* CYCLE ITEMS PANEL */}
             <div className="rc-cycle-panel">
-              <div className="rc-cycle-header">组内循环</div>
+              <div className="rc-cycle-header">
+                组内循环
+                {cycleSelected.size > 0 && (
+                  <span className="rc-cycle-checked-count">{cycleSelected.size}</span>
+                )}
+              </div>
               <div className="rc-cycle-list">
                 {[...cycleItems].map(baseName => {
                   const js = jumpStates[baseName];

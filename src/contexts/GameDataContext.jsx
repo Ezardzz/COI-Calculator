@@ -110,7 +110,7 @@ function processAll(data, cargoDepot, rUnity, rProfit) {
 export const GameDataProvider = ({ children }) => {
   const [gameData, setGameData] = useState(null);
   const [recipeData, setRecipeData] = useState([]);
-  const [categoryOrder, setCategoryOrder] = useState([])
+  const [recipeCfg, setRecipeCfg] = useState(null)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -158,24 +158,13 @@ export const GameDataProvider = ({ children }) => {
     fetchGameData();
   }, []);
 
-  useEffect(() => {
-    const allCats = Array.from(
-      new Set(recipeData.map(r => r.Category || '未分类'))
-    )
-
-    setCategoryOrder(prev => {
-      const merged = [...prev]
-
-      allCats.forEach(cat => {
-        if (!merged.includes(cat)) merged.push(cat)
-      })
-
-      return merged
-    })
-  }, [recipeData])
   // 更新整个配方
   const updateRecipeData = (newRecipes) => {
     setRecipeData(newRecipes)
+  }
+  // 更新配方配置
+  const updateRecipeCfg = (newRecipes) => {
+    setRecipeCfg(newRecipes)
   }
   // 更新单个配方的 Enable 状态
   const updateRecipeEnable = (recipeId, enabled) => {
@@ -252,14 +241,14 @@ export const GameDataProvider = ({ children }) => {
   const value = {
     gameData: gameData,
     recipeData,
-    categoryOrder,
+    recipeCfg,
     contractData,
     loading,
     error,
     updateRecipeData,
+    updateRecipeCfg,
     updateRecipeEnable,
     updateRecipesEnable,
-    setCategoryOrder,
     resetAllRecipes,
     getEnabledRecipes,
     getDisabledRecipes,

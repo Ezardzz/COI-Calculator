@@ -2,7 +2,7 @@ export function buildLP(recipes,noBlanceItems) {
   
   const varX = (id) => `x_${id}`;
   const varN = (id) => `n_${id}`;
-  console.log(recipes);
+  // console.log(recipes);
   
   let lp = "";
 

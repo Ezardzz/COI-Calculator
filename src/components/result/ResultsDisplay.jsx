@@ -130,7 +130,7 @@ function ResultsDisplay() {
                         <div className="items-stats-grid">
                           {Object.entries(results[currentCategory].totalInput).map(([itemName, itemAmount]) => (
                             <div key={itemName} className="stat-item material-stat" title={itemName}>
-                              <GameIcon name={itemName} size={20} tooltip={'top'} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }}/>
+                              <GameIcon name={itemName} size={20} tooltip={'top'} tooltipData={itemName} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }}/>
                               <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
                             </div>
                           ))}
@@ -141,7 +141,7 @@ function ResultsDisplay() {
                         <div className="items-stats-grid">
                           {Object.entries(results[currentCategory].totalOutput).map(([itemName, itemAmount]) => (
                             <div key={itemName} className="stat-item product-stat" title={itemName}>
-                              <GameIcon name={itemName} size={20} tooltip={'top'} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }} />
+                              <GameIcon name={itemName} size={20} tooltip={'top'} tooltipData={itemName} onClick={(e) => { addToNoMaintenance(e, itemName); if (!e.ctrlKey) handleItemClick(itemName); }} style={{ cursor: 'pointer' }} />
                               <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
                             </div>
                           ))}
@@ -152,7 +152,7 @@ function ResultsDisplay() {
                         <div className="items-stats-grid">
                           {Object.entries(results[currentCategory].totalConsumption).map(([itemName, itemAmount]) => (
                           <div key={itemName} className="stat-item consumption-stat" title={itemName}>
-                            <GameIcon name={itemName} size={20} tooltip={'top'} onClick={(e) => addToNoMaintenance(e, itemName)} style={{ cursor: noMaintenanceMode?.isOpen ? 'pointer' : 'default' }} />
+                            <GameIcon name={itemName} size={20} tooltip={'top'} tooltipData={itemName} onClick={(e) => addToNoMaintenance(e, itemName)} style={{ cursor: noMaintenanceMode?.isOpen ? 'pointer' : 'default' }} />
                             <span className="stat-amount">{Math.round(itemAmount * 10) / 10}</span>
                           </div>
                         ))}
