@@ -3,6 +3,7 @@ import { X, Check, Plus, Trash2, GripVertical, Search } from 'lucide-react';
 import GameIcon from '../GameIcon';
 import { useConfig } from '@/contexts/ConfigContext';
 import { useGameData } from '@/contexts/GameDataContext';
+import { useCalculation } from '@/contexts/CalculationContext';
 import { encodeItemName, getBaseName } from '@/calculation/itemName';
 import './RecipeCfg.css';
 
@@ -139,8 +140,7 @@ function SearchControl({ side, keyword, mode, onChange, onJump, matchCount, jump
 ═══════════════════════════════════════════════════ */
 export default function RecipeCfg() {
   const { recipeData, recipeCfg, updateRecipeData, updateRecipeCfg } = useGameData();
-  const { configuration, updateConfig } = useConfig();
-  const isOpen = configuration.interface?.recipeCfg || false;
+  const { interfaceOpen, setInterfaceOpen } = useCalculation();
 
 
   /* ══════════════════════════════════════════════
@@ -533,7 +533,8 @@ export default function RecipeCfg() {
   const handleCopy = (id) => {
     const source = flatRecipes.find(r => r.ID === id);
     if (!source) return;
-    const newId = Math.max(0, ...flatRecipes.map(r => r.ID)) + 1;
+    const maxID = Math.max(0, ...flatRecipes.map(r => r.ID))
+    const newId = maxID > 2000 ? maxID + 1 : maxID + 2001;
     const clone = {
       ...source, ID: newId,
       Items: { material: { ...source.Items?.material }, product: { ...source.Items?.product } },
@@ -698,7 +699,7 @@ export default function RecipeCfg() {
   /* ─────────────────────────────────────────────
      CONFIRM
   ───────────────────────────────────────────── */
-  const handleClose   = () => updateConfig('interface.recipeCfg', false);
+  const handleClose   = () => setInterfaceOpen(prev => ({...prev,recipeCfg: false}));
   const handleConfirm = () => {
     // Save cfg (cycles as arrays for JSON-safe storage)
     updateRecipeCfg({
@@ -720,7 +721,7 @@ export default function RecipeCfg() {
     handleClose();
   };
 
-  if (!isOpen) return null;
+  if (!interfaceOpen) return null;
 
   /* ─────────────────────────────────────────────
      RENDER HELPERS
@@ -997,8 +998,7 @@ export default function RecipeCfg() {
                   return (
                     <div key={baseName}
                       className={`rc-cycle-item ${cycleSelected.has(baseName) ? 'checked' : ''}`}>
-                      <div className="rc-cycle-icon" onClick={() => handleCycleJumpClick(baseName)}
-                        title={`点击跳转含"${baseName}"的配方`}>
+                      <div className="rc-cycle-icon" onClick={() => handleCycleJumpClick(baseName)}>
                         <div className="rc-cycle-icon-wrap">
                           <GameIcon name={encodeItemName(baseName, activeCategory)} size={28} tooltip="top"/>
                           {showBadge && (
@@ -1006,10 +1006,7 @@ export default function RecipeCfg() {
                           )}
                         </div>
                       </div>
-                      <div className="rc-cycle-check" onClick={() => toggleCycleItem(baseName)}
-                        title={cycleSelected.has(baseName)
-                          ? `取消：恢复为"${baseName}"`
-                          : `勾选：组内改名`}>
+                      <div className="rc-cycle-check" onClick={() => toggleCycleItem(baseName)}>
                         {cycleSelected.has(baseName) && <Check size={9} color="#071018" strokeWidth={3.5}/>}
                       </div>
                       <span className="rc-cycle-name">{baseName}</span>

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useCalculation } from '@/contexts/CalculationContext';
 import { useConfig } from '@/contexts/ConfigContext'
+
 import GameIcon from '../GameIcon';
 import './ResultsDisplay.css';
 import FarmRotation from './FarmRotation';
@@ -8,13 +9,13 @@ import { useSolve } from '@/calculation/useSolve';
 
 function ResultsDisplay() {
   
-  const { results, setItemRecord } = useCalculation();
+  const { results, setItemRecord, setInterfaceOpen } = useCalculation();
   if (!results) return null
   const { configuration, updateConfig } = useConfig()
   // 点击图标打开配方查看界面
   const handleItemClick = (itemName) => {
     setItemRecord([itemName]);
-    updateConfig('interface.recipeViewer', true);
+    setInterfaceOpen(prev => ({...prev,recipeViewer: true}));
   };
 
   const noMaintenanceMode = configuration.facility.demand.noMaintenanceMode

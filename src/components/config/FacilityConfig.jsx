@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react'
 import { useConfig } from '@/contexts/ConfigContext'
 import { useGameData } from '@/contexts/GameDataContext'
+import { useCalculation } from '@/contexts/CalculationContext';
+import { configFrame } from '@/contexts/cfg'
 import { Chip, RadioChip, ChipWithQty, RadioChipGroup,SectionCard, SubLabel } from './Primitives'
 import {
   VEHICLE_DATA, FACILITY_OPTIONS, RESEARCH_OPTIONS,
@@ -37,6 +39,7 @@ function syncSpaceStation(factory, amount, spaceResearch) {
 // ── Demand ────────────────────────────────────────────────────────────────────
 function DemandSection() {
   const { configuration, updateConfig } = useConfig()
+  const { setInterfaceOpen } = useCalculation();
   const demand = configuration.facility.demand
   const research = demand.research || { amount: 0, research: null, spaceResearch: false }
   const popEnabled = demand.population !== null && demand.population !== undefined
@@ -142,10 +145,10 @@ function DemandSection() {
       <div className="facility-section-header">物品需求</div>
       <div className="sub-section">
         <div className="trigger-row">
-          <button className="action-btn" onClick={() => updateConfig('interface.recipeCfg', true)}>
+          <button className="action-btn" onClick={() => setInterfaceOpen(prev => ({...prev,recipeCfg: true}))}>
             ＋ 配置配方
           </button>
-          <button className="action-btn" onClick={() => updateConfig('interface.itemCfg', true)}>
+          <button className="action-btn" onClick={() => setInterfaceOpen(prev => ({...prev,itemCfg: true}))}>
             ＋ 配置物品
           </button>
           {Object.keys(demand.items || {}).length > 0 && (
@@ -387,6 +390,7 @@ function LogisticsSection() {
 function MineralSection() {
   const { configuration, updateConfig } = useConfig()
   const { contractData } = useGameData()
+  const { setInterfaceOpen } = useCalculation();
   const mineral = configuration.facility.mineral
   const { miner, mine: mapMine } = mineral.map
   const { ship, mine: oceanMine } = mineral.ocean
@@ -516,7 +520,7 @@ function MineralSection() {
         <div className="trigger-row">
           {!ship.cargoDepot
             ? <span className="hint-text">请先选择货运港</span>
-            : <button className="action-btn" onClick={() => updateConfig('interface.contractSelector', true)}>＋ 配置合同</button>
+            : <button className="action-btn" onClick={() => setInterfaceOpen(prev => ({...prev,contractSelector: true}))}>＋ 配置合同</button>
           }
           {tradeItemKeys.length > 0 && (
             <div className="chip-group">
@@ -582,6 +586,35 @@ const handleExport = () => {
   URL.revokeObjectURL(url)
 }
 
+function mergeByFrame(frame, current, incoming) {
+  // 叶子节点（null）→ 直接取 incoming 或 fallback current
+  if (frame === null) {
+    return incoming !== undefined ? incoming : current
+  }
+
+  const result = {}
+
+  Object.keys(frame).forEach(key => {
+    const frameVal = frame[key]
+    const curVal = current?.[key]
+    const inVal = incoming?.[key]
+
+    if (frameVal === null) {
+      // 叶子
+      result[key] = inVal !== undefined ? inVal : curVal
+    } else {
+      // 递归
+      result[key] = mergeByFrame(
+        frameVal,
+        curVal || {},
+        inVal || {}
+      )
+    }
+  })
+
+  return result
+}
+
 const handleImport = () => {
   if (!importRef) return
 
@@ -607,17 +640,20 @@ const handleImport = () => {
           }
         }
 
-        // ✅ 1. 整体覆盖 configuration
+        // 按照框架读取
         if (payload.configuration) {
-          updateConfig('', payload.configuration)
-        }
+          const safeConfig = mergeByFrame(
+            configFrame,
+            configuration,
+            payload.configuration
+          )
 
-        // ✅ 2. 整体覆盖 recipeData
+          updateConfig('', safeConfig)
+        }
+        // 整体覆盖
         if (Array.isArray(payload.recipeData)) {
           updateRecipeData(payload.recipeData)
         }
-
-        // ✅ 3. 整体覆盖 recipeCfg
         if (payload.recipeCfg) {
           updateRecipeCfg(payload.recipeCfg)
         }

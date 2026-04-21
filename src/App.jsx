@@ -6,6 +6,7 @@ import { ConfigProvider } from '@/contexts/ConfigContext';
 import { GameDataProvider } from '@/contexts/GameDataContext';
 import { HighsProvider } from "./contexts/HighsContext";
 import { CalculationProvider } from '@/contexts/CalculationContext';
+import { useCalculation } from '@/contexts/CalculationContext';
 import { useConfig } from '@/contexts/ConfigContext';
 import { useGameData } from '@/contexts/GameDataContext';
 
@@ -19,8 +20,7 @@ import RecipeViewer from '@/components/result/RecipeViewer';
 import '@/App.css';
 
 function AppContent() {
-  const { configuration, updateConfig } = useConfig();
-  const iface = configuration.interface
+  const { interfaceOpen } = useCalculation();
   const { 
     loading, 
     error
@@ -57,10 +57,10 @@ function AppContent() {
           <Calculator className="title-icon" size={48} />
           COI-量化计算器
         </h1>
-        {iface.recipeCfg && <RecipeCfg />}
-        {iface.itemCfg   && <ItemCfg />}
-        {iface.contractSelector && <ContractSelector />}
-        {iface.recipeViewer && <RecipeViewer/> }
+        {interfaceOpen.recipeCfg && <RecipeCfg />}
+        {interfaceOpen.itemCfg   && <ItemCfg />}
+        {interfaceOpen.contractSelector && <ContractSelector />}
+        {interfaceOpen.recipeViewer && <RecipeViewer/> }
         <ConfigPanel />
         <Calculation />
         <ResultsDisplay />

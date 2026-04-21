@@ -1,19 +1,18 @@
 import { useState } from 'react';
 import { useCalculation } from '@/contexts/CalculationContext';
-import { useConfig } from '@/contexts/ConfigContext';
 import { decodeItemName } from '@/calculation/itemName';
 import GameIcon from '../GameIcon';
 import './RecipeViewer.css';
 
 function RecipeViewer() {
   const { results, itemRecord, setItemRecord } = useCalculation();
-  const { updateConfig } = useConfig();
+  const { setInterfaceOpen } = useCalculation();
   const [sortMode, setSortMode] = useState('type'); // 'type' | 'usage'
 
   const currentItem = itemRecord.length > 0 ? itemRecord[itemRecord.length - 1] : null;
 
   const handleClose = () => {
-    updateConfig('interface.recipeViewer', false);
+    setInterfaceOpen(prev => ({...prev,recipeViewer: false}));
     setItemRecord([]);
   };
 
