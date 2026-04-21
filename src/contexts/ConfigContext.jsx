@@ -71,13 +71,7 @@ const initialConfig = {
       },
     },
   },
-  buff: {},
-  interface: {
-    recipeCfg: false,
-    itemCfg: false,
-    contractSelector: false,
-    recipeViewer: false,
-  }
+  buff: {}
 }
 
 const farmSystemRecipe = () => {

@@ -3,13 +3,13 @@ import { X, Check, Search } from 'lucide-react';
 import GameIcon from '../GameIcon';
 import { useConfig } from '@/contexts/ConfigContext';
 import { useGameData } from '@/contexts/GameDataContext';
+import { useCalculation } from '@/contexts/CalculationContext';
 import './ItemSelector.css';
 
 export default function ItemCfg() {
   const { recipeData } = useGameData();
   const { configuration, updateConfig } = useConfig();
-
-  const isOpen = configuration.interface?.itemCfg || false;
+  const { interfaceOpen,setInterfaceOpen } = useCalculation();
 
   const itemCategories = useGameData().gameData?.Category?.物品 || {};
 
@@ -69,7 +69,7 @@ export default function ItemCfg() {
     setDraft(prev => ({ ...prev, [item]: parseInt(val) || 0 }));
   };
 
-  const handleClose   = () => updateConfig('interface.itemCfg', false);
+  const handleClose   = () => setInterfaceOpen(prev => ({...prev,itemCfg: false}));;
   const handleConfirm = () => {
     const final = Object.fromEntries(
       Object.entries(draft).filter(([, qty]) => qty > 0)
@@ -78,7 +78,7 @@ export default function ItemCfg() {
     handleClose();
   };
 
-  if (!isOpen) return null;
+  if (!interfaceOpen) return null;
 
   return (
     <div className="is-overlay" onClick={handleClose}>

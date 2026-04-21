@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useConfig } from '@/contexts/ConfigContext'
 import { useGameData } from '@/contexts/GameDataContext'
+import { useCalculation } from '@/contexts/CalculationContext';
 import './ContractSelector.css'
 import GameIcon from '../GameIcon';
 
@@ -17,6 +18,7 @@ function sortByPortOrder(draft, contractData) {
 export default function ContractSelector() {
   const { configuration, updateConfig } = useConfig()
   const { contractData, loading }       = useGameData()
+  const { setInterfaceOpen } = useCalculation();
   const cargoDepot = configuration.facility.mineral.ocean.ship.cargoDepot
   // console.log(contractData);
   const itemKeys   = Object.keys(contractData)
@@ -27,7 +29,7 @@ export default function ContractSelector() {
   )
   const [activeItem, setActiveItem] = useState(null)
 
-  const handleClose = () => updateConfig('interface.contractSelector', false)
+  const handleClose = () => setInterfaceOpen(prev => ({...prev,contractSelector: false}));
 
   const isSelected = (item, idx) =>
     (draft[item] || []).includes(idx)
