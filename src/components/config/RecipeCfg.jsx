@@ -150,10 +150,30 @@ export default function RecipeCfg() {
   // catOrder: string[]
   const initState = () => {
     // If recipeCfg exists, restore from it
+    if (recipeCfg) {
+      // Ensure UNCLASSIFIED is in catOrder if localMap has entries for it
+      const restoredOrder = [...(recipeCfg.catOrder || [])];
+      if (
+        recipeCfg.localMap?.[UNCLASSIFIED]?.length > 0 &&
+        !restoredOrder.includes(UNCLASSIFIED)
+      ) {
+        restoredOrder.push(UNCLASSIFIED);
+      }
+      return {
+        map:            recipeCfg.localMap,
+        order:          restoredOrder,
+        cycleSelInit:   Object.fromEntries(
+          Object.entries(recipeCfg.cycleSelections || {}).map(([k, v]) => [k, new Set(v)])
+        ),
+        parentIdsInit:  new Set(recipeCfg.parentIds  || []),
+        cloneIdsInit:   new Set(recipeCfg.cloneIds   || []),
+        parentToClonesInit: recipeCfg.parentToClones || {},
+      };
+    }
     // Otherwise build from recipeData
     const map = {}, order = [], seen = new Set();
     recipeData.forEach(r => {
-      const cat = (!r.Category || r.Category === '其他建筑') ? UNCLASSIFIED : r.Category;
+      const cat = (!r.Category || r.Category === '未分类') ? UNCLASSIFIED : r.Category;
       const recipe = {
         ...r,
         Category: cat,
@@ -164,26 +184,15 @@ export default function RecipeCfg() {
       map[cat].push(recipe);
       if (!seen.has(cat)) { seen.add(cat); order.push(cat); }
     });
-    // Keep UNCLASSIFIED at end of order
+    // Keep UNCLASSIFIED at end of order (always include it so left panel exists)
     const uidx = order.indexOf(UNCLASSIFIED);
     if (uidx > -1 && uidx < order.length - 1) {
       order.splice(uidx, 1); order.push(UNCLASSIFIED);
     }
-    if (recipeCfg){
-      return {
-        map:            map,
-        order:          order,
-        cycleSelInit:   Object.fromEntries(
-          Object.entries(recipeCfg.cycleSelections || {}).map(([k, v]) => [k, new Set(v)])
-        ),
-        parentIdsInit:  new Set(recipeCfg.parentIds  || []),
-        cloneIdsInit:   new Set(recipeCfg.cloneIds   || []),
-        parentToClonesInit: recipeCfg.parentToClones || {},
-      }
-    }
-    else{
-      return { map, order, cycleSelInit: {}, parentIdsInit: new Set(), cloneIdsInit: new Set(), parentToClonesInit: {} };
-    }
+    // Always ensure UNCLASSIFIED key exists (even if empty)
+    if (!map[UNCLASSIFIED]) map[UNCLASSIFIED] = [];
+    if (!order.includes(UNCLASSIFIED)) order.push(UNCLASSIFIED);
+    return { map, order, cycleSelInit: {}, parentIdsInit: new Set(), cloneIdsInit: new Set(), parentToClonesInit: {} };
   };
 
   const {
@@ -364,7 +373,16 @@ export default function RecipeCfg() {
     checked.forEach(item => { r = applyItemRename(r, item, catId, false); });
     return r;
   };
-
+  // Strip ALL _L_xxx_R_ tags from a recipe's items unconditionally.
+  // Used when moving a recipe so no stale category tag remains.
+  const stripAllCategoryTags = (recipe) => {
+    const strip = obj => {
+      const next = {};
+      Object.entries(obj).forEach(([k, v]) => { next[getBaseName(k)] = v; });
+      return next;
+    };
+    return { ...recipe, Items: { material: strip(recipe.Items?.material || {}), product: strip(recipe.Items?.product || {}) } };
+  };
   const applyAllCycleNames = (recipe, catId) => {
     const checked = cycleSelections[catId] || new Set();
     let r = recipe;
@@ -424,7 +442,8 @@ export default function RecipeCfg() {
         const moving = list.filter(r => idSet.has(r.ID));
         if (moving.length === 0) return;
         moving.forEach(r => {
-          let u = revertAllCycleNames(r, r.Category);
+          // Strip ALL _L_xxx_R_ tags first (covers any residual tags from any category)
+          let u = stripAllCategoryTags(r);
           u = applyAllCycleNames(u, targetCat);
           movingRecipes.push({ ...u, Category: targetCat });
         });
@@ -605,7 +624,7 @@ export default function RecipeCfg() {
 
   const deleteCategory = (catId) => {
     const movingRecipes = (localMap[catId] || []).map(r => {
-      let u = revertAllCycleNames(r, catId);
+      let u = stripAllCategoryTags(r);
       return { ...u, Category: UNCLASSIFIED, Enable: true };
     });
     setLocalMap(prev => {
@@ -702,7 +721,13 @@ export default function RecipeCfg() {
   const handleClose   = () => setInterfaceOpen(prev => ({...prev,recipeCfg: false}));
   const handleConfirm = () => {
     // Save cfg (cycles as arrays for JSON-safe storage)
+    // Ensure catOrder includes UNCLASSIFIED if it has recipes
+    const cfgCatOrder = (localMap[UNCLASSIFIED]?.length > 0 && !catOrder.includes(UNCLASSIFIED))
+      ? [...catOrder, UNCLASSIFIED]
+      : catOrder;
     updateRecipeCfg({
+      localMap,
+      catOrder: cfgCatOrder,
       cycleSelections: Object.fromEntries(
         Object.entries(cycleSelections).map(([k, v]) => [k, [...v]])
       ),
@@ -714,7 +739,7 @@ export default function RecipeCfg() {
     const result = catOrder.flatMap(cat => {
       const list = localMap[cat] || [];
       if (cat === UNCLASSIFIED)
-        return list.map(r => ({ ...r, Enable: false }));
+        return list.map(r => ({ ...r, Enable: false, Category: '未分类' }));
       return list;
     });
     updateRecipeData(result);
