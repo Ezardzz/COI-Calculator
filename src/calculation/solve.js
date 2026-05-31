@@ -6,7 +6,7 @@ export  async function solve({
   Recipes,
   redundancy,
   noMaintenanceMode,
-  MAX_ITER = 20,
+  MAX_ITER = 10,
 }) {
   let bestFallback = null;
   const noBlanceItems = noMaintenanceMode.isOpen ? noMaintenanceMode.itemList : []
@@ -44,14 +44,16 @@ export  async function solve({
     for(const recipe of [...RecipesWInt].reverse()){
       if (String(recipe?.ID) in solution){
         if (recipe.Factory.name === "办公室 III"){
-            recipe.FixedValue = Math.ceil(solution[recipe.ID]) 
+          recipe.FixedValue = Math.ceil(solution[recipe.ID]) 
         }
-        if (recipe.Factory.name === "核反应堆 I"){
-            recipe.FixedValue =Math.ceil(solution[recipe.ID] * 3) / 3 
-        }
-        if (recipe.Factory.name === "核反应堆 II"){
-            recipe.FixedValue = Math.ceil(solution[recipe.ID] * 4) / 4 
-        }
+        // if (recipe.Factory.name === "核反应堆 I"){
+        //   recipe.FixedValue = Math.ceil(solution[recipe.ID] * 3) / 3 
+        //   console.log("核反应堆 I",Math.ceil(solution[recipe.ID] * 3) / 3);
+        // }
+        // if (recipe.Factory.name === "核反应堆 II"){
+        //   recipe.FixedValue = Math.ceil(solution[recipe.ID] * 4) / 4 
+        //   console.log("核反应堆 II",Math.ceil(solution[recipe.ID] * 4) / 4 );
+        // }
         if (JSON.stringify(recipe.Items.product) === JSON.stringify( {"蒸汽（超高压）": 384,"核心燃料（用过）": 16,"毯式燃料（浓缩）": 16})){
           recipe.FixedValue = Math.ceil(solution[recipe.ID] * 4) / 4 
         }
