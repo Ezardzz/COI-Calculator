@@ -212,6 +212,8 @@ function calBuffResult(configuration){
                 - (buff?.edicts?.清洁面板?.unity ?? 0)
                 - (buff?.edicts?.研究效率?.unity ?? 0),
             "专注点":0
+                + (buff?.office?.卡车载货量?.focus ?? 0)
+                + (buff?.office?.列车载货量?.focus ?? 0)
                 + (buff?.office?.研究效率?.focus ?? 0)
                 + (buff?.office?.维修产量?.focus ?? 0)
                 + (buff?.office?.农作物产量?.focus ?? 0)
