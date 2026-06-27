@@ -389,7 +389,8 @@ function LogisticsSection() {
 // ── Mineral ───────────────────────────────────────────────────────────────────
 function MineralSection() {
   const { configuration, updateConfig } = useConfig()
-  const { contractData } = useGameData()
+  const { gameData,contractData } = useGameData()
+  const shipData = gameData.Facility.vehicle["船舶"]
   const { setInterfaceOpen } = useCalculation();
   const mineral = configuration.facility.mineral
   const { miner, mine: mapMine } = mineral.map
@@ -483,6 +484,16 @@ function MineralSection() {
         <div className="section-container" style={{ '--col1': '35%', '--col2': '65%' }}>
           <div className="facility-section-header">海外船只</div>
           <div className="sub-section">
+            <div className="research-amount">
+              <span className="label-header">贸易周期</span>
+              <input
+                className="qty-input"
+                type="number" min={0}
+                value={ ship.period }
+                style={{ width: 64 }}
+                onChange={e => updateConfig('facility.mineral.ocean.ship.period',parseInt(e.target.value))}
+              />
+            </div>
             <div className="chip-group">
               {SHIP_FUELS.map(f => (
                 <RadioChip 
@@ -499,7 +510,10 @@ function MineralSection() {
                   key={d} 
                   label={d} 
                   selected={ship.cargoDepot === d}
-                  onClick={() => {if (ship.cargoDepot !== d) updateConfig('facility.mineral.ocean.ship.cargoDepot', ship.cargoDepot === d ? null : d)}} 
+                  onClick={() => {if (ship.cargoDepot !== d) {
+                    updateConfig('facility.mineral.ocean.ship.cargoDepot', ship.cargoDepot === d ? null : d);
+                    updateConfig('facility.mineral.ocean.ship.period',shipData[ship.fuel][d].consumption["装卸时间"]+3)
+                  }}} 
                 />
               ))}
             </div>

@@ -52,7 +52,7 @@ const initialConfig = {
         mine: ['岩石'],
       },
       ocean: {
-        ship: { fuel: '氢', cargoDepot: '货运港（8）' },
+        ship: { period : 5.4 , fuel: '氢', cargoDepot: '货运港（8）' },
         mine: [],
         trade: {
           "原油": [3],

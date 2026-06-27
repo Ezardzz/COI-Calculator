@@ -97,6 +97,8 @@ export function ResultsAnalysis(result,Recipes,pc){
 
   const TotalItems =  filterSmallValues(totalItems)
   console.log(TotalItems);
+  // console.log(categoryResults["居民生活"].totalOutput);
+  // console.log(categoryResults["居民生活"].totalInput);
   return {categoryResults,specialItems,deficientItems};
 };
 
