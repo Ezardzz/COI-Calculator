@@ -89,7 +89,7 @@ export  async function solve({
         recipe.FixedValue = amountInt
         // 计算小数部分对应的农业系统
         const ftK = 1.02// 农作物产量冗余系数
-        const ftTargetNew = Math.ceil(Math.max(1.4*ftK*amountDec,0.6)/0.1)*0.1
+        const ftTargetNew = Math.ceil(Math.min(1.4, Math.max(0.6, 1.4*ftK*amountDec))/0.1)*0.1
         const ftCfg = ["肥料 II",2.5,ftTargetNew]
 
         farmRecipe = JSON.parse(JSON.stringify(recipe))

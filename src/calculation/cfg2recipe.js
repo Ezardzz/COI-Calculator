@@ -669,11 +669,21 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
     }
 
     // 海外矿
+    const shipPeriod = configuration.facility.mineral.ocean.ship.period
     const cargoDepot = configuration.facility.mineral.ocean.ship.cargoDepot
     const shipFuel = configuration.facility.mineral.ocean.ship.fuel
     const oceanMines = configuration.facility.mineral.ocean.mine
     const vehicleInfo = vehicleData.船舶[shipFuel][cargoDepot]
     const cargoDepotRecipe = extractVehicleRecipe(cargoDepot,vehicleInfo,"船舶",specialRecipe["货运港"].Category === "特殊" ? "原矿" : specialRecipe["货运港"].Category)
+    // 根据运输周期（shipPeriod）计算消耗
+    const cargoDepotCsm = cargoDepotRecipe.Factory.consumption
+    const sailingTime = shipPeriod - cargoDepotCsm["装卸时间"]
+    cargoDepotCsm["维护 I"] = (cargoDepotCsm["维护 I"] * cargoDepotCsm["装卸时间"] + 0.2 * cargoDepotCsm["维护 I"] * sailingTime) / shipPeriod
+    cargoDepotCsm["电"] = cargoDepotCsm["电"] * cargoDepotCsm["装卸时间"] / shipPeriod
+    delete cargoDepotCsm["装卸时间"]
+    cargoDepotRecipe.Items.material[shipFuel] = cargoDepotRecipe.Items.material[shipFuel] / shipPeriod
+    
+    
     for(const mine of oceanMines){
         // 海外矿：原矿 改为 原矿+"#"
         const mineRecipe = JSON.parse(JSON.stringify(mineData[mine]))
@@ -682,12 +692,11 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
         mineRecipe.Category = "原矿"
         mineRecipe.Enable = true
         vehicleRecipe.push(mineRecipe)
-        // 海外矿运输：产物里替换"运输效率"为对应原矿，原料里加上原矿+"#"
+        // 海外矿运输：原料里加上原矿+"#"
         let recipe = JSON.parse(JSON.stringify(cargoDepotRecipe))
-        delete recipe.Factory.consumption["单程月数"];
-        recipe.Items.product[mine] = recipe.Items.product["运输效率"]
-        recipe.Items.material[mine + "#"] = recipe.Items.product["运输效率"]
-        delete recipe.Items.product["运输效率"]
+        recipe.Items.product[mine] = recipe.Items.product["运量"] / shipPeriod
+        recipe.Items.material[mine + "#"] = recipe.Items.product["运量"] / shipPeriod
+        delete recipe.Items.product["运量"]
         vehicleRecipe.push(recipe)
     }
     // 贸易
@@ -701,8 +710,7 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
             // 计算单个配方凝聚力消耗
             let recipe = JSON.parse(JSON.stringify(cargoDepotRecipe));
             let consumption = recipe.Factory.consumption
-            consumption["凝聚力"] = contract["凝聚力/船"]/consumption["单程月数"];
-            const fuel = recipe.Items.material
+            consumption["凝聚力"] = contract["凝聚力/船"] / shipPeriod;
             // 构建配方
             const contractRecipe = {
                 ID:0,
@@ -717,16 +725,15 @@ function calVehicleRecipe(configuration, GameData, contractData, specialRecipe, 
                     }
                 },
                 Items:{
-                    material:fuel,
+                    material:recipe.Items.material,
                     product:{}
                 },
                 Category:specialRecipe["货运港"].Category === "特殊" ? "原矿" : specialRecipe["货运港"].Category,
                 Enable:true
 
             }
-            contractRecipe.Items.material[contract.出口.物品] = contract.出口.数量/consumption["单程月数"]
-            contractRecipe.Items.product[contract.进口.物品] = contract.进口.数量/consumption["单程月数"]
-            delete contractRecipe.Factory.consumption["单程月数"];
+            contractRecipe.Items.material[contract.出口.物品] = contract.出口.数量 / shipPeriod;
+            contractRecipe.Items.product[contract.进口.物品] = contract.进口.数量 / shipPeriod;
             vehicleRecipe.push(contractRecipe)
         }
     }
@@ -800,9 +807,8 @@ function calFixedRecipe(configuration, specialRecipe, buffResult){
     }
     // 特殊建筑
     for(let [name,amount] of Object.entries(factorys)){
-        if (researchCfg.spaceResearch) amount = researchAmount + 2 
-        
         if (name === "空间站"){
+            if (researchCfg.spaceResearch) amount = researchAmount + 2 
             const recipe = {
                 ID:0,
                 Factory:{
