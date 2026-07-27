@@ -119,7 +119,7 @@ export function buildLP(recipes,noBlanceItems) {
     // 防止生成空约束
     if (terms.length === 0) return;
 
-    // 拼接表达式（不会有开头 +）
+    // 拼接表达式
     const expr = terms.join(" ");
     const safe = item.replace(/\s+/g, "_");
     if (["凝聚力","专注点","研究点数","工人","电"].includes(item)){
@@ -139,7 +139,7 @@ export function buildLP(recipes,noBlanceItems) {
   });
 
   /* =====================
-   * 5. Bounds（新增）
+   * 5. Bounds
    * ===================== */
   lp += "Bounds\n";
 

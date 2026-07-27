@@ -17,14 +17,20 @@ export function useSolve(setStatistic) {
     const [solving, setSolving] = useState(false);
 
     const handleSolve = async () => {
-        const pop = configuration.facility.demand.population
         // 冗余范围为±0.05
         const redundancy = Object.fromEntries(
             Object.entries(configuration.facility.demand.redundancy).map(([key, value]) => [
                 key,
-                [value - 0.05 > 1 ? value - 0.05 : 1, pop && key === '工人' ? value + 9999 : value + 0.05]
+                [value - 0.05 > 1 ? value - 0.05 : 1, value + 0.05]
             ])
         );
+        let population = configuration.facility.demand.population ?? 0
+
+        // if (configuration.facility.demand.population){
+        //     redundancy["工人"][1] = redundancy["工人"][1] + 9999
+        // }
+        console.log(redundancy);
+        
         const noMaintenanceMode = configuration.facility.demand.noMaintenanceMode
         console.log(noMaintenanceMode);
         
@@ -36,6 +42,7 @@ export function useSolve(setStatistic) {
                 lpSolve,
                 Recipes,
                 redundancy,
+                population,
                 noMaintenanceMode,
             })
 

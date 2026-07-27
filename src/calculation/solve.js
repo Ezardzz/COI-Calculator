@@ -5,14 +5,22 @@ export  async function solve({
   lpSolve,
   Recipes,
   redundancy,
+  population,
   noMaintenanceMode,
   MAX_ITER = 10,
 }) {
   let bestFallback = null;
   const noBlanceItems = noMaintenanceMode.isOpen ? noMaintenanceMode.itemList : []
-  // 构建可更改权重配方
+    // 构建可更改权重配方
   let RecipesW = JSON.parse(JSON.stringify(Recipes));
-  
+  // 获取所人口相关配方的索引
+  let idx_pop = 0
+  let idx_house = 0
+  for (let i = 0 ; i < RecipesW.length ; i++){
+    if (RecipesW[i].Factory.name === "人口") idx_pop = i
+    if (Object.hasOwn(RecipesW[i].Items.product, "工人")) idx_house = i
+  }
+
   for (let iter = 0; iter < MAX_ITER; iter++) {
     console.log("次数",iter+1);
     // -----------------------------
@@ -21,15 +29,8 @@ export  async function solve({
     const lpData1 = buildLP(RecipesW,noBlanceItems);
     const lpRes1 = await lpSolve(lpData1);
     console.log(lpRes1.Status);
-    if (lpRes1.Status !== "Optimal"){
-      RecipesW.map(recipe => {
-        if (recipe.Factory.name === "人口"){
-          recipe.FixedValue = null
-        }
-      })
-      if (redundancy["工人"][1] >= 9999){
-        redundancy["工人"][1] -= 9999
-      }
+    if (lpRes1.Status != "Optimal"){
+      RecipesW[idx_pop].FixedValue = null
       continue
     }
     // 提取解向量
@@ -38,7 +39,7 @@ export  async function solve({
       if (col.Primal > 1e-6) solution[name.replace("x_", "")] = col.Primal;
     }
     // -----------------------------
-    // 二：核电配方整数解
+    // 二：配方整数解
     // -----------------------------
     let RecipesWInt = JSON.parse(JSON.stringify(RecipesW))
     for(const recipe of [...RecipesWInt].reverse()){
@@ -46,26 +47,18 @@ export  async function solve({
         if (recipe.Factory.name === "办公室 III"){
           recipe.FixedValue = Math.ceil(solution[recipe.ID]) 
         }
-        // if (recipe.Factory.name === "核反应堆 I"){
-        //   recipe.FixedValue = Math.ceil(solution[recipe.ID] * 3) / 3 
-        //   console.log("核反应堆 I",Math.ceil(solution[recipe.ID] * 3) / 3);
-        // }
-        // if (recipe.Factory.name === "核反应堆 II"){
+        // if (JSON.stringify(recipe.Items.product) === JSON.stringify( {"蒸汽（超高压）": 384,"核心燃料（用过）": 16,"毯式燃料（浓缩）": 16})){
         //   recipe.FixedValue = Math.ceil(solution[recipe.ID] * 4) / 4 
-        //   console.log("核反应堆 II",Math.ceil(solution[recipe.ID] * 4) / 4 );
         // }
-        if (JSON.stringify(recipe.Items.product) === JSON.stringify( {"蒸汽（超高压）": 384,"核心燃料（用过）": 16,"毯式燃料（浓缩）": 16})){
-          recipe.FixedValue = Math.ceil(solution[recipe.ID] * 4) / 4 
-        }
-        if (JSON.stringify(recipe.Items.product) === JSON.stringify( {"蒸汽（超高压）": 96,"核心燃料（用过）": 16,"毯式燃料（浓缩）": 48})){
-          recipe.FixedValue = Math.ceil(solution[recipe.ID] * 4) / 4 
-        }
+        // if (JSON.stringify(recipe.Items.product) === JSON.stringify( {"蒸汽（超高压）": 96,"核心燃料（用过）": 16,"毯式燃料（浓缩）": 48})){
+        //   recipe.FixedValue = Math.ceil(solution[recipe.ID] * 4) / 4 
+        // }
       }
-      else{
-        if (["核反应堆 I","核反应堆 II","快中子增殖反应堆"].includes(recipe.Factory.name)){
-          recipe.FixedValue = 0
-        }
-      }
+      // else{
+      //   if (["核反应堆 I","核反应堆 II","快中子增殖反应堆"].includes(recipe.Factory.name)){
+      //     recipe.FixedValue = 0
+      //   }
+      // }
     }
     const lpData2 = buildLP(RecipesWInt,noBlanceItems);
     const lpRes2 = await lpSolve(lpData2);
@@ -140,18 +133,14 @@ export  async function solve({
       }
     }
     console.log(pc);
-    if (pc["工人"].useRate < 1){
-      RecipesW.map(recipe => {
-        if (recipe.Factory.name === "人口"){
-          recipe.FixedValue = null
-        }
-      })
-      if (redundancy["工人"][1] >= 9999){
-        redundancy["工人"][1] -= (9999-0.05)
-      }
-    }
     /* ---------- 3. 满足条件或当前为无维护模式则直接返回 ---------- */
     if (allOK) {
+      if (population > pc["工人"].consumption){
+        RecipesW[idx_pop].FixedValue = population / 1000
+        // RecipesW[idx_house].Items.product["工人"] = RecipesW[idx_house].Items.material["工人#"]
+        population = 0
+        continue
+      }
       console.log("满足");
       console.log(solution);
       return {

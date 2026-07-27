@@ -79,7 +79,7 @@ export function cfg2recipe(configuration,GameData,recipeData,contractData){
         if ("工人#" in material) material["工人#"] *= buffResult.影响.居民服务.住房容量
         if ("工人" in product) product["工人"] *= buffResult.影响.居民服务.住房容量  
         // 办公室
-        if ("专注点" in product) product["专注点"] *= buffResult.影响.专注点
+        if ("专注点" in product) product["专注点"] = product["专注点"] + 1000 * ( buffResult.影响.专注点 - 1 )
         // 太阳能
         if ((recipe.Factory.name).includes("太阳能")) product["电"] *= buffResult.影响.太阳能   
 
@@ -217,6 +217,7 @@ function calBuffResult(configuration){
                 + (buff?.office?.研究效率?.focus ?? 0)
                 + (buff?.office?.维修产量?.focus ?? 0)
                 + (buff?.office?.农作物产量?.focus ?? 0)
+                + (buff?.office?.回收效率?.focus ?? 0)
                 + (buff?.office?.食物消耗?.focus ?? 0)
                 + (buff?.office?.商品与服务消耗?.focus ?? 0)
                 + (buff?.office?.来自定居点的凝聚力?.focus ?? 0)
@@ -489,8 +490,8 @@ function calSettlementRecipe(configuration, GameData, specialRecipe, buffResult,
         Category:specialRecipe["人口"].Category,
         Enable:true
     }
-    const population = configuration.facility.demand.population
-    if (population) populationRecipe.FixedValue = population/1000
+    // const population = configuration.facility.demand.population
+    // if (population) populationRecipe.FixedValue = population / 1000
 
     settlementRecipe.push(populationRecipe)
     
