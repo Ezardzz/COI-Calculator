@@ -47,18 +47,18 @@ export  async function solve({
         if (recipe.Factory.name === "办公室 III"){
           recipe.FixedValue = Math.ceil(solution[recipe.ID]) 
         }
-        // if (JSON.stringify(recipe.Items.product) === JSON.stringify( {"蒸汽（超高压）": 384,"核心燃料（用过）": 16,"毯式燃料（浓缩）": 16})){
-        //   recipe.FixedValue = Math.ceil(solution[recipe.ID] * 4) / 4 
-        // }
-        // if (JSON.stringify(recipe.Items.product) === JSON.stringify( {"蒸汽（超高压）": 96,"核心燃料（用过）": 16,"毯式燃料（浓缩）": 48})){
-        //   recipe.FixedValue = Math.ceil(solution[recipe.ID] * 4) / 4 
-        // }
+        if (JSON.stringify(recipe.Items.product) === JSON.stringify( {"蒸汽（超高压）": 384,"核心燃料（用过）": 16,"毯式燃料（浓缩）": 16})){
+          recipe.FixedValue = Math.ceil(solution[recipe.ID] * 4) / 4 
+        }
+        if (JSON.stringify(recipe.Items.product) === JSON.stringify( {"蒸汽（超高压）": 96,"核心燃料（用过）": 16,"毯式燃料（浓缩）": 48})){
+          recipe.FixedValue = Math.ceil(solution[recipe.ID] * 4) / 4 
+        }
       }
-      // else{
-      //   if (["核反应堆 I","核反应堆 II","快中子增殖反应堆"].includes(recipe.Factory.name)){
-      //     recipe.FixedValue = 0
-      //   }
-      // }
+      else{
+        if (["核反应堆 I","核反应堆 II","快中子增殖反应堆"].includes(recipe.Factory.name)){
+          recipe.FixedValue = 0
+        }
+      }
     }
     const lpData2 = buildLP(RecipesWInt,noBlanceItems);
     const lpRes2 = await lpSolve(lpData2);
