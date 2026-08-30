@@ -20,6 +20,7 @@ export  async function solve({
     if (RecipesW[i].Factory.name === "人口") idx_pop = i
     if (Object.hasOwn(RecipesW[i].Items.product, "工人")) idx_house = i
   }
+  RecipesW[idx_pop].FixedValue = population / 1000
 
   for (let iter = 0; iter < MAX_ITER; iter++) {
     console.log("次数",iter+1);
@@ -119,28 +120,29 @@ export  async function solve({
     let useRates = {}
     for (const item in redundancy) {
       const { produced, consumption } = pc[item];
-
-      
       const useRate = produced / (consumption ? consumption : 1e-6) 
       pc[item]["useRate"] = useRate
 
       useRates[item] = useRate
       const [low, high] = redundancy[item];
-      if ((useRate < low || useRate > high)) {
-        if (!noMaintenanceMode.isOpen || !noMaintenanceMode.itemList.includes(item)){
-          allOK = false;
-        }        
+      if (item === "工人" && population) {
+        if (useRate < low) {
+          if (!noMaintenanceMode.isOpen || !noMaintenanceMode.itemList.includes(item)){
+            allOK = false;
+          }        
+        }
+      }
+      else{
+        if ((useRate < low || useRate > high)) {
+          if (!noMaintenanceMode.isOpen || !noMaintenanceMode.itemList.includes(item)){
+            allOK = false;
+          }        
+        }
       }
     }
     console.log(pc);
     /* ---------- 3. 满足条件或当前为无维护模式则直接返回 ---------- */
     if (allOK) {
-      if (population > pc["工人"].consumption){
-        RecipesW[idx_pop].FixedValue = population / 1000
-        // RecipesW[idx_house].Items.product["工人"] = RecipesW[idx_house].Items.material["工人#"]
-        population = 0
-        continue
-      }
       console.log("满足");
       console.log(solution);
       return {
@@ -151,12 +153,13 @@ export  async function solve({
     }
     /* ---------- 4. 记录兜底解 ---------- */
     const penalty = Object.entries(useRates)
-      .filter(([_, r]) => r > 1)
-      .reduce((sum, [item, r]) => {
+    .reduce((sum, [item, r]) => {
         const [l, h] = redundancy[item];
-        return sum + Math.abs(r - (l + h) / 2);
+        const margin = Math.abs(r - (l + h) / 2) > 0.05 ? Math.abs(r - (l + h) / 2) : 0;
+        return sum + margin;
       }, 0);
-
+    console.log("penalty",penalty);
+    
     if (!bestFallback || penalty < bestFallback.penalty) {
       bestFallback = {
         resultRecipes,       
@@ -170,7 +173,8 @@ export  async function solve({
     adjustRecipeWeights(
       RecipesW,
       useRates,
-      redundancy
+      redundancy,
+      iter
     );
   }
 
@@ -234,7 +238,8 @@ function calcRealPC(recipes, solution, redundancy) {
 function adjustRecipeWeights(
   recipes,
   useRates,
-  redundancy
+  redundancy,
+  iter
 ) {
   const clamp = (x, min, max) => Math.max(min, Math.min(max, x));
   for (const item in redundancy) {
@@ -242,20 +247,21 @@ function adjustRecipeWeights(
     if (!rate) continue;
 
     const [low, high] = redundancy[item];
-    if ((rate >= low && rate <= high) || high >= 9999) continue;
+    if (rate >= low && rate <= high) continue;
 
     const avg = (low + high) / 2;
-    const weight = clamp(rate / avg, 0.7, 1.3);
-    // const weight = clamp(rate / avg, 0.95, 1.05);
-    // const weight = rate / avg
+    let weight;
+    if (iter <= 3) weight = clamp(rate / avg, 0.7, 1.3)
+    else if (iter <= 6 && iter > 3) weight = clamp(rate / avg, 0.9, 1.1)
+    else if (iter > 6) weight = clamp(rate / avg, 0.95, 1.05)
 
     // 调整产出各个“维护”的配方的产出数量
     for (const r of recipes) {
       if (!r.Items?.product) continue;
       if (r.Items.product[item] !== undefined) {
-        // console.log("权重调整前:", item, r.Items.product[item]);
+        console.log("权重调整前:", item, r.Items.product[item]);
         r.Items.product[item] *= weight;
-        // console.log("权重调整后:", item, r.Items.product[item]);
+        console.log("权重调整后:", item, r.Items.product[item]);
       }
     }
   }
